@@ -17,15 +17,9 @@
 <body>
 
   <div class="container" style="border: 1px solid black; margin-top: 50px;">
-
-    <div id="main" style="border: 1px solid black; margin-top: 50px;">
-      <div id="image" style="height:100px; width:100px">Main Image</div>
-      <div id="text">Text</div>
-      <div id="option-buttons" class="btn btn-primary">
-        <button class="btn">Option 1</button>
-        <button class="btn">Option 1</button>
-      </div>
-    </div>
+    <div id="images"></div>
+    <div id="text"></div>
+    <div id="buttonBox"></div>
     
     <!-- modal -->
     <div class="modal fade" id="modal-box" tabindex="-1" role="dialog" aria-labelledby="modal-box">
@@ -33,12 +27,18 @@
         <div class="modal-content">
 
           <div class="modal-body">
-            <p>Welcome to the game!</p>
-            <button id="start-btn" class="btn btn-dark" data-dismiss="modal" onclick="removeModal()">Start Button!</button>
+            <h4>Welcome Aboard</h4>
+            <p>CALLING ALL RANGERS!<br>
+            I hope this message finds you well?<br>
+            The planet Pokitaru needs your help!<br>
+            Are you willing to change your coordinates to help save Pokitaru?<br>
+            Are you ready to descend?</p>
+            <input id="input" type="text" placeholder="What's your name?">
+            <button id="start-btn" class="btn btn-dark" data-dismiss="modal" onclick="removeModal()">Descend</button>
           </div>
         </div>
       </div>
-    </div>
+    </div> 
   
   </div>
 
