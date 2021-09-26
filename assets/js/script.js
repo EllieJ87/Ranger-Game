@@ -8,7 +8,6 @@ const updateRecords = (records) => {
 };
 */
 
-
 // these variables connect our code with the 'id' on the html page
 // we can then manpulate the variables and it will manipulate the html
 const image = document.getElementById("images");
@@ -16,12 +15,14 @@ const text = document.getElementById("text");
 const buttonBox = document.getElementById('buttonBox');
 const input = document.getElementById('input');
 const startBtn = document.getElementById('start-btn');
+const modal = document.getElementById('test');
+const test = document.getElementById('good-bye-text');
 
 // this is the variable for the player's name
 var playersName;
 
 // keep track of the character
-//let state = {} // understand this point more
+// let state = {} // understand this point more
 
 // removes the opening modal when the user clicks on it
 function removeModal() {
@@ -51,6 +52,22 @@ var changeButtons = function(buttonList) {
         + buttonList[i][0] + "</button>";
     };
 };
+
+// 26/09/21 
+// import this text from a separte doc
+// Added a home element button (change to icon) removes modal and displays generic text
+function removeHomeModal() {
+    var myobj2 = document.getElementById("test");
+    myobj2.remove();
+    test.innerHTML = `${playersName}` + 
+    " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." + ` ${playersName} ` +
+    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum";
+    // create an element / have a time out to refreseh the page
+    // add an empty array with different word choices?
+    // Generic text about the failure of not saving the planet
+    // Breaks added to text    
+    //setTimeout(function () { location.reload(true); }, 5000);
+}
 
 // this is what moves the game along
 var advanceTo = function(s) {
@@ -102,8 +119,6 @@ const scenario = {
     },
 
 };
-
-
 
 // this is the code that starts the game
 advanceTo(scenario.one);
