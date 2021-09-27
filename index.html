@@ -2,20 +2,28 @@
 <html lang="en">
 
 <head>
+  <title>Ranger Game</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Ranger Game</title>
-
+  
   <!-- This is the link to Bootstrap, which will make up the basis of the styles for my site -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!--This is the link to font awesome, which I will use for the icons in my site-->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!--This is the link to google fonts used in the site-->
+  <link href='https://fonts.googleapis.com/css?family=Covered By Your Grace' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+  
   <!-- CSS LINK -->
   <link rel="stylesheet" href="assets/css/main.css">
 
 <!--  -->
 
 </head>
-<body>
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
   <header>
     <nav>
       <!-- Button trigger modal -->

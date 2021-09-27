@@ -1,7 +1,22 @@
-.modal-header {
+
+
+.modal-header  {
     border-bottom: 0 none;
   }
 
   .modal-footer {
     border-top: 0 none;
+  }
+
+  .center {
+    align-items: center;
+    font-size: 100px;
+    cursor: pointer;
+  }
+
+  #images {
+    height: 1000px;
+    width: 1000px;
+    background-repeat: no-repeat;
+    
   }

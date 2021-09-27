@@ -41,7 +41,7 @@ var changeText = function(words) {
 
 // this takes the image link and puts it in the proper format, sending it to the html
 var changeImage = function(img) {
-    image.style.backgroundImage = "<img src='" + img + "' alt='myimage'>";
+    image.style.backgroundImage = "url(" + img + ")"; // 27/09/21 updated image url
 };
 
 // this looks at the numbe of options we have set and creates enough buttons
@@ -59,14 +59,45 @@ var changeButtons = function(buttonList) {
 function removeHomeModal() {
     var myobj2 = document.getElementById("test");
     myobj2.remove();
-    test.innerHTML = `${playersName}` + 
-    " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." + ` ${playersName} ` +
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum";
-    // create an element / have a time out to refreseh the page
-    // add an empty array with different word choices?
+    test.innerHTML = `${playersName}` 
+    + `
+    <p>Bacon ipsum dolor amet boudin pastrami shankle ham fatback
+    pork. Short ribs ham beef, filet mignon ball tip sirloin
+    shankle t-bone drumstick. Ground round drumstick pancetta
+    fatback alcatra.
+    `
+    + "<br></br>" 
+    + `
+    Bacon ipsum dolor amet boudin pastrami shankle ham fatback
+    pork. Short ribs ham beef, filet mignon ball tip sirloin
+    shankle t-bone drumstick. Ground round drumstick pancetta
+    fatback alcatra.
+    `
+    + "<br></br>" 
+    + `
+    Bacon ipsum dolor amet boudin pastrami shankle ham fatback
+    pork. Short ribs ham beef, filet mignon ball tip sirloin
+    shankle t-bone drumstick. Ground round drumstick pancetta
+    fatback alcatra.
+    `
+    + "<br></br>" 
+    + `
+    Bacon ipsum dolor amet boudin pastrami shankle ham fatback
+    pork. Short ribs ham beef, filet mignon ball tip sirloin
+    shankle t-bone drumstick. Ground round drumstick pancetta
+    fatback alcatra.</p>
+    `
+    + "<br></br>" 
+    // added a font awesome icon with a refresh page browser element
+    + '<a onclick="setTimeout(function() { location.reload(true); });"><i class="fa fa-minus-circle center"></i></a>';
     // Generic text about the failure of not saving the planet
     // Breaks added to text    
-    //setTimeout(function () { location.reload(true); }, 5000);
+}
+
+// 27/09/21 Prevents the user to go backwards (from stack overflow source)
+window.history.forward();
+function noBack() {
+    window.history.forward();
 }
 
 // this is what moves the game along
@@ -79,7 +110,7 @@ var advanceTo = function(s) {
 // this is the object that holds each scenario
 const scenario = {
     one: {
-        image: 'assets/images/senku.jpg', 
+        image: 'assets/images/senku.jpg',  
         text: "Your name yanks at the leash. You hear dogs barking and see an old abandoned house. Strangely, the door is wide open. What do you want to do?",
         buttons: [
             ["Turn and run", "advanceTo(scenario.three)"],
@@ -122,6 +153,20 @@ const scenario = {
 
 // this is the code that starts the game
 advanceTo(scenario.one);
+
+/* 	// click to mute/unmute and also change the image 
+  		// https: //stackoverflow.com/questions/5571285/how-can-i-change-image-source-on-click-with-jquery
+  		$('.volume').click(function (e) {
+  			if (audio.muted == true) {
+  				audio.muted = false;
+
+  				$('.volume').attr('src', 'assets/images/noun_volume.png');
+  			} else if (audio.muted == false) {
+  				audio.muted = true;
+  				$('.volume').attr('src', 'assets/images/noun_mute.png');
+  			}
+  		});
+          */
 
 
 
