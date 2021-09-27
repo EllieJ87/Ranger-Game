@@ -1,4 +1,16 @@
+body {
+  /*background-color: chartreuse;
+  background-image: url("assets/images/background.jpg");/*
+  background-repeat: no-repeat;
+  background-position: center;*/
 
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;*/
+  height: 100vh;
+} 
 
 .modal-header  {
     border-bottom: 0 none;
@@ -18,5 +30,24 @@
     height: 1000px;
     width: 1000px;
     background-repeat: no-repeat;
-    
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  i {
+    color: white;
+    text-decoration: none;
+  }
+
+ .fa-home {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #text {
+    color: white;
   }
