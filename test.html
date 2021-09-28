@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ranger Game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- This is the link to Bootstrap, which will make up the basis of the styles for my site -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!--This is the link to font awesome, which I will use for the icons in my site-->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="assets/css/main.css">
+
+<!--  -->
+
+</head>
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="" style="background-image: url('assets/images/background.jpg');">
+
+    <header class="container-fluid">
+        <span class="header-text"">Ranger Game</span>
+        <nav class="nav-links">
+            <i class="fa fa-volume-off" aria-hidden="true"></i>
+            <i class="fa fa-home" aria-hidden="true" data-toggle="modal" data-target="#modal-home"></i>
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>            
+        </nav>
+    </header>
+
+
+  
+  <div class="container" style="border: 1px solid black; margin-top: 50px;"></div>
+
+  <footer class="container-fluid fixed-bottom">
+      <span class="footer-text">Copyright by Ellie Judge @2021</span>
+      
+      <div class="footer-links">
+        <a class="fa fa-question" aria-hidden="true"></a>
+        <a href="https://www.linkedin.com/in/ellie-judge-45b00689/" class="fa fa-linkedin-square" aria-hidden="true" target="_blank"></a>
+        <a href="https://github.com/EllieJ87" class="fa fa-github" aria-hidden="true" target="_blank"></a> 
+    </div>
+</footer>
+
+<!-- <div class="col-12 col-lg-6 d-flex"> -->
+  
+<!-- jQuery & Bootstrap.js CDNS files -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- My js file link -->
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>

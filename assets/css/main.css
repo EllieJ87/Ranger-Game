@@ -1,9 +1,15 @@
-body {
-  /*background-color: chartreuse;
-  background-image: url("assets/images/background.jpg");/*
-  background-repeat: no-repeat;
-  background-position: center;*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarpanch&display=swap');
 
+/*font-family: 'Sarpanch', sans-serif;*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
   /* display: flex;
   justify-content: center;
   align-items: center;
@@ -11,6 +17,104 @@ body {
   flex-direction: column;*/
   height: 100vh;
 } 
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.header-text {
+  padding-left: 20px;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5em;
+  letter-spacing: 0.3em;
+  color: #87186E;
+  text-shadow: 1px 1px 10px rgba(242, 244, 248, 0.4);
+}
+
+.nav-links {
+  display: inline-block;
+  padding: 0px;
+}
+
+.nav-links i {
+  padding: 20px;
+  font-size: 30px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%; 
+}
+
+.footer-text {
+  padding-right: 20px;
+  order: 2;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: #87186E;
+  text-shadow: 1px 1px 10px rgba(242, 244, 248, 0.4);
+}
+
+.footer-links {
+  display: inline-block;
+  padding: 0px;
+  padding-right: 20px;
+}
+
+.footer-links a {
+  padding: 20px;
+  font-size: 30px;
+  order: 1;
+}
+
+.fa {
+  text-decoration: none;
+}
+
+.fa-volume-off {
+  color: #68E2A3;
+
+}
+
+.fa-home {
+  color: #DC07A2;
+  cursor: pointer;
+}
+
+.fa-envelope-o {
+  color: #EEFC05;
+
+}
+
+.fa-question {
+  color: #EEFC05;
+
+}
+
+.fa-linkedin-square {
+  color: #F2F4F8;
+
+}
+
+.fa-github {
+  color: #87186E;
+
+}
+
+
+
+
+
+
+
 
 .modal-header  {
     border-bottom: 0 none;
@@ -32,22 +136,26 @@ body {
     background-repeat: no-repeat;
   }
 
-  a {
-    color: white;
-    text-decoration: none;
-  }
-
-  i {
-    color: white;
-    text-decoration: none;
-  }
-
- .fa-home {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
   #text {
     color: white;
   }
+
+  @media (max-width: 576px) {
+
+    header, footer {
+      flex-direction: column;
+    }
+    
+    .header-text .footer-text {
+      text-align: center
+    }
+
+     .nav-links .footer-links {
+       flex-wrap: wrap;
+       justify-content: space-between;
+     } 
+}
+  
+
+  
+ 

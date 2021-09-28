@@ -26,21 +26,13 @@
 <body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="" style="background-image: url('assets/images/background.jpg');">
 
   <header class="container-fluid">
-    <nav>
-      <span style="color: white;">Ranger Game</span>
-      <!-- Button trigger modal -->
-      <!-- <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modal-home">
-        Home
-      </button> -->
-
-      <span><i class="fa fa-volume-off" aria-hidden="true"></i></span>
-      
-      <span><i class="fa fa-home" aria-hidden="true" data-toggle="modal" data-target="#modal-home" ></i></span>
-      
-      <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span>    
-      
+    <span class="header-text"">Ranger Game</span>
+    <nav class="nav-links">
+        <i class="fa fa-volume-off" aria-hidden="true"></i>
+        <i class="fa fa-home" aria-hidden="true" data-toggle="modal" data-target="#modal-home"></i>
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>            
     </nav>
-  </header>
+</header>
       
       <!-- Modal -->
       <!-- Added a Home modal box 26-09-21-->
@@ -94,32 +86,14 @@
   
   </div>
 
-  <div class="container-fluid">
-    <div class="row" id="links">
-      <div class="col-12 col-lg-6 d-flex" id="socialMediaLinks">
-  
-        <!-- Social Media Links will be the same across all pages-->
-        <div class="p-2">
-          <a class="fa fa-question" aria-hidden="true">
-          </a>
-        </div>
-
-        <div class="p-2">
-          <a href="https://www.linkedin.com/in/ellie-judge-45b00689/" class="fa fa-linkedin-square" aria-hidden="true" target="_blank">
-          </a>
-        </div>        
-  
-        <div class="p-2">
-          <a href="https://github.com/EllieJ87" class="fa fa-github" aria-hidden="true" target="_blank">
-          </a>
-        </div>
- 
-        </div><!-- col-12 col-lg-6 d-flex -->
-  
-        <!-- Footer Copyright will be the same across all pages-->
-        <div class="col-12 col-lg-6" id="footer" style="color: white;">copyright by Ellie Judge @2021</div>
-      </div>
-  </div><!-- Closed container p-2 div -->
+  <footer class="container-fluid fixed-bottom">
+    <span class="footer-text">Copyright by Ellie Judge @2021</span>    
+    <div class="footer-links">
+      <a class="fa fa-question" aria-hidden="true"></a>
+      <a href="https://www.linkedin.com/in/ellie-judge-45b00689/" class="fa fa-linkedin-square" aria-hidden="true" target="_blank"></a>
+      <a href="https://github.com/EllieJ87" class="fa fa-github" aria-hidden="true" target="_blank"></a> 
+  </div>
+</footer>
 
   
 <!-- jQuery & Bootstrap.js CDNS files -->
