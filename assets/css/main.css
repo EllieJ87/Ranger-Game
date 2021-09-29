@@ -184,62 +184,54 @@ footer {
 .state-container {
   grid-area: state;
 }
-
-
 .state-text {
   color: white;
 }
 
-.state-bar{
+.state-bar {
   border: 2px solid #ffec99;
   border-radius: 5px;
   background-color: #fff9db;
   padding: 1em;
 }
 
+.modal-header {
+  border-bottom: 0 none;
+}
 
+.modal-footer {
+  border-top: 0 none;
+}
 
+.center {
+  align-items: center;
+  font-size: 100px;
+  cursor: pointer;
+}
 
-
-
-
-
-
-
-.modal-header  {
-    border-bottom: 0 none;
+@media (max-width: 576px) {
+  
+  header, footer {
+    flex-direction: column;
   }
-
-  .modal-footer {
-    border-top: 0 none;
+  
+  .header-text .footer-text {
+    text-align: center
   }
-
-  .center {
-    align-items: center;
-    font-size: 100px;
-    cursor: pointer;
+  
+  .nav-links .footer-links {
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-
-  @media (max-width: 576px) {
-
-    header, footer {
-      flex-direction: column;
-    }
-    
-    .header-text .footer-text {
-      text-align: center
-    }
-
-     .nav-links .footer-links {
-       flex-wrap: wrap;
-       justify-content: space-between;
-     }
-     
-     .game-container {
-      display: flex;
-      flex-direction: column;
+  
+  #game-container {
+    display: flex;
+    flex-direction: column;
   }
-
+  
+  #images {
+    max-width: 80%;
+  }
 }
   
 
