@@ -5,12 +5,12 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   
 }
 
-body {
-  margin: 0;
-  padding: 0;
+body {  
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -117,21 +117,39 @@ footer {
 
 #game-container {
   border: 2px solid greenyellow;
+  border-radius: 3px;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: 2fr 1fr;
+  grid-auto-rows: minmax(200px, auto);
+  column-gap: 5px;
+  row-gap: 5px;
+  padding: 5px;
+  grid-template-areas: 
+  "image text"
+  "image buttons"
+  "image state";
 }
 
-#option-container {
-  display: grid;
-  grid-template-rows: repeat(2, auto);
+.grid {
+  background-color: coral;
+  border: 1px solid orange;
+  border-radius: 3px;
+}
 
+.image-container {
+  grid-area: image;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
 }
 
 #images {
-  height: 696px;
-  width: 680px;
-  max-width: 90%;
   background-repeat: no-repeat;
+}
+
+.text-container {
+  grid-area: text;
+  grid-column: 2;
+  grid-row: 1 / 2;
 }
 
 #text {
@@ -140,38 +158,46 @@ footer {
   width: 458px;
 }
 
-#buttonBox {
+.btn-container {
+  grid-area: buttons;
   display: grid;
-  grid-template-rows: repeat(2, auto);
+  grid-column: 2;
+  grid-row: 2 / 3;
+  grid-template-columns: subgrid;
+  column-gap: 5px;
+  row-gap: 5px;
+  padding: 5px;
+}
+
+#buttonBox {
   background-color: white;
-  grid-gap: 10px 20px;
 
 }
 
 .btn {
-  background-color: green;
-  width: 300px;
+  border: 2px solid #ffec99;
   border-radius: 5px;
-  color: white;
-  
-
+  background-color: #fff9db;
+  padding: 1em;
 }
 
-#fuel{
-  display: grid;
-  grid-template-rows: repeat(2, auto);
-
+.state-container {
+  grid-area: state;
 }
+
 
 .state-text {
   color: white;
 }
 
 .state-bar{
-  width: auto;
-  height: 10px;
-  background-color: white;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
+
+
 
 
 
@@ -207,12 +233,13 @@ footer {
      .nav-links .footer-links {
        flex-wrap: wrap;
        justify-content: space-between;
-     } 
+     }
+     
+     .game-container {
+      display: flex;
+      flex-direction: column;
+  }
 
-     #images {
-      max-width: 50%;
-      
-    }
 }
   
 

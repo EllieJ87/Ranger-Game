@@ -41,7 +41,7 @@ var changeText = function(words) {
 
 // this takes the image link and puts it in the proper format, sending it to the html
 var changeImage = function(img) {
-    image.style.backgroundImage = "url(" + img + ")"; // 27/09/21 updated image url
+    image.innerHTML = "<img src=" + img + ">"; // 27/09/21 updated image url
 }; 
 
 // this looks at the numbe of options we have set and creates enough buttons

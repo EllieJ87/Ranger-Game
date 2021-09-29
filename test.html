@@ -22,30 +22,27 @@
 <body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="" style="background-image: url('assets/images/background.jpg');">
 
     <header class="container-fluid">
-        <span class="header-text"">Ranger Game</span>
+        <span class="header-text">Ranger Game</span>
         <nav class="nav-links">
             <i class="fa fa-volume-off" aria-hidden="true"></i>
             <i class="fa fa-home" aria-hidden="true" data-toggle="modal" data-target="#modal-home"></i>
             <i class="fa fa-envelope-o" aria-hidden="true"></i>            
         </nav>
     </header>
-
-
   
   <div class="container">
     
     <div id="game-container">
-      <div id="images" style="border: 1px solid aquamarine;"></div>
-      <div id="option-container">
-        <div id="text" style="border: 1px solid bisque;"></div>
-        <div id="buttonBox" style="border: 1px solid cyan;"></div>
-        <div id="fuel" style="border: 1px solid pink;">
+      <div id="images" class="grid image-container"></div>  
+        <div id="text" class="grid text-container"></div>
+        <div id="buttonBox" class="grid btn-container"></div>
+        <div id="fuel" class="grid state-container">
         <p class="state-text">Fuel</p>
         <div id="fuel-gauge" class="state-bar"></div>
         <p class="state-text">Missiles</p>
         <div id="missile-gauge" class="state-bar"></div>
       </div>
-      </div>      
+           
     </div>
   
   </div>
