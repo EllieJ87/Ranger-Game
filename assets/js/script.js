@@ -15,7 +15,7 @@ const text = document.getElementById("text");
 const buttonBox = document.getElementById('buttonBox');
 const input = document.getElementById('input');
 const startBtn = document.getElementById('start-btn');
-const modal = document.getElementById('test');
+const modal = document.getElementById('game-container');
 const test = document.getElementById('good-bye-text');
 
 // this is the variable for the player's name
@@ -48,7 +48,7 @@ var changeImage = function(img) {
 var changeButtons = function(buttonList) {
     buttonBox.innerHTML = "";
     for (var i = 0; i < buttonList.length; i++) {
-        buttonBox.innerHTML += "<button onClick=" + buttonList[i][1] + ">" 
+        buttonBox.innerHTML += "<button class='btn' onClick=" + buttonList[i][1] + ">" 
         + buttonList[i][0] + "</button>";
     };
 };
@@ -57,7 +57,7 @@ var changeButtons = function(buttonList) {
 // import this text from a separte doc
 // Added a home element button (change to icon) removes modal and displays generic text
 function removeHomeModal() {
-    var myobj2 = document.getElementById("test");
+    var myobj2 = document.getElementById("game-container");
     myobj2.remove();
     test.innerHTML = `${playersName}` 
     + `
