@@ -30,21 +30,27 @@
         </nav>
     </header>
   
-  <div class="container">
-    
-    <div id="game-container">
-      <div id="images" class="grid image-container"></div>  
-        <div id="text" class="grid text-container"></div>
-        <div id="buttonBox" class="grid btn-container"></div>
-        <div id="fuel" class="grid state-container">
-        <p class="state-text">Fuel</p>
-        <div id="fuel-gauge" class="state-bar"></div>
-        <p class="state-text">Missiles</p>
-        <div id="missile-gauge" class="state-bar"></div>
+    <div class="container">
+      <div id="game-container" class="row">
+          <div id="images" class="col-md-6 image-container">IMAGE</div>
+          <div class="col-md-6 grid">
+              <!--Column right with nested rows and columns-->
+              <div class="row">
+                  <div id="text" class="col-12 text-container">Text</div>
+              </div>
+              <div class="row">
+                  <div id="buttonBox" class="col-12 btn-container"></div>
+              </div>
+              <div class="row">
+                  <div id="fuel" class="col-12 state-container">
+                      <span class="state-text">Fuel</span>
+                      <div id="fuel-gauge" class="state-bar"></div>
+                      <span class="state-text">Missiles</span>
+                      <div id="missile-gauge" class="state-bar"></div>
+                  </div>
+              </div>
+          </div>
       </div>
-           
-    </div>
-  
   </div>
 
   <footer class="container-fluid fixed-bottom">

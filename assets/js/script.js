@@ -110,7 +110,7 @@ var advanceTo = function(s) {
 // this is the object that holds each scenario
 const scenario = {
     one: {
-        image: 'assets/images/senku.jpg',  
+        image: 'assets/images/image-1.jpg',  
         text: "Your name yanks at the leash. You hear dogs barking and see an old abandoned house. Strangely, the door is wide open. What do you want to do?",
         buttons: [
             ["Turn and run", "advanceTo(scenario.three)"],
@@ -119,7 +119,7 @@ const scenario = {
     },
 
     two: {
-        image: 'assets/images/tanjiro.jpg',
+        image: 'assets/images/image-2.jpg',
         text: "Your name yanks at the leash. You hear dogs barking and see an old abandoned house. Strangely, the door is wide open. What do you want to do?",
         buttons: [
             ["Turn and run", "advanceTo(scenario.three)"],
@@ -128,7 +128,7 @@ const scenario = {
     },
 
     three: {
-        image: 'assets/images/senku.jpg',
+        image: 'assets/images/image-3.jpg',
         text: "Scenario 2",
         buttons: [
             ["continue", "advanceTo(scenario.four)"]
@@ -136,7 +136,7 @@ const scenario = {
     },
 
     four: {
-        image: 'assets/images/tanjiro.jpg',
+        image: 'assets/images/image-4.jpg',
         text: "Scenario 3",
         buttons: [
             ["Follow your Dog Downstairs", "advanceTo(scenario.five)"],
@@ -145,7 +145,7 @@ const scenario = {
     },
 
     five: {
-        image: 'assets/images/senku.jpg',
+        image: 'assets/images/image-5.jpg',
         text: "TO BE CONTINUED...",
     },
 
