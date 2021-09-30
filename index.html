@@ -29,66 +29,80 @@
         <i class="fa fa-envelope-o" aria-hidden="true"></i>            
     </nav>
 </header>
-      
-      <!-- Modal -->
-      <!-- Added a Home modal box 26-09-21-->
-      <div class="modal fade" id="modal-home" tabindex="-1" role="dialog" aria-labelledby="modal-home" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5>Return Home?</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="removeHomeModal()">Close</button>
-            </div>
-          </div>
+
+<!-- Modal -->
+<!-- Added a Home modal box 26-09-21-->
+<div class="modal fade" id="modal-home" tabindex="-1" role="dialog" aria-labelledby="modal-home" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Return Home?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="removeHomeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  
+  <div id="game-container" class="row">
+    <div id="images" class="col-md-6 image-container">IMAGE</div>
+    <div class="col-md-6 grid">
+      <!--Column right with nested rows and columns-->
+      <div class="row">
+        <div id="text" class="col-12 text-container">Text</div>
+      </div>
+      <div class="row">
+        <div id="buttonBox" class="col-12 btn-container"></div>
+      </div>
+      <div class="row">
+        <div id="fuel" class="col-12 state-container">
+          <span class="state-text">Fuel</span>
+          <div id="fuel-gauge" class="state-bar"></div>
+          <span class="state-text">Missiles</span>
+          <div id="missile-gauge" class="state-bar"></div>
         </div>
       </div>
- 
-
-  <div class="container" style="border: 1px solid black; margin-top: 50px;">
-
-    <div id="game-container">
-      <div id="images"></div>
-      <div id="text"></div>
-      <div id="buttonBox"></div>
     </div>
-
-    <div id="good-bye-text"></div>
-    
-    <!-- modal -->
-    <div class="modal fade" id="modal-box" tabindex="-1" role="dialog" aria-labelledby="modal-box">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-
-          <div class="modal-body">
-            <h4>Welcome Aboard</h4>
-            <p>CALLING ALL RANGERS!<br>
+  </div>
+  
+  <div id="good-bye-text"></div>
+  
+  <!-- modal -->
+  <div class="modal fade" id="modal-box" tabindex="-1" role="dialog" aria-labelledby="modal-box">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h4>Welcome Aboard</h4>
+          <p>CALLING ALL RANGERS!<br>
             I hope this message finds you well?<br>
             The planet Pokitaru needs your help!<br>
             Are you willing to change your coordinates to help save Pokitaru?<br>
-            Are you ready to descend?</p>
-            <input id="input" type="text" placeholder="Ranger's name..."><!-- 23/09/21 updated placeholder-->
-            <button id="start-btn" class="btn btn-dark" data-dismiss="modal" onclick="removeModal()">Descend</button>
-          </div>
+            Are you ready to descend?
+          </p>
+          <input id="input" type="text" placeholder="Ranger's name..."><!-- 23/09/21 updated placeholder-->
+          <button id="start-btn" class="btn btn-dark" data-dismiss="modal" onclick="removeModal()">Descend</button>
         </div>
       </div>
-    </div> 
+    </div>
+  </div> 
   
-  </div>
+</div><!--container close tag-->
 
-  <footer class="container-fluid fixed-bottom">
-    <span class="footer-text">Copyright by Ellie Judge @2021</span>    
-    <div class="footer-links">
-      <a class="fa fa-question" aria-hidden="true"></a>
-      <a href="https://www.linkedin.com/in/ellie-judge-45b00689/" class="fa fa-linkedin-square" aria-hidden="true" target="_blank"></a>
-      <a href="https://github.com/EllieJ87" class="fa fa-github" aria-hidden="true" target="_blank"></a> 
+<footer class="container-fluid fixed-bottom">
+  <span class="footer-text">Copyright by Ellie Judge @2021</span>    
+  <div class="footer-links">
+    <a class="fa fa-question" aria-hidden="true"></a>
+    <a href="https://www.linkedin.com/in/ellie-judge-45b00689/" class="fa fa-linkedin-square" aria-hidden="true" target="_blank"></a>
+    <a href="https://github.com/EllieJ87" class="fa fa-github" aria-hidden="true" target="_blank"></a> 
   </div>
 </footer>
 
