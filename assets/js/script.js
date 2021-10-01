@@ -34,6 +34,26 @@ function removeModal() {
     advanceTo(scenario.one)   
 } 
 
+// To display the how to play overlay
+function helpOn() {
+    document.getElementById("help-overlay").style.display = "block";
+}
+
+// To dismiss the how to play overlay
+function helpOff() {
+    document.getElementById("help-overlay").style.display = "none";
+}
+
+// To display the contact overlay
+function contactOn() {
+    document.getElementById("contact-overlay").style.display = "block";
+}
+
+// To dismiss the contact overlay
+function contactOff() {
+    document.getElementById("contact-overlay").style.display = "none";
+}
+
 // this changes the text and puts in the players name
 var changeText = function(words) {
     text.innerHTML = words.replace("Your name", playersName);
@@ -41,7 +61,7 @@ var changeText = function(words) {
 
 // this takes the image link and puts it in the proper format, sending it to the html
 var changeImage = function(img) {
-    image.innerHTML = "<img src=" + img + ">"; // 27/09/21 updated image url
+    image.innerHTML = "<img src=" + img + " class='character'>"; // 27/09/21 updated image url
 }; 
 
 // this looks at the numbe of options we have set and creates enough buttons

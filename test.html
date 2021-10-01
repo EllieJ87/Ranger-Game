@@ -21,7 +21,7 @@
 </head>
 <body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="" style="background-image: url('assets/images/background.jpg');">
 
-    <header class="container-fluid">
+    <header class="container-fluid fixed-top">
         <span class="header-text">Ranger Game</span>
         <nav class="nav-links">
             <i class="fa fa-volume-off" aria-hidden="true"></i>
@@ -31,29 +31,19 @@
     </header>
   
     <div class="container">
-
-      <div id="game-container" class="row">
-          <div id="images" class="col-md-6 image-container">IMAGE</div>
-          <div class="col-md-6 grid">
-              <!--Column right with nested rows and columns-->
-              <div class="row">
-                  <div id="text" class="col-12 text-container">Text</div>
-              </div>
-              <div class="row">
-                  <div id="buttonBox" class="col-12 btn-container"></div>
-              </div>
-              <div class="row">
-                  <div id="fuel" class="col-12 state-container">
-                      <span class="state-text">Fuel</span>
-                      <div id="fuel-gauge" class="state-bar"></div>
-                      <span class="state-text">Missiles</span>
-                      <div id="missile-gauge" class="state-bar"></div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      
-  </div>
+        
+        <div id="game-container" class="game">
+            <div id="images" class="image-container"></div>
+            <div id="text" class="text-container"></div>
+            <div id="buttonBox" class="btn-container"></div>
+            <div id="fuel" class="state-container">
+                <span class="state-text">Fuel</span>
+                <div id="fuel-gauge" class="state-bar"></div>
+                <span class="state-text">Missiles</span>
+                <div id="missile-gauge" class="state-bar"></div>
+            </div>
+        </div>
+    </div>
 
   <footer class="container-fluid fixed-bottom">
       <span class="footer-text">Copyright by Ellie Judge @2021</span>

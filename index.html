@@ -21,36 +21,64 @@
 </head>
 <body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="" style="background-image: url('assets/images/background.jpg');">
 
-  <header class="container-fluid">
-    <span class="header-text"">Ranger Game</span>
+  <header class="container-fluid fixed-top">
+    <span class="header-text">Ranger Game</span>
     <nav class="nav-links">
         <i class="fa fa-volume-off" aria-hidden="true"></i>
         <i class="fa fa-home" aria-hidden="true" data-toggle="modal" data-target="#modal-home"></i>
-        <i class="fa fa-envelope-o" aria-hidden="true"></i>            
+        <i class="fa fa-envelope-o" aria-hidden="true" onclick="contactOn()"></i>            
     </nav>
 </header>
+
+  <!-- Onload modal -->
+  <div class="modal fade" id="modal-box" tabindex="-1" role="dialog" aria-labelledby="modal-box">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div id="welcome-container" class="modal-body">
+          <div id="welcome-body">
+          <h4 id="welcome-header">Welcome Aboard</h4>
+          <br>
+          <p id="welcome-text">CALLING ALL RANGERS!<br><br>
+            I hope this message finds you well?<br><br>
+            The planet Pokitaru needs your help!<br><br>
+            Are you willing to change your coordinates to help save Pokitaru?<br><br>
+            Are you ready to descend?
+          </p>
+          <input id="input" type="text" placeholder="Ranger's name..."><!-- 23/09/21 updated placeholder--><br>
+          <button id="start-btn" data-dismiss="modal" onclick="removeModal()">Descend</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <!-- Modal -->
 <!-- Added a Home modal box 26-09-21-->
 <div class="modal fade" id="modal-home" tabindex="-1" role="dialog" aria-labelledby="modal-home" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5>Return Home?</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="removeHomeModal()">Close</button>
+      <div id="home-container">
+        <div id="home-body">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5 id="home-header">Return Home?</h5>
+            <br>
+            <p id="home-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+          <div class="modal-footer">
+            <button id="home-btn" type="button" class="btn btn-secondary" data-dismiss="modal" onclick="removeHomeModal()">Home</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- Game Play container -->
 <div class="container">
   
   <div id="game-container" class="row">
@@ -76,31 +104,48 @@
   
   <div id="good-bye-text"></div>
   
-  <!-- modal -->
-  <div class="modal fade" id="modal-box" tabindex="-1" role="dialog" aria-labelledby="modal-box">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-          <h4>Welcome Aboard</h4>
-          <p>CALLING ALL RANGERS!<br>
-            I hope this message finds you well?<br>
-            The planet Pokitaru needs your help!<br>
-            Are you willing to change your coordinates to help save Pokitaru?<br>
-            Are you ready to descend?
-          </p>
-          <input id="input" type="text" placeholder="Ranger's name..."><!-- 23/09/21 updated placeholder-->
-          <button id="start-btn" class="btn btn-dark" data-dismiss="modal" onclick="removeModal()">Descend</button>
-        </div>
+  <!-- How to play overlay --> 
+  <div id="help-overlay" onclick="helpOff()">
+    <div id="help-text">
+      <div id="help-text-container">
+        <h2 id="help-heading">How to Play</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
+        <button id="ready" onclick="helpOff()">Ready?</button>
       </div>
     </div>
-  </div> 
-  
+  </div>
+
+  <!-- Contact overlay --> 
+  <div id="contact-overlay">
+    <div id="contact-text">
+      <div id="contact-text-container">
+        <a class="closebtn" onclick="contactOff()">&times;</a>  
+        <h2 id="contact-heading">Contact Me</h2>
+        
+        <form action="/action_page.php">
+          <label for="pname">Player's Name</label><br><br>
+          <input type="text" name="fname" class="form-control" id="fname"><br><br>
+          <label for="ename">Email</label><br><br>
+          <input type="email" name="email" class="form-control" id="inputEmail"><br><br>
+          <label for="textarea">Your Thoughts?</label><br><br> 
+          <textarea type="text" name="message" class="form-control" id="textarea" style="height:200px"></textarea><br><br> 
+        </form> 
+        
+        <button id="submit">Submit</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+  </div>
+    
 </div><!--container close tag-->
 
 <footer class="container-fluid fixed-bottom">
   <span class="footer-text">Copyright by Ellie Judge @2021</span>    
   <div class="footer-links">
-    <a class="fa fa-question" aria-hidden="true"></a>
+    <a class="fa fa-question" aria-hidden="true" onclick="helpOn()"></a>
     <a href="https://www.linkedin.com/in/ellie-judge-45b00689/" class="fa fa-linkedin-square" aria-hidden="true" target="_blank"></a>
     <a href="https://github.com/EllieJ87" class="fa fa-github" aria-hidden="true" target="_blank"></a> 
   </div>
