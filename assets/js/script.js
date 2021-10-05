@@ -61,7 +61,7 @@ var changeText = function(words) {
 
 // this takes the image link and puts it in the proper format, sending it to the html
 var changeImage = function(img) {
-    image.innerHTML = "<img src=" + img + " class='character'>"; // 27/09/21 updated image url
+    images.style.backgroundImage = "url(" + img + ")"; // 27/09/21 updated image url
 }; 
 
 // this looks at the numbe of options we have set and creates enough buttons
@@ -130,7 +130,7 @@ var advanceTo = function(s) {
 // this is the object that holds each scenario
 const scenario = {
     one: {
-        image: 'assets/images/image-1.jpg',  
+        image: 'assets/images/senku.jpg',  
         text: "Your name yanks at the leash. You hear dogs barking and see an old abandoned house. Strangely, the door is wide open. What do you want to do?",
         buttons: [
             ["Turn and run", "advanceTo(scenario.three)"],

@@ -4,20 +4,18 @@
 /*font-family: 'Sarpanch', sans-serif;*/
 
 * {
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 body {
   padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
+  margin: 0 auto;
+  color: white;
+  width: 100%;
+  height: 100%;
 }
 
-header {
+/* header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,13 +41,17 @@ header {
 .nav-links i {
   padding: 20px;
   font-size: 30px;
-}
+} */
 
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%; 
+  padding: 15px 10%;
+  margin: 0 auto; 
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 
 .footer-text {
@@ -74,6 +76,12 @@ footer {
   order: 1;
 }
 
+.footer-links i {
+  padding: 20px;
+  font-size: 30px;
+  order: 1;
+}
+
 .fa {
   text-decoration: none;
 }
@@ -90,116 +98,109 @@ footer {
 
 .fa-envelope-o {
   color: #EEFC05;
-
 }
 
 .fa-question {
   color: #EEFC05;
-
 }
 
 .fa-linkedin-square {
   color: #F2F4F8;
-
 }
 
 .fa-github {
   color: #87186E;
 }
 
-.container {
-  width: auto;
-  max-width: 80%;
-  padding: 5px;
+.fa-rocket {
+  color: black;
 }
 
-.game {
-  background-color: navy;
-  border: 2px solid #EEFC05;
-  border-radius: 3px;
+.fa-crosshairs {
+  color: red;
+}
+
+#game-container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(200px, auto);
-  column-gap: 5px;
-  row-gap: 5px;
-  padding: 5px;
-  grid-template-areas: 
-  "image text"
-  "image button"
-  "image state";
+  width:100%;
+  max-width: 90rem;
+  padding: 5% 5%;
+  margin: 0 auto;
+  grid-gap: 10px;
+  grid-template-areas:
+  "main main main aside"
+  "main main main ."
+  "text-container text-container buttonBox buttonBox";
 }
 
-.image-container {
-  grid-area: image;
-  grid-column: 1 / 2;
-  grid-row: 1 / 4;
-  border: 2px solid #68E2A3;
-  border-radius: 3px;
-  background-color: white;
-}
-
-.character {
-  display: flex;
-  width: auto;
-  padding: 5px 5px;
-}
-
-.text-container {
-  grid-area: text;
-  grid-column: 2;
-  grid-row: 1 / 2;
-  background-color: #09183C;
-  border: 2px solid #D007A2;
-  border-radius: 3px;
-  /*text-align: justify;*/
-  font-family: 'Sarpanch', sans-serif;
-  color: #F2F4F8;
-  font-size: 1.5em;
-  line-height: 1.5em;
-}
-
-.btn-container {
-  grid-area: button;
-  display: grid;
-  grid-column: 2;
-  grid-row: 2 / 3;
-  grid-template-columns: subgrid;
-  column-gap: 5px;
-  row-gap: 5px;
-  padding: 5px;
+#game-container > * {
+  border: 3px solid white;
   background-color: #68E2A3;
-  border: 2px solid #87186E;
-  border-radius: 3px;
-}    
-
-.btn {
-  width: 550px;
-  height: 70px;
-  padding: 1em;
-  background-color: #F2F4F8;
-  border-radius: 3px;
-  font-family: 'Sarpanch', sans-serif;
-  font-weight: bold;
-  color: #09183C ;
+  padding: 15px;
 }
 
-.state-container {
-  grid-area: state;
-  background-color: #EEFC05;
-  border: 2px solid #F2F4F8;
-  border-radius: 3px;
+main {
+  grid-area: main;
 }
 
-.state-text {
-  font-family: 'Sarpanch', sans-serif;
-  font-weight: bold;
-  color: #09183C;
+#text-container {
+  grid-area: text-container;
 }
 
-.state-bar {
-  padding: 1em;
-  border-radius: 3px;
-  background-color: #D007A2;
+#text {
+  font-size: 1em;
+}
+
+#buttonBox {
+  grid-area: buttonBox;
+}
+
+aside {
+  grid-area: aside;
+}
+
+#images {
+  /* background-image: url("images/senku.jpg"); */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.nested {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.nested .btn {
+  border: 1px solid #fff;
+  padding: 20px;
+  margin: 0;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  justify-self: start;
+  align-items: start;
+}
+
+.stats div {
+  align-items: center;
+  text-align: center;
+}
+
+.ammo-bar {
+  background: #87186E;
+  color: #87186E;
+}
+
+.fuel-bar {
+  background: black;
+  color: black;
 }
 
 /* Welcome onLoad Modal */
@@ -313,6 +314,7 @@ button.close {
   cursor: pointer;
 }
 
+/* How to Play overlay */
 #help-overlay {
   position: fixed;
   display: none;
@@ -368,6 +370,7 @@ button.close {
   border: none;
 }
 
+/* Contact overlay */
 #contact-overlay {
   position: fixed;
   display: none;
@@ -469,39 +472,111 @@ button.close {
   cursor: pointer;
 }
 
-/*@media (min-width: 1200px) {
-  .container {
-    width: 1000px;
-  }
-}*/
+@media (max-width: 768px) {
 
-@media (max-width: 576px) {
+  #game-container {
+    grid-template-columns: 24.4% 0.1% 74.5%;
+    grid-auto-rows: minmax(90px, auto);
+    max-width: 90%;
+    grid-gap: 7px;
+    grid-template-areas:
+    "aside . main"
+    "aside . main"
+    "text-container text-container text-container"
+    "buttonBox buttonBox buttonBox";
+  }
   
-  header, footer {
+  #content > * {
+    padding: 7px;
+  }
+  
+  .stats {
+    grid-gap: 7px;
+    justify-self: end;
+    align-items: end;
+  }
+  
+  footer {
     flex-direction: column;
   }
   
-  .header-text .footer-text {
-    text-align: center
+  .footer-text {
+    text-align: center;
+    font-size: 0.7em;
   }
   
-  .nav-links .footer-links {
+  .footer-links {
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+
+  #game-container {
+    grid-auto-rows: minmax(60px, auto);
   }
 
-  .game-container {
-    display: flex;
-    flex-direction: column;
-} 
-  
-  #images {
-    width: 50%;
+  #text {
+    font-size: 0.9em;
+    line-height: 1.5em;
+
   }
+  
+  footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .footer-links a {
+    padding: 10px;
+    font-size: 25px;
+  }
+  
+  .footer-links i {
+    padding: 10px;
+    font-size: 25px;
+  }
+}
+
+/*  ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px */
+@media (min-width: 280px) and (max-width: 823px) and (orientation: landscape) {
+  #game-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr ;
+    grid-auto-rows: minmax(80px, auto);
+    max-width: 90%;
+    padding: 5% 5%;
+    margin: 0 auto;
+    grid-gap: 7px;
+    grid-template-areas:
+    "main text-container aside"
+    "buttonBox buttonBox . ";
+  }
+
+  #text {
+    font-size: 0.9em;
+
+  }
+
+  .stats {
+    grid-gap: 7px;
+    justify-self: start;
+    align-items: start;
+  }
+  
+  footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+}
 
           
 
-}
+
 
   
 

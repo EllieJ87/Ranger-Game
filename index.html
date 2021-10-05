@@ -21,15 +21,6 @@
 </head>
 <body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="" style="background-image: url('assets/images/background.jpg');">
 
-  <header class="container-fluid fixed-top">
-    <span class="header-text">Ranger Game</span>
-    <nav class="nav-links">
-        <i class="fa fa-volume-off" aria-hidden="true"></i>
-        <i class="fa fa-home" aria-hidden="true" data-toggle="modal" data-target="#modal-home"></i>
-        <i class="fa fa-envelope-o" aria-hidden="true" onclick="contactOn()"></i>            
-    </nav>
-</header>
-
   <!-- Onload modal -->
   <div class="modal fade" id="modal-box" tabindex="-1" role="dialog" aria-labelledby="modal-box">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -80,27 +71,41 @@
 
 <!-- Game Play container -->
 <div class="container">
-  
-  <div id="game-container" class="row">
-    <div id="images" class="col-md-6 image-container">IMAGE</div>
-    <div class="col-md-6 grid">
-      <!--Column right with nested rows and columns-->
-      <div class="row">
-        <div id="text" class="col-12 text-container">Text</div>
+    
+  <div id="game-container">
+    
+    <main id="images"></main>
+    
+    <aside class="stats">
+      
+      <div class="ammo">
+        <i class="fa fa-crosshairs" aria-hidden="true"></i>
+        <div class="ammo-bar">1</div>
+        <div class="ammo-bar">2</div>
+        <div class="ammo-bar">3</div>
+        <div class="ammo-bar">4</div>
+        <div class="ammo-bar">5</div>
+        <div class="ammo-bar">6</div>
       </div>
-      <div class="row">
-        <div id="buttonBox" class="col-12 btn-container"></div>
+      
+      <div class="fuel">
+        <i class="fa fa-rocket" aria-hidden="true"></i>
+        <div class="fuel-bar">1</div>
+        <div class="fuel-bar">2</div>
+        <div class="fuel-bar">3</div>
+        <div class="fuel-bar">4</div>
+        <div class="fuel-bar">5</div>
+        <div class="fuel-bar">6</div>
       </div>
-      <div class="row">
-        <div id="fuel" class="col-12 state-container">
-          <span class="state-text">Fuel</span>
-          <div id="fuel-gauge" class="state-bar"></div>
-          <span class="state-text">Missiles</span>
-          <div id="missile-gauge" class="state-bar"></div>
-        </div>
-      </div>
-    </div>
+    </aside>
+    
+    <section id="text-container">
+      <p id="text"></p>
+    </section>
+    
+    <section id="buttonBox" class="nested btn"></section>
   </div>
+</div>
   
   <div id="good-bye-text"></div>
   
@@ -142,9 +147,14 @@
     
 </div><!--container close tag-->
 
-<footer class="container-fluid fixed-bottom">
-  <span class="footer-text">Copyright by Ellie Judge @2021</span>    
+<footer class="container-fluid">
+    
+  <span class="footer-text"> Ranger Game &copy;EJ@2021</span>
+  
   <div class="footer-links">
+    <i class="fa fa-volume-off" aria-hidden="true"></i>
+    <i class="fa fa-home" aria-hidden="true" data-toggle="modal" data-target="#modal-home"></i>
+    <i class="fa fa-envelope-o" aria-hidden="true" onclick="contactOn()"></i>
     <a class="fa fa-question" aria-hidden="true" onclick="helpOn()"></a>
     <a href="https://www.linkedin.com/in/ellie-judge-45b00689/" class="fa fa-linkedin-square" aria-hidden="true" target="_blank"></a>
     <a href="https://github.com/EllieJ87" class="fa fa-github" aria-hidden="true" target="_blank"></a> 
