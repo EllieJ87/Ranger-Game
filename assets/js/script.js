@@ -35,7 +35,7 @@ function removeModal() {
 } 
 
 // To display the how to play overlay
-function helpOn() {
+/*function helpOn() {
     document.getElementById("help-overlay").style.display = "block";
 }
 
@@ -52,7 +52,7 @@ function contactOn() {
 // To dismiss the contact overlay
 function contactOff() {
     document.getElementById("contact-overlay").style.display = "none";
-}
+}*/
 
 // this changes the text and puts in the players name
 var changeText = function(words) {
@@ -81,7 +81,7 @@ function removeHomeModal() {
     myobj2.remove();
     test.innerHTML = `${playersName}` 
     + `
-    <p>Bacon ipsum dolor amet boudin pastrami shankle ham fatback
+    <div class="end-container"><p class="end-text">Bacon ipsum dolor amet boudin pastrami shankle ham fatback
     pork. Short ribs ham beef, filet mignon ball tip sirloin
     shankle t-bone drumstick. Ground round drumstick pancetta
     fatback alcatra.
@@ -109,7 +109,7 @@ function removeHomeModal() {
     `
     + "<br></br>" 
     // added a font awesome icon with a refresh page browser element
-    + '<a onclick="setTimeout(function() { location.reload(true); });"><i class="fa fa-minus-circle center"></i></a>';
+    + '<a onclick="setTimeout(function() { location.reload(true); });"><i class="fa fa-minus-circle"></i></a></div>';
     // Generic text about the failure of not saving the planet
     // Breaks added to text    
 }
@@ -130,7 +130,7 @@ var advanceTo = function(s) {
 // this is the object that holds each scenario
 const scenario = {
     one: {
-        image: 'assets/images/senku.jpg',  
+        image: 'assets/images/image-4.jpg',  
         text: "Your name yanks at the leash. You hear dogs barking and see an old abandoned house. Strangely, the door is wide open. What do you want to do?",
         buttons: [
             ["Turn and run", "advanceTo(scenario.three)"],
