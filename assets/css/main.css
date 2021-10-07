@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sarpanch&display=swap');
 
-/* box-shadow:inset 0 0 .5rem 0 var(--yellow),0 0 1rem 0 var(--yellow); */
-
 :root {
   --navy:#09183C;
   --white:#F2F4F8;
@@ -217,6 +215,35 @@ footer {
 
 .fa-crosshairs {
   color: #A01306;
+}
+
+/* END OF GAME ICON POSITION */
+.fa-refresh {
+  font-size: 40px;
+  color: var(--aqua);
+  cursor: pointer;
+}
+
+.fa-refresh:hover {
+  color: var(--magenta);
+  font-size: 50px;
+  text-shadow: 0 0 15px rgba(238, 252, 5, 0.8);
+  animation: rotate 1s, increase 1s; 
+  -webkit-animation: rotate 1s, increase 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+
+  to {
+      transform: rotate(360deg);
+  }
 }
 
 /* ------ MAIN GAME CONTAINER ------ */
@@ -827,14 +854,10 @@ label {
   text-align: center;
   align-self: center;
   font-size: 1em;
-  font-family: var(--font);
-}
-
-/* END OF GAME ICON POSITION */
-.fa-minus-circle {
-  font-size: 100px;
+  font-family: var(--head);
   color: var(--white);
-  cursor: pointer;
+  letter-spacing: 0.1em;
+  padding-bottom: 20px;
 }
 
 /* ------ MEDIA QUERIES ------ */
@@ -843,13 +866,13 @@ label {
 
   /* MAIN GAME CONTAINER */
   #game-container {
-    grid-template-columns: 24.4% 0.1% 74.5%;
+    grid-template-columns: 2fr 1fr auto ;
     grid-auto-rows: minmax(90px, auto);
-    max-width: 90%;
+    max-width: 95%;
     grid-gap: 7px;
     grid-template-areas:
-    "stats . image"
-    "stats . image"
+    "image stats ."
+    "image stats ."
     "text-container text-container text-container"
     "buttonBox buttonBox buttonBox";
   }
@@ -887,6 +910,15 @@ label {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0;
+  }
+
+  /* ------ END OF GAME & RETURN HOME END CONTAINER ------ */
+  .end-container {
+    padding: 5% 10px;
+  }
+
+  .end-text {
+    font-size: 0.8em;
   }
 }
 
@@ -953,10 +985,9 @@ label {
   }
   
   #ready {
-    width: 125px;
+    width: 130px;
     height: 40px;
-    font-size: 1.2em;
-    line-height: 20px;
+    font-size: 1em;
   }
   
   /* ------ CONTACT FORM ------ */
@@ -982,6 +1013,15 @@ label {
     width: 125px;
     height: 40px;
     font-size: 1em;
+  }
+
+  /* END OF GAME ICON POSITION */
+  .fa-refresh {
+    font-size: 30px;
+  }
+
+  .fa-refresh:hover {
+    font-size: 35px;
   }
 }
 
@@ -1082,6 +1122,30 @@ label {
     padding: 10px;
     font-size: 25px;
   }
+  
+  .fa-volume-off:hover {
+    font-size: 30px;
+  }
+  
+  .fa-home:hover {
+    font-size: 30px;
+  }
+  
+  .fa-envelope-o:hover {
+    font-size: 30px;
+  }
+  
+  .fa-question:hover {
+    font-size: 30px;
+  }
+  
+  .fa-linkedin-square:hover {
+    font-size: 30px;
+  }
+  
+  .fa-github:hover {
+    font-size: 30px;
+  }
 
 }
 
@@ -1091,15 +1155,15 @@ label {
   /* MAIN GAME CONTAINER */
   #game-container {
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr ;
-    grid-auto-rows: minmax(80px, auto);
+    grid-template-columns: 1fr 1fr auto ;
+    grid-auto-rows: minmax(60px, auto);
     max-width: 90%;
     padding: 5% 5%;
     margin: 0 auto;
     grid-gap: 7px;
     grid-template-areas:
-    "image text-container stats"
-    "buttonBox buttonBox . ";
+    "image text-container text-container "
+    "buttonBox buttonBox stats";
   }
 
   #text {

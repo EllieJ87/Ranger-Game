@@ -34,26 +34,6 @@ function removeModal() {
     advanceTo(scenario.one)   
 } 
 
-// To display the how to play overlay
-/*function helpOn() {
-    document.getElementById("help-overlay").style.display = "block";
-}
-
-// To dismiss the how to play overlay
-function helpOff() {
-    document.getElementById("help-overlay").style.display = "none";
-}
-
-// To display the contact overlay
-function contactOn() {
-    document.getElementById("contact-overlay").style.display = "block";
-}
-
-// To dismiss the contact overlay
-function contactOff() {
-    document.getElementById("contact-overlay").style.display = "none";
-}*/
-
 // this changes the text and puts in the players name
 var changeText = function(words) {
     text.innerHTML = words.replace("Your name", playersName);
@@ -101,15 +81,8 @@ function removeHomeModal() {
     fatback alcatra.
     `
     + "<br></br>" 
-    + `
-    Bacon ipsum dolor amet boudin pastrami shankle ham fatback
-    pork. Short ribs ham beef, filet mignon ball tip sirloin
-    shankle t-bone drumstick. Ground round drumstick pancetta
-    fatback alcatra.</p>
-    `
-    + "<br></br>" 
     // added a font awesome icon with a refresh page browser element
-    + '<a onclick="setTimeout(function() { location.reload(true); });"><i class="fa fa-minus-circle"></i></a></div>';
+    + '<a onclick="setTimeout(function() { location.reload(true); });"><i class="fa fa fa-refresh"></i></a></div>';
     // Generic text about the failure of not saving the planet
     // Breaks added to text    
 }
