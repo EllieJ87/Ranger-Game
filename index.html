@@ -21,7 +21,7 @@
 </head>
 <body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="" style="background-image: url('assets/images/background.jpg');">
 
-  <!-- Onload modal -->
+  <!-- ONLOAD WELCOME MODAL -->
   <div class="modal fade" id="modal-box" tabindex="-1" role="dialog" aria-labelledby="modal-box">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content welcome">
@@ -37,7 +37,7 @@
             </p>
             <form action="" id="input-container">
               <input id="input" type="text" placeholder="Ranger's name...">
-              <button id="start-btn" data-dismiss="modal" onclick="removeModal()">Descend</button>
+              <button id="start-btn" type="button"  data-dismiss="modal" onclick="removeModal()">Descend</button>
             </form>
           </div>
         </div>
@@ -45,7 +45,7 @@
     </div>
   </div>
 
-<!-- Modal -->
+<!-- RETURN HOME MODAL -->
 <div class="modal fade" id="modal-home" tabindex="-1" role="dialog" aria-labelledby="modal-home" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content home">
@@ -62,7 +62,7 @@
             <p id="home-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
           </div>
           <div class="modal-footer">
-            <button id="home-btn" type="button" class="btn btn-secondary" data-dismiss="modal" onclick="removeHomeModal()">Home</button>
+            <button id="home-btn" type="button" data-dismiss="modal" onclick="removeHomeModal()">Home</button>
           </div>
         </div>
       </div>
@@ -70,7 +70,65 @@
   </div>
 </div>
 
-<!-- Game Play container -->
+<!-- HOW TO PLAY MODAL --> 
+<div class="modal fade" id="modal-play" tabindex="-1" role="dialog" aria-labelledby="modal-play" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content play">
+      <div id="play-container">
+        <div id="play-body">
+          <div class="modal-header play-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="play-close">&times;</span>
+            </button>
+          </div>
+          <div class="play-body">
+            <h5 id="play-headText">How to Play</h5>
+            <br>
+            <p id="play-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+          <div class="modal-footer play-footer">
+            <button id="ready" type="button" data-dismiss="modal">Ready?</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT FORM MODAL --> 
+<div class="modal fade" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="modal-contact" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content contact">
+      <div id="contact-container">
+        <div id="contact-body">
+          <div class="modal-header contact-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="btn-contact">&times;</span>
+            </button>
+          </div>
+          <div class="contact-bodyText">
+            <h5 id="contact-headText">Contact Me</h5>
+            <br>
+            <form action="/action_page.php">
+              <label for="pname">Player's Name</label>
+              <input type="text" name="fname" class="form-control" id="fname" placeholder="Your name..." >
+              <label for="ename">Email</label>
+              <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Your Email...">
+              <label for="textarea">Your Thoughts?</label>
+              <textarea type="text" name="message" class="form-control textarea" id="textarea" style="height:200px" placeholder="Your Thoughts..."></textarea>
+            </form> 
+            <div class="modal-footer contact-footer">
+              <button id="submit"type="button" data-dismiss="modal">Submit</button>
+              <button id="reset"type="button" data-dismiss="modal">Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN GAME PLAY CONTAINER -->
 <div class="container">
     
   <div id="game-container">
@@ -106,103 +164,11 @@
     
     <section id="buttonBox" class="nested btn"></section>
   </div>
-</div>
-  
-  <div id="good-bye-text"></div>
-  
-  <!-- How to play overlay --> 
-  <!-- Modal -->
-<div class="modal fade" id="modal-play" tabindex="-1" role="dialog" aria-labelledby="modal-play" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content-play">
-      <div id="play-container">
-        <div id="play-body">
-          <div class="play-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true" class="play-close">&times;</span>
-            </button>
-          </div>
-          <div class="play-body">
-            <h5 id="play-headText">How to Play</h5>
-            <br>
-            <p id="play-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-          </div>
-          <div class="play-footer">
-            <button id="ready">Ready?</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-  <!--<div id="help-overlay" onclick="helpOff()">
-    <div id="help-text">
-      <div id="help-text-container">
-        <h2 id="help-heading">How to Play</h2>
-        <p class="help-body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div> <!-- container close tag-->
 
-        </p>
-        <button id="ready" onclick="helpOff()">Ready?</button>
-      </div>
-    </div>
-  </div>-->
-
-  <!-- Contact overlay --> 
-  <!-- Modal -->
-<div class="modal fade" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="modal-contact" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content-contact">
-      <div id="contact-container">
-        <div id="contact-body">
-          <div class="contact-header">
-            <button type="button" class="contact-close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true" class="btn-contact">&times;</span>
-            </button>
-          </div>
-          <div class="contact-body">
-            <h5 id="contact-headText">Contact Me</h5>
-            <br>
-            <form action="/action_page.php">
-              <label for="pname">Player's Name</label><br><br>
-              <input type="text" name="fname" class="form-control" id="fname"><br><br>
-              <label for="ename">Email</label><br><br>
-              <input type="email" name="email" class="form-control" id="inputEmail"><br><br>
-              <label for="textarea">Your Thoughts?</label><br><br> 
-              <textarea type="text" name="message" class="form-control" id="textarea" style="height:200px"></textarea><br><br> 
-            </form> 
-          <div class="contact-footer">
-            <button id="submit">Submit</button>
-            <button id="reset">Reset</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <!--<div id="contact-overlay">
-    <div id="contact-text">
-      <div id="contact-text-container">
-        <a class="closebtn" onclick="contactOff()">&times;</a>  
-        <h2 id="contact-heading">Contact Me</h2>
-        
-        <form action="/action_page.php">
-          <label for="pname">Player's Name</label><br><br>
-          <input type="text" name="fname" class="form-control" id="fname"><br><br>
-          <label for="ename">Email</label><br><br>
-          <input type="email" name="email" class="form-control" id="inputEmail"><br><br>
-          <label for="textarea">Your Thoughts?</label><br><br> 
-          <textarea type="text" name="message" class="form-control" id="textarea" style="height:200px"></textarea><br><br> 
-        </form> 
-        
-        <button id="submit">Submit</button>
-        <button id="reset">Reset</button>
-      </div>
-    </div>
-  </div>-->
-    
-</div><!--container close tag-->
+<!-- ENDING TEXT PLACEMENT -->
+<div id="good-bye-text"></div>
 
 <footer class="container-fluid">
     
@@ -217,7 +183,6 @@
     <a href="https://github.com/EllieJ87" class="fa fa-github" aria-hidden="true" target="_blank"></a> 
   </div>
 </footer>
-
   
 <!-- jQuery & Bootstrap.js CDNS files -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -231,7 +196,8 @@
   $(document).ready(function() {
       $("#modal-box").modal('show');
   });
-  // 23/09/21 prevents the user from dismissing the modal box when clicked outsidde
+
+  // 23/09/21 prevents the user from dismissing the modal box when clicked outside
   $('#modal-box').modal({
     backdrop: 'static',
     keyboard: false
