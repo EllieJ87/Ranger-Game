@@ -1,468 +1,344 @@
-# Ranger_Game Website
+Ranger Game Website
 
-Content
+This is a website that I created for my second milestone project.  My personal admiration for gaming and storytelling made this website possible.  
 
-## Showcase
+The concept for this game was influenced by the PS5 game Ratchet and Clank (disclaimer at the end), this was a huge game for me when I was younger.  I also had a lot of inspiration from text adventure gaming (some independent and some more mainstream gaming) 
 
-![GitHub Logo]()
+I wanted to create a fun and interactive text adventure game where the player could choose their own options and have a different ending depending on the choices that they had picked.
 
-A deployed version of my website can be found [here]()
-This domain will allow you to access Ranger_game website, which I have completed as part of the Code Institute Milestone 2 Project.
+The main narrator guides your through the journey, but it is up to you to have the final decision!
+Showcase
+![GitHub Logo](/screens/main.jpg)  //upload responsive image 
 
-This website is designed to be responsive on a range of devices and browsers, allowing access to anyone that is interested in my portfolio work.
+A deployed version of my website can be found [here]( https://elliej87.github.io/ellchan-anime/) // link final site here
 
+This domain will allow you to access Ranger Game website, which I have completed as part of the Code Institute Milestone 2 Project.
 Table of Contents
+1.	User Experience UX
+o	User Stories
+	As a new / first time user
+	Returning Visitor Goals
+	Frequent User Goals
+	User Customer Goals
+	Business Goals
+	Scope
+	Structure
+o	Design
+o	Imagery
+o	Wireframes
 
-1. User Experience UX
-    * User Stories
-      * As a new / first time user
-      * Returning Visitor Goals
-      * Frequent User Goals
-      * User Customer Goals
-      * Business Goals
-      * Scope
-      * Structure
-    * Design
-    * Imagery
-    * Wireframes
+2.	Features
+o	Existing-features
+o	Future-features
 
-2. Features
-    * Existing-features
-    * Future-features
+3.	Technologies and Languages Used
+o	Other Resources
 
-3. Technologies and Languages Used
-    * Other Resources
+4.	Testing
+o	User Stories
+o	Implementation
+o	Bugs
 
-4. Testing
-    * User stories
-    * Implementation
-    * Bugs    
+5.	Deployment
 
-5. Deployment
+6.	Credits
+o	Content
+o	Media
+o	Acknowledgments
 
-6. Credits
-    * Content
-    * Media
-    * Acknowledgments
-
-## User Experience UX
-
+UX (User Experience)
 My website is for current and potential anime, gaming or drawing fans, who are looking to gain more content and a full library of my work.  My website provides a full overhaul of varied works over the past years, along with links to my social media sites where they can follow me directly.
+User Stories
+As a text adventure game fan
 
-## User Stories
+-	I want to be taken on an adventure to see how the game unfolds
+-	I want to see what options and endings I can explore
+-	I want to experience that I am in charge of my decisions 
+-	I want to have images to help portray the experience and to bring depth and mood to the adventure
 
-As a new / first time user / potential customer I would like users to learn more about the work I have to offer, as well as easily understand the goals that this site is offering.
+As a user returning to the site
 
-* As a new / first time user / potential customer all content will be easy to navigate through in order that the user finds what they are looking for quickly, this will provide the user with a great friendly user experience and transform them into a returning and frequent user of the site.
-* As part of the new / first time user’s / potential customer's there will also be social media links so you can follow ellchan_anime and see their new posts, as well as provide another form of interaction to the user.
-* As a new / first time user / potential customer I would expect the questions that they would ask are:
+-	I want to be able to explore alternate decisions that were different from my first fun through
+-	I want to see all the options for the endings
 
-**What does this site have to offer me?**
+As a user who does not play text adventure games
 
-* How do I submit enquiries?
-* How do I follow and interact with the site and social media links?
+-	I want something that is easy to follow and engaging
+-	I want something where I don’t have to be interested in space to enjoy
+-	I want to have an adventure that is fun and interactive that will make me return again
+-	I want to have a ‘how to play’ button so the user can find more information on how to navigate and play the game 
 
-**Returning Visitor Goals**
+All users
 
-* As a returning user I would like to be able to see updated relevant content.
-* Enquire about future works and how to collaborate with the artist.
+-	I want the site to be easy navigable on both desktop and on mobile so I can pick this up where and when I can
+-	I want to have a home navigation which resets the game again
+-	I want the ability to turn the music / sound on and off when I choose
+-	I want the text adventure game to have a consistent and easily flow theme 
+-	I want each option to be separate rather than a long list 
+-	I want to be able to contact the site owner with feedback
+-	I want to be able to see and interact with them via social media
 
-As a returning user / customer I would expect the questions that they would ask are:
+Site Owner Goals
 
-* Is the content being refreshed / new content being added / updated?
-* Is the information relatable and understandable?
+-	As a site owner I want to bring a text adventure game experience that had multiple different endings depending on the users choices
+-	As a site owner I want the site to be easy to navigate and a fun experience so users will share with their friends and return to the site again and again 
 
-**Frequent User Goals**
+Research
+To understand my text adventure game concept, I researched existing renditions of a simple text adventure game, which game me insight and help to be able to build and expanding with my own design and storytelling concept.
 
-* As a frequent user I would like to be able to see relevant updated content
-* Be able to engage with the artist site for collaborations and future works to work together on.
+Design
+Theme
+I have chosen a ‘space’ theme for my text adventure game.  The main inspiration came from playing ‘Ratchet and Clank’ and I wanted to create a concept that was a mission based by calling on ‘rangers’ that were within the area. 
 
-As a frequent user I would expect the questions that they would ask are:
+With the space theme I researched imagery / colours to help building the fonts, colours and imagery used.
+Fonts
+I have chosen Orbiton // with link to font site for the main title, copyright and main headers which are all in uppercase.  I wanted an easy-to-read font that also had a space feel to it.
 
-* Able to keep up-to-date with current and future collaborations.
-* Advise on future projects and skills.
+// image of the font In use
 
-I would expect the bulk of new, returning and frequent users are interested in anime / gaming and would like to have a collaboration or own a future custom piece of work for their own.
+For my main paragraph text, I have used Sarpanch // with link to font site I wanted to have a generic text that was still inspired by the space theme
+ 
+// image of the font In use 
+Colours
+I wanted my colours not to be dark, I wanted to have clear pop of colours to bring a brightness to the screen.  I did not want my main background to be black but rather a deep Navy colour.  
 
-**User/Customer Goals**
+My original concept was to have a main background colour with white text and one or two additional colours, however from research space imager of galaxies and Milky Way a lot of these colours have right yellows, greens, and purples. 
 
-The user/customer goals that ellchan_anime will offer to provide to users are:
+With this research I choose to have a deep navy with a grey/white, mainly for readability on text, this is then mixed with a deep and bright purple and two additional accent colours of a bright teal and yellow colour. 
 
-* A fun portfolio for them to inspire a creative flair, they can feedback to me with collaborations or work they wish to have from the site.
-* Able to contact me with bespoke ideas to be applied to their chosen media setting.
+These are the final chosen colour palette 
 
-**Business Goals**
+// Image of final chosen colours
 
-The business goals and outcomes that ellchan_anime will want to progress to is (future development in work):
+I feel these colours compliment each other and brings a very bright and engaging colours, in keeping with the users’ expectations.
+Imagery
+The background image was drawn and coloured by me it was inspired by my space imagery research.  I initially wanted it to be plain however I wanted something that would capture the space feel a bit more, so by the additional stars added to this feature nicely.  The colours used in the background are used from the colour palette so there are no additional colours been added. 
 
-* Able to buy and purchase the work on different medias (apparel range, canvas, prints).
-* Have a stock level system of what is available.
-* Implement a payment structure (through paypal or credit card)
-* Videos / media of work being carried out, through YouTube videos and Instagram.
-* Videos / media on how to draw / paint and tips and tricks on what I do when drawing, offering feedback.
-* Using Instagram to showcase offers and deals that will be linked directly to the site.
-* Videos / Media of the product being made and where it is being made.
+The main character inspiration was inspired by ‘Ratchet’ from ‘Ratchet and Clank’ this was researched and drawn together by me.  He has multiple expressions and moods this is to help the user become engaged with him more.
 
-## Scope
+Along with the main character there is some additional scenery to help the user see what they would expect to see when they are at that particular point at the game, this being either a meteor field, another space ship or distance space.
 
-I want my users to easily understand a beautiful range of my works and how I can inspire them to be artistic.  By using the social media links and the contact form the user can get in contact with me regarding any feedback or future works.
+All imagery that has been used has been drawn and developed by me this is because I wanted to not rely on other works as I had a clear vision on what I wanted each imagery to represent through this text adventure journey.
+Wireframes
+The wireframes were created using Adobe XD // link to Adobe XD  and the imager can be found in the wireframes //link to folder in pdf format. 
 
-## Structure
+Desktop View 
 
-I wanted to have an image loading page that is just one main image with a title and an enter button to take you to the site, this was to showcase a clean and simple load page to engage the user.
+-	Home (onload screen) // link 
+-	How to Play // link 
+-	Contact // link 
+-	Game Play // link
+-	Return Home // link
+-	End of Game // link
 
-The main page structure I wanted it to be clean and simple, with an easy flow to each page that was the same formation, to ensure this was easy for the user to navigate through each page link.  The navigation and title running along the top when scroll is to enable the user to always be able to navigate through the different pages when clicked, the navigation has a hover element to add more colour to the website.
+Mobile View 
 
-The opening welcome page is to give a brief description of the site and what is to offer this will help the user understand the site more.  The ‘Upcoming Works’ section is separate to the main page, so the user knows on what drawings are up and coming in the future.  When these are completed, I would like the page to be re-shifted and have a ‘New’ section and the top to draw attention to the user of the new designs.  The welcome information will be moved to a separate column, so the information is still there for new and returning customers.   
-
-For the portfolio pages my original intent was to have this as one page for the user to scroll through however I did not want to take up loading time with multiple images, with the current layout the user can easily go to their chosen category that they wish to view making this more a bite site page and easier to navigate and scroll through.
-
-Future ‘New’ projects will be put into a ‘new’ portfolio link, this will be placed at the top of the portfolio dropdown menu.
-
-The footer I wanted to be minimal and simple, so by just taking up one line for larger screens this then becomes stacked and central on smaller devices so the text does not become too small.  The social media sits alongside the disclaimer on the left f the screen.  This also has the same formation from larger to smaller screens by being stacked and all icons being central aligned and evenly spaced so these did not become too small on smaller screens.  The social media links also have a similar hover element as the navigation links and portfolio images.
-
-## Design
-
-The site is designed over four main navigation pages, with the portfolio having a drop-down element for the subcategories for each artwork category.  The links all work and connect to the relevant page of the project.
-
-The main design used for my website was to be an exceptionally clean flow, I felt I did not want anything in the layout that was too distracting that draws attention away from the artwork.  Making the main pages white with a pop of colours helps draw the eye and keeps the user engaged with the site.  
-
-The title font ‘Covered By Your Grace’ is inspired by a ‘modern’ Japanese accents I wanted something that looked hand drawn / sketched to help in keeping with the artistic feel of the site.  I originally wanted to design my own logo, but this would have been too tricking, as this would then have become either a vector image or main image which would have been difficult to amend and control the drop shadow, so I decided to use a pre-designed font for my title.  
-
-The main body text uses the Google font: ‘Lato’ this is the same used throughout the site, I wanted a text that had an easy flow with a clean look that came across professional in both a standard text and for the heading text.  There were two headers’ stylings used for the site; title for the page and a subtitle these both are the same font, but the shadow and text weights were amended to create the look and feel of the site.  I tried to not use the bold element too much as I did not want the text to become heavier and unreadable, and only had key elements / parts where I wanted this text to be emphasised.  
-
-The colour scheme was inspired mainly by the banner image which I drew especially for this site, taken from the anime ‘Boku no Hero Academia’ (My Hero Academia).  I originally wanted the site to be just black and white, like a traditional Manga (Japanese Comic) but decided that the site needed a bit of colour.  When drawing and creating the banner colours in Adobe Photoshop I used their actual hair colours to inspire the theme of the site.   I already have a soft spot for light turquoise colours, so this made it quite easy to make the banner and the drop shadow effects on the text to sit quite nicely together.  I feel by adding a pop of colour helps take the site to a more simplistic colour element by also adding a shadow and opacity elements makes the site have a softer feel.
-
-With the main title and navigation took precedence to be designed and colours this soft turquoise, I wanted the main headers and sub headers to be in a secondary colour to help different out the main title and navigation links.  The idea of using the red (from the other character’s colour in the banner) came from Taragh (my housemate); she noticed when looking at the full screen width the red colour in the banner and suggested to use a red colour to help tie into the overall theme more.  This was a good idea as I didn’t want to completely add a brand-new colour just for the headers, but at first it was quite difficult styling the red, (as I did not want this to be a ‘warning’ feel).  I tend to find styling red and black can be tricky to get the levels right, by also making it clearly visible for the user.  However, by applying a soft black and red shadow effects with white elements help add a softer and visible title that gives a contrast to the main site
-
-Before coding and developing my site, being a creative person for visuals I designed my first draft of how I wanted my website to look in Adobe XD this helped play around with the styling and overall layout.  By adding different navigation elements and positions I also did not want the site to take up the full width f the screen but be central.  You will be able to see how the navigation was vertical on the left side of the screen with additional imagery.  When developing the site, I felt the images were not adding anything and could potentially run into problems later with smaller screen navigation bars and drop-down menus making this too big.
-
-## Imagery
-
-* All imagery that is present on the website was drawn and developed by me.
-* These have been either hand sketched, coloured, digitally drawn and tweaked by me.
-* This site is a showcase for my work and all imagery has a copyright built into the file name, which was added using Adobe Photoshop.
-
-## Wireframes
-
-I developed done two wireframes for each page to show my consideration of how to make my website responsive. The links to the files are below:
-
-Desktop & Laptop | Tablet & Mobile
---------------------|------------------------
-[index.html](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/index-wireframe-xl-lg-md.pdf)|[index.html](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/index-wireframe-sm-xs.pdf)
-[home.html](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/home-wireframe-xl-lg-md.pdf)|[home.html](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/home-wireframe-sm-xs.pdf)
-[about.html](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/about-wireframe-xl-g-md.pdf)|[about.html](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/about-wireframe-sm-xs.pdf)
-[anime.html (portfolio pages)](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/portfolio-wireframe-xl-lg-md.pdf)|[anime.html (portfolio pages)](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/portfolio-wireframe-sm-xs.pdf)
-[contact.html](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/contact-wireframe-xl-lg-md.pdf)|[contact.html](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/contact-wireframe-sm-xs.pdf)
+-	Home (onload screen) // link 
+-	How to Play // link 
+-	Contact // link 
+-	Game Play // link
+-	Return Home // link
+-	End of Game // link
 
 There are some differences between my wireframes and my final website. This was due to visual preferences and what was able to work for a streamline user experience.
-
-**Changes to wireframes**
-
+Changes to wireframes
 The wireframes haven't been changes as there were minimal changes but the actual site that has been produced as the final outcome shows these changes.
 
 Some changes from the wireframes to the final live site were to resolve bugging issues layout did not work or there were issues to ensure the user full accessibility to the site.
-
-## Features
-
+Features
 This section is a brief highlight of features that this site contains, why they are the way they are as well as any future improvements or additions that would take this site from strength to strength.
 
-* All pages are to be visually appealing with the index page as the landing page and the home page giving users the information they require
-* The about section is separate so the user can navigate to this section if they wish to find more information about me
-* The website title and navigation bar running underneath the image banner which becomes sticky when the user scrolls, so this is always visible on the page
-* The nav bar allows users to quickly jump between the pages. The links all have a hover colour to show this is an active link
-* The navigation bar turns into a hamburger icon when the user is on smaller devices such as phones or tablets
-* The contact form allows users to get in contact with any questions they have like collaborations or general feedback for the site. (This will be linked to an API server and my own email address in the future)
-* This website is responsive on all browsers and devices regardless of viewport size
-* Elements are interactive to engage users to visit and interact with and engage with the site as intended
+Background
+
+-	Takes up the full width of the screen and is centred with no repeat.
+-	This is sized according to the size of the device 
 
-## Existing Features
+Header
 
-**index.html**
+-	Contains the main title of the game ‘Ranger Game’ on the left side of the page this then is centred and on top of the navigation links in smaller screens for easy readability 
+-	Contains the ‘Audio’, ‘Home’ and ‘Contact’ navigation links on the right side of the page and evenly spaced these and then stacked underneath the header title and are all centred to the width of the screen
+-	All navigation links have an animation and a colour change when the user hover over the icon, this is so the user knows they are interactive and have a purpose
+-	The header runs along the top and has no fill colour to make this easy to read and visual appealing
+-	The colour scheme is to be reflective of the colour palette and to be easy to see 
 
-* Main loading page for site, with a ‘Enter’ button this takes you directly to the main site through the home.html page where you will be able to find all the information and images dedicated to my site
+Footer
 
-**All Pages**
+-	Contains the copyright text, this is in the right side of the page this then is centred and on top of the navigation links in smaller screens for easy readability.
+-	The copyright is on the opposite side to the header text, with the font text being smaller than the main heading, this is due it needed to fit on smaller screen size, I also only wanted it to be slightly visible for the user 
+-	Contains the ‘Question’ (How to Play), ‘LinkedIn’ and ‘GitHub’ navigation links on the left side of the page and evenly spaced these and then stacked underneath the header title and are all centred to the width of the screen
+-	All navigation links have an animation and a colour change when the user hover over the icon, this is so the user knows they are interactive and have a purpose. 
+-	The ‘LinkedIn’ and ‘GitHub’ icons opens a new window to the relevant page 
+-	The footer runs along and is fixed at the bottom with no fill colour to make this easy to read and visual appealing
+-	The colour scheme is to be reflective of the colour palette and to be easy to see 
 
-* Navigation links - allows users to navigate around my website by clicking each navigation link, which redirects them to the relevant webpage
+Onload ‘Welcome Aboard’ - Modal 
 
-* Navigation links: dropdown – allows users to navigate my portfolio pages where these are section by category so the user can select which area they wish to view on
+-	Launches on the page load, this is central to the screen width and height.
+-	‘Welcome Aboard’ header text is central to the modal
+-	Main mission for the game is central of the modal
+-	Input field is at the bottom of the modal where the player can input the name they wish to proceed with in the game, this is then linked to the main script game text and will be referenced back to this input
+-	Input field has validation on so the user needs to have a value inputted otherwise the game will not be able to proceed
+-	The ‘Descend’ button is central to the modal and enables the player to proceed to play the game
+-	User is unable to click outside of the modal box to dismiss it 
 
-* Hamburger button – this is visible on smaller devices; this then has a drop-down menu of all the navigation links to all pages on my website.  The user can click the links to navigate to the relevant webpage
+Audio Icon
 
-* Social media links - Each link opens a new page with the relevant social media page to my personal social media site, (LinkedIn, Instagram, Twitter, and Facebook).  These links make it easy for users to access my social media profiles from one place. The social media profiles load in a new tab, which allows users to then return to the site. They are displayed to the left in the footer on large to extra-large screens, this is then stacked on medium to extra small screens and is centred
+-	Situated in the top right side of the screen enables the player to toggle between having the audio on or off while playing the game
+-	When user clicks the ‘Audio’ icon the icon changes between volume on or off, this is clear to the user if sound is present or not  
+-	When the sound is on there is a calming background space noise and each option button clicked has a ‘click’ noise
 
-**Portfolio Pages**
+Game Play
 
-*(anime.html / games.html / pokemon.html / animals.html / other.html)*
+-	Main container is situated in the centre of the screen, this has four different containers
+-	Main container has elements from bootstrap and grid layout to make this easier to be responsive
+-	Image container – displays an image depending on what option they are on making the game more visual engaging 
+-	Text container – displays the text so the user knows how the story is progressing
+-	Option container – this holds the button options to move the user along to the next scene, stay the same size regardless of how much text the button holds – options where carefully thought to not be too descriptive and to be clear and concise options for the users experience 
+-	State container – holds additional element where the user knows how much fuel or ammo the user holds to add an extra element to the user
+-	All main container points are pulled from the script.js file to correctly display the correct progress point in the game
+-	The back click and back button has been disabled to prevent the player from going back in the game, the only way to ‘reset’ the game is to click the home button , this was to prevent the player from amending their options and trying to change their option
 
-* Modal with image, title, and brief description of the image - The modal is triggered by clicking the image, this then opens the Modal with the image, title, and brief description of the drawing in its own container
+How to Play - Overlay
 
-* Modal – has a hover over the element so the user knows this is an interactive element on the site.
+-	The ‘Question mark’ icon launches an overlay once the user clicks on it
+-	This overlay is centre to the screen width and height for full visibility
+-	This opens a ‘How to Play’ overlay where the user can read how to play the text adventure game and the objective of the game
+-	There is a ‘Ready’ button at the bottom of the screen, when the user clicks on the button this will take you back to the main page where the user had originally clicked on
+-	The user has the option to click outside of the box to dismiss the overlay
 
-**contact.html**
+Contact - Overlay
 
-* Form with submit button - Allows users to contact me for any further information or collaborations they wish to work with me on.  It also gives the user the opportunity to contact me if they like anything they see to have for themselves or any feedback they wish to give regarding any content on the site.
+-	The ‘Email’ icon launches an overlay once the user clicks on it
+-	This overlay is centre to the screen width and height for full visibility
+-	This opens the ‘Contact Me’ overlay where the user has the option to send me feedback regarding their experience or general enquires that they wish to share
+-	This has input field for: Name, Email and Message to be filled out
+-	Name and Email have field validation that need to be filled before the ‘Submit’ button is clicked
+-	Once this has been sent the user receives confirmation via an alert that the information has been submitted and the window closes // test this 
+-	The overlay has a ‘Reset’ button where the user can click to clear the form if they wish
+-	As overlays have a feature to be dismissed when clicked either inside or outside of the overlay – this has been disabled to prevent this from happening 
+-	If the user decides not to contact me when they have clicked the ‘Email’ icon there is an option ‘X’ button in the top right-hand corner, so they have to option to dismiss the overlay box
 
-## Future Features
+Home - Modal
 
-Once I've learnt JavaScript and back-end web development, I will add further functionality to the existing features on my website.
+-	After reviewing the site, I felt it was needed to add a ‘Home’ icon option in case the user wished to reset the game or return back to the original onload screen
+-	When the ‘Home’ icon is clicked this opens a modal dialogue box, this is placed centrally in the window screen
+-	This has a brief description on why the user wishes to return back to the original onload screen
+-	When the user clicks on the ‘Home’ button the modal and full game will be removed
+-	A new paragraph is added about the mission state 
+-	A ‘Refresh’ icon will be visible for the use to click and will then refresh the page and takes the user back to the onload screen 
 
-* Contact form 'Submit' button action – I will add that the form will be reset after the form has been submitted.  I will add further functionality to the 'Submit' button so that it displays an on-screen 'Thank you' message. I will also add functionality for an email to be sent to the user to confirm that the form has been received and they will receive a response
+End of Game
 
-* Hamburger button - I will add functionality for the burger button to change to a 'X' icon once the navigation links is triggered and displayed
+-	The end of the game will have the game container removed from the screen and plain text with the final scenario visible 
+-	This will have a option to ‘Play Again?’ which will refresh the page and take the user back to the onload screen where they can go back through the text adventure game again and try to find an alternative ending
+Future features
+-	I would like to have a share link where the user can share their experience and their ending with their friends via a social media platform
+-	I would like to add the battle element more where this becomes a mini in game experience
+-	I would like to have some navigation as a mini in game where the user needs to use the keyboard or their screen to control the space craft 
+-	With these two options I would then like to implement a high score tracker where they can beat how quickly they can navigate through this mini challenge.
+Technologies Used
+Adobe Photoshop 
 
-* Portfolio pages – instead of a modal being used I would like to just have the image open in no modal box, this will also display the image at 100%
+-	Adobe Photoshop was used to resize images and copyright all files.  This was also to amend banner colours.
 
-* Portfolio pages (when site becomes a payment site – each image will have a zoom element and it’s own page for a cost break down and what media / colours it can be printed on.  This will also display the artwork size / price and how to order and pay for the item
+Adobe Illustrator 
 
-* Portfolio pages – will become a page to buy from offering a range of media for the artwork to be displayed on, i.e Canvas, apparel range (t-shirts, Hoodies) and prints
-Technologies and Languages Used
-This project was built using the following languages and technologies:
+-	was used for my works and drawings.
 
-## Languages
+Adobe XD
 
-* [HTML5](https://en.wikipedia.org/wiki/HTML5)
-* [CSS3](https://en.wikipedia.org/wiki/CSS)
+-	I've used Adobe XD to create wireframes of my website before building the actual site.
 
-**Libraries Frameworks and online resources**
+Bootstrap
 
-* [Bootstrap 4.5.2](https://getbootstrap.com/docs/4.5/getting-started/introduction/): Bootstrap was used to help with the styling of the website in forming the grid layout as well as aid the responsiveness of the site.
-* [jQuery](https://en.wikipedia.org/wiki/JQuery): The project uses jQuery to simplify DOM manipulation. This is the standard jQuery that is built with Bootstrap components.
-* [JavaScript](https://en.wikipedia.org/wiki/JavaScript): The project uses JavaScript from Bootstrap which is required to add functionality to some of Bootstrap's components.
-* Google Chrome Dev Tools: For testing purposes.
-* [Google Fonts](https://fonts.google.com/): Google fonts was used to import ‘Covered By Your Grace’ font and ‘Lato’ into the HTML which is used on all pages throughout the project.
-* [W3C HTML-Validator](https://validator.w3.org/): Used to find mistakes in my HTML code and try to fix these.
-* [Autoprefixer](https://autoprefixer.github.io/): Used to find mistakes in my CSS code and try to fix these.
-* [Formspree](https://formspree.io/forms): Used for the backend contact form to ensure this linked from my site to my email.
-* [Compressjpeg](https://compressjpeg.com/): Used to compress all my images so loading pages would not be an issue.
-* [Font Awesome](https://fontawesome.com/): Font Awesome icons were used on all pages throughout the website. The majority of these were in the footer for the Social Media icons. I have added other Font Awesome icons to button.
+-	The project uses the Bootstrap framework to add a responsive grid system, prebuilt components, plugins built on jQuery, and Bootstrap styles to my game, before adding my own custom styling 
 
-Here is a list of Icons that I have used within my site for the different pages/sections. These have all been styled using CSS. I have called the style tags the following:
-* [Hamburger Menu Icon](https://fontawesome.com/v4.7/icon/bars)
-* [Portfolio Toggle](https://fontawesome.com/v4.7/icon/chevron-down)
-* [LinkedIn](https://fontawesome.com/v4.7/icon/linkedin-square)
-* [Instagram](https://fontawesome.com/v4.7/icon/instagram)
-* [Email Icon](https://fontawesome.com/v4.7/icon/envelope)
-* [Twitter](https://fontawesome.com/v4.7/icon/twitter)
-* [Facebook](https://fontawesome.com/v4.7/icon/facebook)
+CSS
 
-## Tools
+-	The project uses CSS to apply the custom styles to create the look of my game.  The index.html file is linked directly to the main.css stylesheet
 
-* [Atom](https://atom.io/): I've used Atom as the development environment to write the code for my website.
-* [Git](https://git-scm.com/): I've used Git as a version control system to regularly add and commit changes made to project in Atom, before pushing them to GitHub.
-* [Github](https://github.com/): I've used GitHub as a remote repository to push and store the committed changes to my project from Git. I've also used GitHub pages to deploy my website in a live environment.
+Font Awesome 
 
-## Programmes
+-	The project uses Font Awesome icons for all navigation and social media links that feature in the header and footer of my site
 
-* [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html): Used to resize images and copyright all files.  This was also to amend banner colours.
-* [Adobe Illustrator](https://www.adobe.com/uk/products/illustrator.html): Used for my works and drawings.
-* [Adobe XD](https://www.adobe.com/uk/creativecloud/ui-ux.html): Used to create wireframes of my website before building the actual site.
+Google Chrome Dev Tools
 
-**Other Resources**
+-	For testing purposes for responsive design
 
-* [Code Institute](https://codeinstitute.net/) and the learning that I have completed so far with them enabled me to put together this project.
-* [Code Institute Slack Community](https://slack.com/intl/en-no/) I have been asking questions with why elements aren't functioning as they should be and when I'd tried everything possible to try and fix these issues. I also used this to find the error(s) to enable this to function correctly.
-* [Stack Overflow](https://stackoverflow.com/) I have asked some questions on here in regard to elements not working as well as sourced answers to help me too.
-* [Get Bootstrap](https://getbootstrap.com/docs/4.0/components/navbar/) was used to get a better understanding for how the Bootstrap navbar works.
-* [Am I Responsive](http://ami.responsivedesign.is/) was used for the screenshot of the mock up in the README.md file.
-* [Adobe XD](https://developer.chrome.com/docs/devtools/)Google Chrome Developer Tools was used to test sizes, check responsiveness and view the layouts as well as debug errors and problems I encountered along the way.
+Google Fonts 
 
-## Testing
+-	Google fonts was used to import ‘Orbiton font and ‘Sarpanch’ into the HTML which is used on all pages throughout the project.
 
-**Testing User Stories**
+HTML5
 
-I used my user stories and documented each of the steps that each user would need to accomplish what they have stated. Below is the link to the document that contains this information.
+-	The project uses HTML to create the basic elements and content of my game 
 
-**Responsive Testing**
+JavaScript 
 
-I used Google Chrome's Development tools to constantly test each change that I made to my website and to ensure that it appeared in the desired way on different screen sizes.
+-	The project uses JavaScript from my custom script.js file to add functionality and interactivity to my text adventure game.  This is the core focus of this project.  The project also uses JavaScript from Bootstrap which is required to add functionality to the Bootstrap modal 
+jQuery
 
-I also tested my website on different screen sizes (mobile, tablet and desktop) to ensure it appeared in the desired way on different devices.
+-	The project uses jQuery to simplify DOM manipulation. This is both the standard jQuery that is built with Bootstrap components, and my custom jQuery used in my index.html and script.js files
 
-I used my own phone to test the orientation and how the site differs from portrait to landscape and to get a feel on the user experience.
 
-To test my whole website, I went through each page, feature by feature, and documented the results on a spreadsheet. The spreadsheet also documents any responsive features and confirms that they work and appear as intended on different screen sizes. The link to the spreadsheet it below:
+Visual Studio Code 
 
-[Testing-checklist](https://github.com/EllieJ87/ellchan-anime/blob/main/testing-documents/testing-checklist.pdf)
+-	I used Visual Studio Code as the development environment to write the code for my website
 
-## Implementation
 
-As this is my first time building a fully responsive website, so coding and using Git was very new to me, trying to identify and resolve why issues were happening was a long process to fully understand and resolve.  I do like to problem solve and research different methods to try and resolve the issues that I was facing.  To do this I would mainly use Dev Tools in Google Chrome.   By using Bootstrap this allowed me to add features for the mobile first approach, as my first attempt I was not using Bootstrap and tried building the site without this framework.   When testing I would use a combination of removing elements style by style to fully understand what this was targeting and how these effected the style and page layouts, this enable me to see what worked and did not work to my required aesthetic.
 
-## Interesting Bugs or Problems
+-	Autoprefixer: Used to find mistakes in my CSS code and try to fix these.
+-	I used the compressjpeg tool to ensure all my images were a load friendly size.
+-	Formspree: for the backend contact form to ensure this linked from my site to my email.
+-	Compressjpeg: able to compress all my images so loading pages would not be an issue.
+ 
+Version Control
+Git 
 
-Whilst testing I found the following problems and issues:
+-	I've used Git as a version control system to regularly add and commit changes made to project in Visual Studio Code, before pushing them to GitHub.
 
-## First Draft of Website – Bootstrap Framework not Used
+GitHub 
 
-**Index.html**
-
-* Image was becoming central on the screen when being re-sized: Horizontal and vertically aligned
-* Title was fixed at the top and was not re-positioned when the screen was re-sized: Title was not being responsive
-* Title text was too heavy and not clean enough: When added to Bootstrap framework this was lighter and more clean looking
-* Enter button was fixed at the bottom of the screen, this was not being scaled / re-positioned when the screen was re-sized: Button was not responsive and element was not relevant to the position
-
-**Home.html**
-
-* Banner image was not re-sized through screen sizes: Was not responsive or fluid would stay fixed when text width would become half the size (due to div sizing)
-* Navigation bar was too big, even when the screen was re-sized: Due to font sizing and text not being responsive, when adding Bootstrap this became a much cleaner and more controlled text sizing
-* Navigation bar was not fixed at the top but just at the side so scrolled with the main content: This did not also become horizontal when screen became resized.
-* Main text became too small and unable to read on smaller screen: Text was not responsive
-* Social media icons overlapping and not spaced evenly out, due to SVG’s being used and unable to easily style and position: SVG vectors were used instead of a <span> or <div> element making these difficult to position and amend styling attributes.
-
-## Second Draft of Website – Using Bootstrap Framework
-
-**Banner Image**
-
-*Issue*
-
-As the banner was fixed at the top, I wanted to optimize the layout in landscape as my initial idea was to have the banner, title and navigation fixed to the top of the screen, this left very minimal screen size for the user to view on.  I chose to have the banner removed at landscape and smaller device widths this led to the below concerns:
-  1. Not having a modern / professional look, I searched other sites that had a similar layout to mine and this was not an ideal solution.
-  2. With the banner image not being visible at the start of loading, it left a key element to my website that the user was unable to see from the start, it made the site look like there was no top banner or the image was either not there or it had failed to load.  With the banner not being visible this could end up that the user never seeing this image if their only way of exploring the internet is through mobile devices which could turn new users potentially away.
-
-*Resolved*
-
-How I resolved this issue was to not have the top banner fixed but only have the title and navigation sticky so when the user scrolled down through the content the banner would disappear but would reappear.  So, when the user would scroll back up, they could clearly see the image again, this also maximize the screen width and size so they could fully see the rest of the content.  With this change made both of my above concerns workable and resolved a lot of issues regarding the navigation and banner placement.
-
-**Navigation Bar**
-
-*Issues*
-
-First Layout (Xlarge to Large Screen size):  This was set on the left-hand side as a vertical column with the main content float to the right, this was a fixed element that was placed underneath the banner and title by with the only scrollable content being the main content for the information on the site.  
-1. This was quite tricky to code at the beginning however using Bootstraps columns made this work.  I ran into issues when separating out this component to make this a fixed element as this caused issues when the navigation collapsed.  This also changed the flow and positioning of the main content as this dropped down to a new line, I then had to work out and amend the positioning of this container which then did not flow right when using media queries.
-2. By adding the navigation into the <header> tag along with the banner and title, as I wanted all these elements to be fixed at the top with a white background and was in front of the main content, this did worked initially but after receiving feedback from my mentor Sunny; he highlighted that by coding this way was blocking the full container width of the site.  This made it difficult and tricky to select elements in the forms or when selecting image to be clicked on.  It was something I had noticed but tried to resolve by amending other elements in the code (i.e. putting a focus in the form so it was automatically selected).  With this being pointed out and shown how to fully use the Google Dev tools help me understand container widths and what elements were targeted and where.
-
-*Resolved*
-
-I completely changed the layout of the navigation bar so instead of this being a vertical it was set up to be in the same line as the title but on the right-hand side rather than underneath and to the left side of the page.  This made it a lot easier to code and ensure this element became sticky when the user was interacting with the site.  It also made the site a lot cleaner and more fluid / professionally looking.
-
-*Issues*
-
-Second Layout (Medium Screen size):  From my first layout I then wanted the navigation to become horizontal and still sit underneath the main title.  The main content was then to drop underneath the navigation bar and still be scrollable with the banner, title and navigation still fixed at the top of the screen.  
-1. This was easier to adjust and amend the break points to for the first screen size however the issue was still the main content being too low down the screen.
-2. There was also the issue of the width of both these containers and the fluidity of the placement underneath the banner as this would jump either too high or too low between screen resolutions.
-3. The main content also had the same issue by trying to keep a consistent distance from the top as this was too irregular and would also jump either too high or too low in between screen resolutions.   
-
-*Resolved*
-
-The title and navigation bar were changed to be in its own header and be on the same line which made it easier to manipulate and ensure the spacing from the top and the main content was consistent.  Thus, making the code more fluid and was able to ensure this element became sticky when the user was interacting with the site.  It also made the site a lot cleaner and more fluid / professionally looking.
-
-*Issue*
-
-Third Layout (Small and XSmall Screen size) adding a Burger Icon:  From my first to second navigation layout, I wanted to add a burger icon, so the navigation bar collapsed on smaller screen sizes (ensuring space on the site was minimal) this sat underneath the Main title and still had the main content scrolling.
-1. At first this was an easier change and to add from the horizontal navigation bar; but ran into issues when the screen was to re-size as the positioning was not consistent from the top of the screen. This became an issue by trying to keep a consistent distance from the top as this was too irregular and would also jump either too high or too low in between screen resolutions.   
-2. This was also developed at the same time as removing the banner so both the title and navigation bar toggle were both on the right-hand side, from my notes regarding the banner concerns I felt this look did not look very polished or professional.
-
-*Resolved*
-
-As the navigation bar was changed to be horizontal across all screen sizes and to be placed on the right-hand side this was easier to amend and control the sticky placement.  This also brought a cleaner and professional look to the site but minimizing space and ensuring the same sticky content was in the same line.
-
-**Portfolio Pages - Modals**
-
-*Issues*
-
-The first part on the portfolio pages was the main formation set up which was easy to display to my liking, the second part was adding a feature where the image was to pop up on the screen (either seeing it a bit bigger or adding information about the image).  This was quite tricky at first as most ways to do this professionally was to use own JavaScript code, which I was not comfortable doing for my first project.  
-
-With this I looked into ‘Modals’ to help add an extra interactive element to the page, this was tricky to get my head around at first as the below came difficult to understand why this was occurring.
-1. Tried using different code elements to add a pop-up image, this worked in the test site for one image but did not work for multiple
-2. They became too big on the page and resizing the image did not take effect
-3. A tried a pre-built modal code that worked but had a carousel integrated in with it but I did not what this feature as I wanted each image to be an isolated case
-4. Setting up and researching modals again, worked for one image and not multiple, kept pulling the same image up when clicked on different images.
-
-*Resolved*
-
-This was resolved by understanding the importance of ‘data-target’ and ‘id’ by making sure these were unique to each different image so these then pulled and pop-open the right image when the user clicked on that image.
-
-_**Future**_
-
-Would like to use JavaScript to produce a more streamline way to expand images rather than relying on modals as I feel just having the image is a lot clearer way of displaying the image.
-
-**Footer & Social Media Links**
-
-*Issue*
-
-Footer disclaimer and Social Links: these were not stacking to the direction I wanted them to sit, even by using the Bootstrap framework this was adjusting to the styling I wished these to be displayed as.  These were not stacking on top of each other and were not adjusting to be central.
-
-*Resolved*
-
-By adding a media query to the chosen break point and amend these items to be flex was easy to amend the position and styling I wanted to achieve.  By having them stacked and all central aligned, the social media links were all amend to be equally spaced out, so they became responsive friendly.
-
-**All Pages**
-
-*Issue*
-
-My last catch-up session with my mentor Sunny he pointed out the horizontal scroll element on all pages, this was something I noticed but did not think this was a bug or an error.  He told me to either look into the banner image and the container width as there might have been additional padding element added.
-1. I tried removing the pre-fixed padding elements from all containers – had no effect.
-2. Setting a width on the banner image – had no effect
-3. Setting a width on the header element – had no effect
-4. Setting a width on the main content container – had no effect
-5. Removing the width and height dimensions from the banner – had no effect
-6. Making the banner width to be ‘100%’ – made the banner huge and too large for the screen also made no changes or effect to the issue
-
-*Resolved*
-
-Placing the image in a`<div class=”container”>`removed this horizontal issue and resolved the issue, this was just contained for the banner image only.
-
-*Issue*
-
-The last small issue that I found tricky to resolve in the time I had left for this project is the Portfolio navigation toggle element, these were hovering separately when over that element and not together as originally intended;
-1. I tried adding a new Id to this element and isolating this container – had no effect
-2. Placing in a new div container – had no effect
-3. Went back to Bootstrap and re-using the code they have for drop down navigation, this worked however when changing the colour the toggle would not change to my colour scheme but would change to a pre-determined colour (e.g Yellow) otherwise it took the colour of what seem to be black.
-
-*Un-resolved*
-
-This element is still _**not fixed**_ and is an error I will re-look into this element when I re-visit this project / site when I want to expand and make this a business site adding all my future features elements to it.
-
-## Deployment
-
+-	I've used GitHub as a remote repository to push and store the committed changes to my project from Git. I've also used GitHub pages to deploy my website in a live environment.
+Testing
+-	Testing can be found here 
+Implementation
+As this is my first time building a fully responsive website, so coding and using Git was very new to me, trying to identify and resolve why issues were happening was a long process to fully understand and resolve.  I do like to problem solve and research different methods to try and resolve the issues that I was facing.  To do this I would mainly use Dev Tools in Google Chrome.   By using elements of Bootstrap, mainly for the modals and to have prefixed padding, the main site was built using css grid and this was a new styling feature for me to learn.  Understand how to manipulate the grid elements and to set this based on different screen sizes was very interesting to learn and understand the concept behind it.   When testing I would use a combination of removing elements style by style to fully understand what this was targeting and how these effected the style and page layouts, this enable me to see what worked and did not work to my required aesthetic. 
+Deployment
 The hosting platform that I've used for my project is GitHub Pages. To deploy my website to GitHub pages, I used the following steps:
 
-* Loaded the terminal window in my Atom workspace.
-* Initialised Git using the git logo (bottom right hand corner).
-* Files that have been amended are automatically listed in the ‘Unstaged Changes’ header
-* Click the ‘Stage All’ icon which drops into the ‘Staged Changes’ display
-* Add comments in the ‘Commit Message’ section and click ‘Commit to Main’
-* Once this has been uploaded click the ‘push’ icon
-* This will add the updated files into the ‘main branch’ option under the ‘GitHub pages’ section
-* Ran several commits after testing was carried out throughout my project.
-
-**Repository Link**
-
-[ellchan_anime](https://github.com/EllieJ87/ellchan-anime)
-
-**Running Code Locally**
-
+-	Loaded the terminal window in my visual studio code workspace
+-	Initialised Git using the Source Control in the control panel
+-	Files that have been amended are automatically listed in the ‘Source Control’ panel
+-	Add message in the ‘Message’ section, making sure the commits are clear and concise (re-checked previous commits for layout and what was fixed / still pending)
+-	Click the ‘tick’ icon which stored the files in visual studio code
+-	Click the ‘ellipsis’ icon and select the ‘push’ option
+-	This then push all files and commits to the main branch
+-	This will add the updated files into the ‘main branch’ option under the ‘GitHub pages’ section
+-	Ran several commits after testing was carried out throughout my project.
+Repository Link
+https://elliej87.github.io/ellchan-anime/ //link to correct site
+Running Code Locally
 To run my code locally, users can download a local copy of my code to their desktop by completing the following steps:
 
-* Go to my GitHub repository.
-* Click on 'Clone or download'.
-* Click on 'Download ZIP'.
-* Once downloaded, extract the zip file's contents and run my website locally.
+-	Go to my GitHub repository.
+-	Click on 'Clone or download'.
+-	Click on 'Download ZIP'.
+-	Once downloaded, extract the zip file's contents and run my website locally.
+Credits
+-	formspree I used for the backend for the Contact forms
+-	Font Awesome for the many icons that I have used throughout the various pages
+-	Bootstrap We have had fun along the way, but overall, for your superb features that you provide to enabled me to add in without having to code too much myself, although there was quite a bit of tinkering with the CSS, but we're still friends
+-	All media work has been drawn / sketched by myself for the sole purpose to showcase my skills and creating a fun experience
+Content:
+The bulk of content on this site has been written by me in order to give the website information, purpose and meaning. I have spent many months in preparation for this website ensuring there is enough diverse content and that all has a similar hand styling and theme.
+Acknowledgments
+Firstly, I would like to thank my Mentor Sunny Hebbar for honest, helpful and continuous feedback, without this I wouldn’t have been able to push myself, giving me helpful sites to understand JavaScript more. Sunny has been absolutely superb to work with!  I really enjoy our mentor sessions together and can't thank Sunny enough for all the help and support that has been given to me. Thank you again, I really appreciate all of your help and support.
 
-## Credits
-
-* [Formspree](https://formspree.io/forms) I used for the backend for the Contact forms.
-* README.md Sunny Hebbar for an in detailed README.md which has been very valuable
-* [Font Awesome](https://fontawesome.com/) for the many icons that I have used throughout the various pages.
-* [Bootstrap](https://getbootstrap.com/) We have had fun along the way, but over all for your superb features that you provide to enabled me to add in without having to code too much myself, although there was quite a bit of tinkering with the CSS, but we're still friends.
-* All media work has been drawn / sketched by myself for the sole purpose to share my work with other artists / anime and gaming fans.
-
-## Content
-
-The bulk of content on this site has been written by myself in order to give the website information, purpose and meaning. I have spent many months in preparation for this website ensuring there is enough diverse content and that all has a similar hand styling and theme.
-
-## Acknowledgments
-
-Firstly I would like to thank my Mentor Sunny Hebbar for honest, helpful and continuous feedback, without this I wouldn’t have been able to design nor create something like I have, nor would I have pushed myself to learn new code or try new ideas either. Sunny has been absolutely superb to work with and has advised me on areas to look out for in Google Chrome Dev Tools  and how to isolate areas and section out problematic code. I really enjoy our mentor sessions together and can't thank Sunny enough for all the help and support that has been given to me. Thank you again, I really appreciate all of your help and support.
-
-I would like to also thank Sophie Wickham being my first mentor and helping me come up with a non ‘Javascript’ first project site! I would like to thank her for their support that they have given to me to enable me to get a good understanding start and to help me understand and complete this project.
-
-I would like to also thank my friend Taragh Godfrey who gave me ideas and additional creative design ideas that help bring the site more to life
+I would like to also thank my brother Sam Judge who has helped me isolate problems and solve elements one by one to help manage my time and problem solving this helped me keep myself focussed.  He has also help support me when the times have been very tough and times of uncertainty of my capabilities.
 
 I would also like to thank the Stack Overflow and Slack Community for helping me fix issues and errors.
-
 I promise one day I will revisit this site once I have graduated and will produce something out of this world.
 
-*Created by Ellie Judge*
+Created by Ellie Judge
+

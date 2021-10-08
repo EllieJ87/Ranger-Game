@@ -373,7 +373,7 @@ aside {
 /* ------ ONLOAD WELCOME ------ */
 /* BACKGROUND COLOUR (BODY FADE) */
 #modal-box {
-  background-color: rgba(9, 4, 60, 0.9);
+  background-color: var(--navy);
 }
 
 /* WELCOME CONTAINER */
