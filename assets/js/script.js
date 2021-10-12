@@ -18,6 +18,7 @@ const startBtn = document.getElementById('start-btn');
 const modal = document.getElementById('game-container');
 const test = document.getElementById('good-bye-text');
 
+
 // this is the variable for the player's name
 var playersName;
 
@@ -28,11 +29,11 @@ var playersName;
 function removeModal() {
     console.log(input.value);
     playersName = input.value;
-    // if the user clicks on the button the modal is removed
+// if the user clicks on the button the modal is removed
     var myobj = document.getElementById("modal-box");
     myobj.remove(); 
-    advanceTo(scenario.one)   
-} 
+    advanceTo(scenario.one) 
+}
 
 // this changes the text and puts in the players name
 var changeText = function(words) {
@@ -52,6 +53,8 @@ var changeButtons = function(buttonList) {
         + buttonList[i][0] + "</button>";
     };
 };
+
+
 
 // 26/09/21 
 // import this text from a separte doc
@@ -133,7 +136,7 @@ const scenario = {
         text: "Scenario 3",
         buttons: [
             ["Follow your Dog Downstairs", "advanceTo(scenario.five)"],
-            ["Search the Kitchen for a knife", "advanceTo(scenario.five)"]
+            ["Search the Kitchen for a knife", "advanceTo(scenario.one)"]
         ]
     },
 
@@ -147,19 +150,39 @@ const scenario = {
 // this is the code that starts the game
 advanceTo(scenario.one);
 
-/* 	// click to mute/unmute and also change the image 
-  		// https: //stackoverflow.com/questions/5571285/how-can-i-change-image-source-on-click-with-jquery
-  		$('.volume').click(function (e) {
-  			if (audio.muted == true) {
-  				audio.muted = false;
+const buttonSound = new Audio("assets/audio/beep-button.mp3");
+const volBtn = $("#volume-btn");
 
-  				$('.volume').attr('src', 'assets/images/noun_volume.png');
-  			} else if (audio.muted == false) {
-  				audio.muted = true;
-  				$('.volume').attr('src', 'assets/images/noun_mute.png');
-  			}
-  		});
-          */
+// const soundBtn = $(".btn");
 
+let sound = false; //Ensures that the sound is on when the game is being played
 
+$(volBtn).click(function() {
+    if (sound) {
+        sound = false;
+        $(this).toggleClass("fa-volume-off");
+        $(this).toggleClass("fa-volume-up");
+        console.log("sound", sound);
+    }
+    else {
+        sound = true;
+        play(buttonSound);
+        $(this).toggleClass("fa-volume-off");
+        $(this).toggleClass("fa-volume-up");
+        console.log("sound", sound);
+        }
+});
 
+// if audio button is on play button sound targetting the class btn
+// else if button is off do not play sound
+// function play sound
+// var = get elementByClassName('btn')
+
+function play(audio) {
+    audio.play();
+  }
+  
+  function stop(audio) {
+    audio.pause();
+    audio.currentTime = 0;
+  }

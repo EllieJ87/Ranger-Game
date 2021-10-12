@@ -37,7 +37,8 @@
             </p>
             <form action="" id="input-container">
               <input id="input" type="text" placeholder="Ranger's name...">
-              <button id="start-btn" type="button"  data-dismiss="modal" onclick="removeModal()">Descend</button>
+              <div class="error"></div>
+              <button id="start-btn" type="button" data-dismiss="modal" onclick="removeModal()">Descend</button>
             </form>
           </div>
         </div>
@@ -109,18 +110,21 @@
           <div class="contact-bodyText">
             <h5 id="contact-headText">Contact Me</h5>
             <br>
-            <form action="/action_page.php">
+            <form id="form" autocomplete="off">
               <label for="pname">Player's Name</label>
-              <input type="text" name="fname" class="form-control" id="fname" placeholder="Your name..." >
-              <label for="ename">Email</label>
-              <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Your Email...">
+              <input type="text" class="form-control" name="pname" id="pname" placeholder="Your name...">
+            <div class="error"></div>
+              <label for="email">Email</label>
+              <input type="text" class="form-control" name="email" id="email" placeholder="Your email...">
+              <div class="error"></div>
               <label for="textarea">Your Thoughts?</label>
               <textarea type="text" name="message" class="form-control textarea" id="textarea" style="height:200px" placeholder="Your Thoughts..."></textarea>
-            </form> 
+            
             <div class="modal-footer contact-footer">
-              <button id="submit"type="button" data-dismiss="modal">Submit</button>
-              <button id="reset"type="button" data-dismiss="modal">Reset</button>
+              <button id="submit" type="submit">Submit</button>
+              <button id="reset" type="reset">Reset</button>
             </div>
+          </form> 
           </div>
         </div>
       </div>
@@ -177,7 +181,7 @@
   <span class="footer-text"> Ranger Game &copy;EJ@2021</span>
   
   <div class="footer-links">
-    <i class="fa fa-volume-off" aria-hidden="true"></i>
+    <i id="volume-btn" class="fa fa-volume-off" aria-hidden="true"></i>
     <i class="fa fa-home" aria-hidden="true" data-toggle="modal" data-target="#modal-home"></i>
     <i class="fa fa-envelope-o" aria-hidden="true" data-toggle="modal" data-target="#modal-contact"></i>
     <a class="fa fa-question" aria-hidden="true" data-toggle="modal" data-target="#modal-play"></a>
@@ -192,6 +196,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- My js file link -->
 <script src="assets/js/script.js"></script>
+<script src="assets/js/emailscript.js"></script>
 
 <script>
   // code to launch modal when window ready 
