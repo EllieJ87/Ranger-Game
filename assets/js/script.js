@@ -105,7 +105,7 @@ var advanceTo = function(s) {
 const scenario = {
     one: {
         image: 'assets/images/image-4.jpg',  
-        text: "Your name yanks at the leash. You hear dogs barking and see an old abandoned house. Strangely, the door is wide open. What do you want to do?",
+        text: "Your name Bacon ipsum dolor amet boudin pastrami shankle ham fatback pork. Short ribs ham beef, filet mignon ball tip sirloin shankle t-bone drumstick. Ground round drumstick pancetta fatback alcatra.?",
         buttons: [
             ["Turn and run", "advanceTo(scenario.three)"],
             ["Enter The House", "advanceTo(scenario.four)"]
@@ -114,7 +114,7 @@ const scenario = {
 
     two: {
         image: 'assets/images/Untitled-4.jpg',
-        text: "Your name yanks at the leash. You hear dogs barking and see an old abandoned house. Strangely, the door is wide open. What do you want to do?",
+        text: "Your name Bacon ipsum dolor amet boudin pastrami shankle ham fatback pork. Short ribs ham beef, filet mignon ball tip sirloin shankle t-bone drumstick. Ground round drumstick pancetta fatback alcatra.?",
         buttons: [
             ["Turn and run", "advanceTo(scenario.three)"],
             ["Enter The House", "advanceTo(scenario.four)"]

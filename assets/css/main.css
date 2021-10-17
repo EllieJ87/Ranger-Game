@@ -279,6 +279,7 @@ footer {
   grid-template-areas:
   "image image image stats"
   "image image image ."
+  "image image image ."
   "text-container text-container buttonBox buttonBox";
 }
 
