@@ -15,6 +15,11 @@
  
   <!-- CSS LINK -->
   <link rel="stylesheet" href="assets/css/main.css">
+  
+  <!-- Favicon Icon -->
+  <link rel="icon" type="image/png" href="assets/images/faicon/favicon - 16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="assets/images/faicon/favicon - 32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/images/faicon/favicon - 96x96.png" sizes="96x96">
 
 <!--  -->
 
@@ -35,9 +40,12 @@
               Are you willing to change your coordinates to help save Pokitaru?<br><br>
               Are you ready to descend?
             </p>
-            <form action="" id="input-container">
-              <input id="input" type="text" placeholder="Ranger's name...">
-              <div class="error"></div>
+            <form action="" id="input" class="input-container">
+              <!--<label for="player">Player's Name</label>-->
+              <input type="text" class="input" name="player" id="player" placeholder="Ranger's name...">
+            <div class="error"></div>
+              <!--<input id="input" type="text" placeholder="Ranger's name...">
+              <div class="error"></div>-->
               <button id="start-btn" type="button" data-dismiss="modal" onclick="removeModal()">Descend</button>
             </form>
           </div>
@@ -119,7 +127,6 @@
               <div class="error"></div>
               <label for="textarea">Your Thoughts?</label>
               <textarea type="text" name="message" class="form-control textarea" id="textarea" style="height:200px" placeholder="Your Thoughts..."></textarea>
-            
             <div class="modal-footer contact-footer">
               <button id="submit" type="submit">Submit</button>
               <button id="reset" type="reset">Reset</button>

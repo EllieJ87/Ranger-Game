@@ -433,7 +433,7 @@ aside {
 }
 
 /* WELCOME INPUT CONTAINER */
-#input-container {
+.input-container {
   display: flex;
   justify-content: center;
   align-self: center;
@@ -441,7 +441,7 @@ aside {
 }
 
 /* INPUT STYLING */
-#input {
+.input {
   font-family: var(--font);
   font-size: 0.9em;
   text-transform: uppercase;
@@ -1188,8 +1188,8 @@ label {
     margin: 0 auto;
     grid-gap: 7px;
     grid-template-areas:
-    "image text-container text-container "
-    "buttonBox buttonBox stats";
+    "image image stats"
+    "text-container buttonBox buttonBox";
   }
 
   #text {

@@ -13,7 +13,7 @@ const updateRecords = (records) => {
 const image = document.getElementById("images");
 const text = document.getElementById("text");
 const buttonBox = document.getElementById('buttonBox');
-const input = document.getElementById('input');
+const input = document.getElementById('player');
 const startBtn = document.getElementById('start-btn');
 const modal = document.getElementById('game-container');
 const test = document.getElementById('good-bye-text');
@@ -53,8 +53,6 @@ var changeButtons = function(buttonList) {
         + buttonList[i][0] + "</button>";
     };
 };
-
-
 
 // 26/09/21 
 // import this text from a separte doc
@@ -115,7 +113,7 @@ const scenario = {
     },
 
     two: {
-        image: 'assets/images/image-2.jpg',
+        image: 'assets/images/Untitled-4.jpg',
         text: "Your name yanks at the leash. You hear dogs barking and see an old abandoned house. Strangely, the door is wide open. What do you want to do?",
         buttons: [
             ["Turn and run", "advanceTo(scenario.three)"],
@@ -141,7 +139,7 @@ const scenario = {
     },
 
     five: {
-        image: 'assets/images/image-5.jpg',
+        image: 'assets/images/Untitled-4.jpg',
         text: "TO BE CONTINUED...",
     },
 
