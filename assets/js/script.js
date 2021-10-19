@@ -1,64 +1,119 @@
+// Below site was help to build a plateform of the game, this has been styled and developed 
+// by myself
 // https://codepen.io/rzim2082/pen/jrWYJW
 
-/* Psuedo Code example
-const updateRecords = (records) => {
-    // records arg is an object literal - properties are id (int), prop
-    ('tracks' or 'artist' - string)
-    // other logic goes here...
-};
-*/
+// Welcome modal variable
+const input = document.getElementById('player');
+const startBtn = document.getElementById('start-btn');
 
-// these variables connect our code with the 'id' on the html page
-// we can then manpulate the variables and it will manipulate the html
+// Main game variables 
 const image = document.getElementById("images");
 const text = document.getElementById("text");
 const buttonBox = document.getElementById('buttonBox');
-const input = document.getElementById('player');
-const startBtn = document.getElementById('start-btn');
+
+// Return home modal variables
 const modal = document.getElementById('game-container');
 const test = document.getElementById('good-bye-text');
 
+// Sound variables
+const buttonSound = new Audio("assets/audio/beep-button.mp3");
+const volBtn = $("#volume-btn");
+
+// const soundBtn = $(".btn");
+
+let sound = false; //Ensures that the sound is on when the game is being played
 
 // this is the variable for the player's name
-var playersName;
+let playersName;
 
 // keep track of the character
 // let state = {} // understand this point more
 
+
 // removes the opening modal when the user clicks on it
-function removeModal() {
-    console.log(input.value);
-    playersName = input.value;
-// if the user clicks on the button the modal is removed
-    var myobj = document.getElementById("modal-box");
-    myobj.remove(); 
-    advanceTo(scenario.one) 
+startGame = () => {
+    const info = $('#player').val();
+    let txt;
+    if (info == "") {
+        // alert("name required")
+        txt = "Need a name ranger!";
+
+    } else {
+        txt = "";
+        console.log(info);
+        playersName = input.value;
+        return false;
+    }
+    document.getElementById("playerName").innerHTML = txt;
 }
 
-// this changes the text and puts in the players name
-var changeText = function(words) {
+//     document.getElementById("start-btn").addEventListener("click", function() {
+//         const myobj = document.getElementById("myModal");
+//   myobj.remove();
+// });
+
+// function removeModal() {
+//     console.log(input.value);
+//     playersName = input.value;
+// // if the user clicks on the button the modal is removed
+//     var myobj = document.getElementById("modal-box");
+//     myobj.remove(); 
+//     advanceTo(scenario.one) 
+// }
+
+// let ammo = 0;
+// let fuel = 0;
+
+// const emptyBars = (el) => {
+//   el.addClass('.empty-grey');
+// };
+
+// const advanceTo = (s) => {
+  
+//   changeImage(s.image)
+//   changeText(s.text)
+//   changeButtons(s.buttons)
+  
+//   if (//ammo decreases) {
+//     ammo = ammo++;
+//     if (ammo > 5) {
+//       ammoGameOver();
+//     }
+//     emptyBars(ammoBars[ammo]);
+//   } else if (// fuel decreses) {
+//     fuel = fuel++;
+//     if (fuel > 5) {
+//       fuelGameOver();
+//     }
+//     emptyBars(fuelBars[fuel]);
+//   }
+// };
+// if no value 
+
+// Replaces 'Your name' with the players input
+let changeText = (words) => {
     text.innerHTML = words.replace("Your name", playersName);
-};
+}
 
-// this takes the image link and puts it in the proper format, sending it to the html
-var changeImage = function(img) {
-    images.style.backgroundImage = "url(" + img + ")"; // 27/09/21 updated image url
-}; 
+// Changes the image on question base
+let changeImage = (img) => {
+    images.style.backgroundImage = "url(" + img + ")";
+}
 
-// this looks at the numbe of options we have set and creates enough buttons
-var changeButtons = function(buttonList) {
+// Adds or decrease the number of buttons for options
+let changeButtons = (buttonList) => {
     buttonBox.innerHTML = "";
-    for (var i = 0; i < buttonList.length; i++) {
+    for (let i = 0; i < buttonList.length; i++) {
         buttonBox.innerHTML += "<button class='btn' onClick=" + buttonList[i][1] + ">" 
         + buttonList[i][0] + "</button>";
     };
 };
 
-// 26/09/21 
+
 // import this text from a separte doc
 // Added a home element button (change to icon) removes modal and displays generic text
-function removeHomeModal() {
-    var myobj2 = document.getElementById("game-container");
+const removeHomeModal = () => {
+    let myobj2 = document.getElementById("game-container");
     myobj2.remove();
     test.innerHTML = `${playersName}` 
     + `
@@ -86,22 +141,58 @@ function removeHomeModal() {
     + '<a onclick="setTimeout(function() { location.reload(true); });"><i class="fa fa fa-refresh"></i></a></div>';
     // Generic text about the failure of not saving the planet
     // Breaks added to text    
-}
+};
 
-// 27/09/21 Prevents the user to go backwards (from stack overflow source)
+// Prevents the user to go backwards (from stack overflow source)
 window.history.forward();
-function noBack() {
+const noBack = () => {
     window.history.forward();
 }
 
 // this is what moves the game along
-var advanceTo = function(s) {
+let advanceTo = (s) => {
     changeImage(s.image)
     changeText(s.text)
     changeButtons(s.buttons)
-};
+}
+//fuel and amo var in an array
 
-// this is the object that holds each scenario
+// sperate function in class and separeate outerHeight
+// same class 
+
+// Toggles the volue icon
+$(volBtn).click(function() {
+    if (sound) {
+        sound = false;
+        $(this).toggleClass("fa-volume-off");
+        $(this).toggleClass("fa-volume-up");
+        console.log("sound", sound);
+    }
+    else {
+        sound = true;
+        play(buttonSound);
+        $(this).toggleClass("fa-volume-off");
+        $(this).toggleClass("fa-volume-up");
+        console.log("sound", sound);
+        }
+});
+
+// if audio button is on play button sound targetting the class btn
+// else if button is off do not play sound
+// function play sound
+// var = get elementByClassName('btn')
+
+// Plays the audio sound
+const play = (audio) => {
+    audio.play();
+  }
+  
+const stop = (audio) => {
+    audio.pause();
+    audio.currentTime = 0;
+  }
+
+// Game scenario
 const scenario = {
     one: {
         image: 'assets/images/image-4.jpg',  
@@ -145,42 +236,6 @@ const scenario = {
 
 };
 
-// this is the code that starts the game
+// Starts the game
 advanceTo(scenario.one);
 
-const buttonSound = new Audio("assets/audio/beep-button.mp3");
-const volBtn = $("#volume-btn");
-
-// const soundBtn = $(".btn");
-
-let sound = false; //Ensures that the sound is on when the game is being played
-
-$(volBtn).click(function() {
-    if (sound) {
-        sound = false;
-        $(this).toggleClass("fa-volume-off");
-        $(this).toggleClass("fa-volume-up");
-        console.log("sound", sound);
-    }
-    else {
-        sound = true;
-        play(buttonSound);
-        $(this).toggleClass("fa-volume-off");
-        $(this).toggleClass("fa-volume-up");
-        console.log("sound", sound);
-        }
-});
-
-// if audio button is on play button sound targetting the class btn
-// else if button is off do not play sound
-// function play sound
-// var = get elementByClassName('btn')
-
-function play(audio) {
-    audio.play();
-  }
-  
-  function stop(audio) {
-    audio.pause();
-    audio.currentTime = 0;
-  }

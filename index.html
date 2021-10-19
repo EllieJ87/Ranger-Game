@@ -40,14 +40,15 @@
               Are you willing to change your coordinates to help save Pokitaru?<br><br>
               Are you ready to descend?
             </p>
+            
             <form action="" id="input" class="input-container">
-              <!--<label for="player">Player's Name</label>-->
+              <label for="player"></label>
+              
               <input type="text" class="input" name="player" id="player" placeholder="Ranger's name...">
-            <div class="error"></div>
-              <!--<input id="input" type="text" placeholder="Ranger's name...">
-              <div class="error"></div>-->
-              <button id="start-btn" type="button" data-dismiss="modal" onclick="removeModal()">Descend</button>
+              <button id="start-btn" type="button" onclick="return startGame();">Descend</button>
+
             </form>
+            <div id="playerName"></div>
           </div>
         </div>
       </div>
@@ -206,8 +207,9 @@
 <script src="assets/js/emailscript.js"></script>
 
 <script>
-  // code to launch modal when window ready 
-  $(document).ready(function() {
+
+    // code to launch modal when window ready 
+    $(document).ready(function() {
       $("#modal-box").modal('show');
   });
 
@@ -216,6 +218,7 @@
     backdrop: 'static',
     keyboard: false
 })
+
 </script>
 </body>
 </html>

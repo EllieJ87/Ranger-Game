@@ -279,7 +279,6 @@ footer {
   grid-template-areas:
   "image image image stats"
   "image image image ."
-  "image image image ."
   "text-container text-container buttonBox buttonBox";
 }
 
@@ -450,6 +449,15 @@ aside {
   border: none;
   text-align: center; 
   width: 100%;
+}
+
+#playerName {
+  font-family: var(--font);
+  font-size: 0.9em;
+  color: #A01306;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 10px;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
