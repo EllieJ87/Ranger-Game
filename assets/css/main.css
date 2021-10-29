@@ -238,6 +238,13 @@ footer {
 }
 
 /* END OF GAME ICON POSITION */
+
+.home-icon {
+  grid-area: home-icon;
+  align-items: center;
+  text-align: center;
+}
+
 .fa-refresh {
   font-size: 40px;
   color: var(--aqua);
@@ -389,6 +396,11 @@ aside {
   color: var(--aqua);
 }
 
+.empty-bars {
+  background: #DBDCDF;
+  color: #DBDCDF;
+}
+
 /* ------ ONLOAD WELCOME ------ */
 /* BACKGROUND COLOUR (BODY FADE) */
 #modal-box {
@@ -494,7 +506,6 @@ aside {
   -webkit-transition-property: box-shadow;
   transition-property: box-shadow;
   transition: background-color 1s ease;
-
 }
 
 #start-btn:hover, #start-btn:focus, #start-btn:active {
@@ -593,7 +604,6 @@ aside {
   -webkit-transition-property: box-shadow;
   transition-property: box-shadow;
   transition: background-color 1s ease;
-
 }
 
 #home-btn:hover, #home-btn:focus, #home-btn:active {
@@ -695,7 +705,6 @@ aside {
   -webkit-transition-property: box-shadow;
   transition-property: box-shadow;
   transition: background-color 1s ease;
-
 }
 
 #ready:hover, #ready:focus, #ready:active {
@@ -826,7 +835,6 @@ label {
   -webkit-transition-property: box-shadow;
   transition-property: box-shadow;
   transition: background-color 1s ease;
-
 }
 
 #submit:hover, #submit:focus, #submit:active {
@@ -835,7 +843,6 @@ label {
   box-shadow: 0 0 10px rgba(104, 226, 163, 0.9);
 }
  
-
 /* RESET BUTTON */
 #reset {
   padding: 0;
@@ -862,7 +869,6 @@ label {
   -webkit-transition-property: box-shadow;
   transition-property: box-shadow;
   transition: background-color 1s ease;
-
 }
 
 #reset:hover, #reset:focus, #reset:active {
@@ -873,26 +879,42 @@ label {
 
 /* ------ END OF GAME & RETURN HOME END CONTAINER ------ */
 .end-container {
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(auto);
   width: 100%;
-  padding: 10% 15px;
-  max-width: 1000px;
-  height: 600px;  
-  display: flex;
-  flex-direction: row;
+  max-width: 90rem;
+  padding: 5% 5%;
+  margin: 0 auto;
+  grid-gap: 10px;
+  grid-template-areas: 
+  ". home-image ."
+  "home-text home-text home-text"
+  ". home-icon .";
+  
+  /* padding: 10% 15px; */
+  /* height: 600px; */
+  /* display: flex; */
+  /* flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; */
+}
+
+#home-image {
+  grid-area: home-image;
 }
 
 /* END OF GAME TEXT */
 .end-text {
+  grid-area: home-text;
   text-align: center;
   align-self: center;
   font-size: 1em;
   font-family: var(--head);
   color: var(--white);
   letter-spacing: 0.1em;
-  padding-bottom: 20px;
+  /* padding-top: 20px; */
+  /* padding-bottom: 20px; */
 }
 
 /* ------ MEDIA QUERIES ------ */
@@ -906,8 +928,8 @@ label {
     max-width: 95%;
     grid-gap: 7px;
     grid-template-areas:
-    "image stats ."
-    "image stats ."
+    "image image stats"
+    "image image stats"
     "text-container text-container text-container"
     "buttonBox buttonBox buttonBox";
   }
@@ -1198,7 +1220,8 @@ label {
     grid-gap: 7px;
     grid-template-areas:
     "image image stats"
-    "text-container buttonBox buttonBox";
+    "text-container text-container text-container"
+    "buttonBox buttonBox buttonBox";
   }
 
   #text {

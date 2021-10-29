@@ -15,20 +15,23 @@ const buttonBox = document.getElementById('buttonBox');
 const modal = document.getElementById('game-container');
 const test = document.getElementById('good-bye-text');
 
+// Ammo & Fuel variables
+let ammoBars = document.querySelectorAll('.ammo-bar');
+let fuelBars = document.querySelectorAll('fuel-bar');
+let addClass = document.querySelectorAll('empty-bar');
+
 // Sound variables
 const buttonSound = new Audio("assets/audio/beep-button.mp3");
 const volBtn = $("#volume-btn");
 
-// const soundBtn = $(".btn");
+const soundBtn = $(".audio");
 
 let sound = false; //Ensures that the sound is on when the game is being played
 
 // this is the variable for the player's name
 let playersName;
-
-// keep track of the character
-// let state = {} // understand this point more
-
+let ammo = 0;
+let fuel = 0;
 
 // removes the opening modal when the user clicks on it
 startGame = () => {
@@ -37,21 +40,29 @@ startGame = () => {
     if (info == "") {
         // alert("name required")
         txt = "Need a name ranger!";
+        document.getElementById("playerName").innerHTML = txt;
 
     } else {
         txt = "";
         console.log(info);
-        playersName = input.value;
-        return false;
-    }
-    document.getElementById("playerName").innerHTML = txt;
+        playersName = info.value;
+        // return true;
+        
+    } 
+
+    $(document).ready(function(){
+        $("#start-btn").click(function(){
+            $("#modal-box").hide();
+            $('.modal-backdrop').remove();
+            console.log("modal is hidden")
+        })
+    })
+
+    advanceTo(scenario.one)
+    
 }
 
-//     document.getElementById("start-btn").addEventListener("click", function() {
-//         const myobj = document.getElementById("myModal");
-//   myobj.remove();
-// });
-
+// -- THIS WAS THE ORIGINAL SCRIPT -- //
 // function removeModal() {
 //     console.log(input.value);
 //     playersName = input.value;
@@ -60,35 +71,6 @@ startGame = () => {
 //     myobj.remove(); 
 //     advanceTo(scenario.one) 
 // }
-
-// let ammo = 0;
-// let fuel = 0;
-
-// const emptyBars = (el) => {
-//   el.addClass('.empty-grey');
-// };
-
-// const advanceTo = (s) => {
-  
-//   changeImage(s.image)
-//   changeText(s.text)
-//   changeButtons(s.buttons)
-  
-//   if (//ammo decreases) {
-//     ammo = ammo++;
-//     if (ammo > 5) {
-//       ammoGameOver();
-//     }
-//     emptyBars(ammoBars[ammo]);
-//   } else if (// fuel decreses) {
-//     fuel = fuel++;
-//     if (fuel > 5) {
-//       fuelGameOver();
-//     }
-//     emptyBars(fuelBars[fuel]);
-//   }
-// };
-// if no value 
 
 // Replaces 'Your name' with the players input
 let changeText = (words) => {
@@ -104,44 +86,13 @@ let changeImage = (img) => {
 let changeButtons = (buttonList) => {
     buttonBox.innerHTML = "";
     for (let i = 0; i < buttonList.length; i++) {
-        buttonBox.innerHTML += "<button class='btn' onClick=" + buttonList[i][1] + ">" 
+        buttonBox.innerHTML += "<button class='btn audio' onClick=" + buttonList[i][1] + ">" 
         + buttonList[i][0] + "</button>";
     };
 };
 
 
-// import this text from a separte doc
-// Added a home element button (change to icon) removes modal and displays generic text
-const removeHomeModal = () => {
-    let myobj2 = document.getElementById("game-container");
-    myobj2.remove();
-    test.innerHTML = `${playersName}` 
-    + `
-    <div class="end-container"><p class="end-text">Bacon ipsum dolor amet boudin pastrami shankle ham fatback
-    pork. Short ribs ham beef, filet mignon ball tip sirloin
-    shankle t-bone drumstick. Ground round drumstick pancetta
-    fatback alcatra.
-    `
-    + "<br></br>" 
-    + `
-    Bacon ipsum dolor amet boudin pastrami shankle ham fatback
-    pork. Short ribs ham beef, filet mignon ball tip sirloin
-    shankle t-bone drumstick. Ground round drumstick pancetta
-    fatback alcatra.
-    `
-    + "<br></br>" 
-    + `
-    Bacon ipsum dolor amet boudin pastrami shankle ham fatback
-    pork. Short ribs ham beef, filet mignon ball tip sirloin
-    shankle t-bone drumstick. Ground round drumstick pancetta
-    fatback alcatra.
-    `
-    + "<br></br>" 
-    // added a font awesome icon with a refresh page browser element
-    + '<a onclick="setTimeout(function() { location.reload(true); });"><i class="fa fa fa-refresh"></i></a></div>';
-    // Generic text about the failure of not saving the planet
-    // Breaks added to text    
-};
+
 
 // Prevents the user to go backwards (from stack overflow source)
 window.history.forward();
@@ -149,18 +100,50 @@ const noBack = () => {
     window.history.forward();
 }
 
+// const emptyBars = (el) => {
+//     el.addClass('.empty-grey');
+//   };
+  
 // this is what moves the game along
-let advanceTo = (s) => {
+ const advanceTo = (s) => {
+    
     changeImage(s.image)
     changeText(s.text)
     changeButtons(s.buttons)
-}
-//fuel and amo var in an array
+    
+    // if (ammo = ammo - 1) { //ammo decreases
+    //   ammo = ammo++;
+    //   if (ammo > 5) {
+    //     ammoGameOver();
+    //   }
+    //   emptyBars(ammoBars[ammo]);
+    // } else if (fuel = fuel - 1) { // fuel decreses
+    //   fuel = fuel++;
+    //   if (fuel > 5) {
+    //     fuelGameOver();
+    //   }
+    //   emptyBars(fuelBars[fuel]);
+    // }
 
-// sperate function in class and separeate outerHeight
-// same class 
+    // Toggles the volume icon
 
-// Toggles the volue icon
+    $(".audio").click(function(){
+        if (sound) {
+            sound = true;
+            play(buttonSound);
+            // console.log("sound played")
+        }
+
+        else {
+            sound = false;
+            // console.log("sound off")
+        }
+
+    })
+
+  };
+
+// Toggles the volume icon
 $(volBtn).click(function() {
     if (sound) {
         sound = false;
@@ -177,10 +160,6 @@ $(volBtn).click(function() {
         }
 });
 
-// if audio button is on play button sound targetting the class btn
-// else if button is off do not play sound
-// function play sound
-// var = get elementByClassName('btn')
 
 // Plays the audio sound
 const play = (audio) => {
@@ -192,15 +171,53 @@ const stop = (audio) => {
     audio.currentTime = 0;
   }
 
+  // import this text from a separte doc
+// Added a home element button (change to icon) removes modal and displays generic text
+const removeHomeModal = () => {
+    let myobj2 = document.getElementById("game-container");
+    myobj2.remove();
+    test.innerHTML =  `
+    <div class="container end-container">
+    <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
+    +
+    `
+    <p class="end-text">With ${playersName} returning back to their home planet...
+    `
+    + `<br></br>`
+    + `
+    Astra and The Orbit Rangers tried to save Pokitaru but they were eventually 
+    outnumbered by The Magnetars, Vex took Astra and The Orbit Rangers back to 
+    his ship as hostages.  
+    `
+    + `<br></br>` 
+    + `
+    With Astra and The Orbit Rangers now in Vex’s possession, and no other ranger 
+    out there to stop him, meant he was able to continue on his plans to absorb 
+    Pokitaru’s energy and lifestream, all Astra could do is watch as Vex drained 
+    Pokitaru’s energy, slowing depleting until the planet eventually died out...  
+    `
+    + `<br></br>` 
+    + `
+    <b>Would you like to try again?</b>
+    `
+    + `<br></br>`
+    // added a font awesome icon with a refresh page browser element
+    + `<div class="home-icon"> <a onclick="setTimeout(function() { 
+        location.reload(true); });"><i class="fa fa fa-refresh"></i></a>
+        </div></div>`;
+};
+
 // Game scenario
 const scenario = {
     one: {
         image: 'assets/images/image-4.jpg',  
         text: "Your name Bacon ipsum dolor amet boudin pastrami shankle ham fatback pork. Short ribs ham beef, filet mignon ball tip sirloin shankle t-bone drumstick. Ground round drumstick pancetta fatback alcatra.?",
+        fuel: fuelBars[fuel],
         buttons: [
             ["Turn and run", "advanceTo(scenario.three)"],
             ["Enter The House", "advanceTo(scenario.four)"]
         ]
+        
     },
 
     two: {
