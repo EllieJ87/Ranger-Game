@@ -1,22 +1,46 @@
-Testing
-Contents
-Functionality Testing
-On all pages
-index.html
-game.html
-contact.html
-User Story Testing
-Performance Testing
-Responsive
-W3C Validator
-JSHint
-Bugs
+# Testing
 
-Functionality Testing
+## Contents
+
+1. [Functionality Testing](#functionalitytesting)
+  
+    - [OnLoad Display](#onloaddisplay)
+  
+    - [Footer Social Navigation Links](#footerlinks)
+      * [Home Icon](#homeicon)
+      * [Email Icon](#emailicon)
+      * [Question Icon](#questionicon)
+      * [Audio Icon](#audioicon)
+      * [Button Icon](#buttonicon)
+      * [LinkedIn Icon](#linkedinicon)
+      * [GitHub Icon](#githubicon)
+  
+    - [Game Container](#gamecontainer)
+      * [Image Container](#imagecontainer)
+      * [Text & Option Containers](#textcontainers)
+
+2. [Testing User Stories](#testinguserstories)
+    - [As a Text Adventure Game Fan](#textgamefan)
+    - [As a User returning to the Site](#returningfan)
+    - [As a User who does not play Text Adventure](#newfan)
+    - [All Users](#allusers)
+
+3. [Responsive Design Testing](#responsivedesigntesting)
+
+4. [Performance Testing](#performancetesting)
+
+5. [Validation](#validationcode)
+    - [HTML](#htmlcode)
+    - [CSS](#csscode) 
+
+6. [Bugs](#bugsfixes)
+
+# <a name="functionalitytesting">Functionality Testing</a>
+
 Browsers tested: Google Chrome, Mozilla Firefox & Opera.
-The devices used in this testing include Samsung S10 v.Android 10. //ask other users…?
+The devices used in this testing include Samsung S10 v.Android 10.
 
-OnLoad Display
+## <a name="onloaddisplay">OnLoad Display</a>
 
 Expected: modal to load on screen start
 Testing: when browser is refreshed, link is clicked, html is opened
@@ -27,8 +51,15 @@ Testing: clicked outside of the modal
 Results: modal is not dismissed making the user use the input field to start the game
 
 Expected: input field should not be left blank when user clicks on the ‘descend’ button
-Testing: 
-Results: 
+Testing: added validation so the user needed to input a ‘name’ before able to proceed
+Results: this ran an error but was not closing the modal box
+Testing: added an event listener onto the button, this was logged on the console to see if this input worked
+Results: displayed message to console to state the button was clicked
+Testing: added to remove the modal after the button has been clicked
+Results: modal was removed
+Bug: modal fade back hidden was still visible
+Testing: added this class into the remove modal click event to remove this
+Results: modal and background is removed
 
 Expected: when hovering over the ‘Descend’ button to change background and text colour 
 Testing: tested by hovering over the ‘Descend’ button
@@ -38,15 +69,15 @@ Expected: when ‘Descend’ button is clicked to take the user to the start of 
 Testing: tested by clicking the ‘Descend’ button
 Results: modal is removed, and the game container is displayed
 
-Responsiveness
+### Responsiveness
 
 Expected: modal, text, input field and button to be responsive to screen size and width
 Testing: through different screen sizes and Google Chrome Dev tools
 Results: modal, text, input field and button are all fit to screen size and width
 
-Footer Social navigation links
+## <a name="footerlinks">Footer Social Navigation Links</a>
 
-Home Icon
+### <a name="homeicon">Home Icon</a>
 
 Expected: when hovering over 'home' icon, the icon changes colour, increases size and pulses
 Testing: tested by hovering over item
@@ -83,7 +114,7 @@ Expected: when clicked on ‘refresh’ icon to refresh the browser page
 Testing: tested by clicking the ‘refresh’ icon
 Results: text and ‘refresh’ icon is then removed and the browser is re-loaded back to the main game screen to re-play again (with new name)
 
-Responsiveness
+### Responsiveness
 
 Expected: home modal, text, and button to be responsive to screen size and width
 Testing: through different screen sizes and Google Chrome Dev tools
@@ -93,8 +124,7 @@ Expected: ending home text and ‘refresh’ icon to be responsive to screen siz
 Testing: through different screen sizes and Google Chrome Dev tools
 Results: ending home text and ‘refresh’ icon are all fit to screen size and width
 
-
-Email Icon
+### <a name="emailicon">Email Icon</a>
 
 Expected: when hovering over 'email' icon, the icon changes colour, increases size and pulses
 Testing: tested by hovering over item
@@ -121,43 +151,33 @@ Testing: tested by hovering over item
 Results: Submit’ & ‘Reset’ button changes colour of text and background colour on hover
 
 Expected: when ‘Submit’ button is clicked an alert to show the user the form has been submitted & received, contact form is reset and modal closes 
-Testing:  
-Results: 
+Testing: clicked on the ‘submit’ button to submit the form   
+Results: alert message to prompt the use that the form has been submitted
 
 Expected: form should not submit without all fields completed
-Testing: 
-Result: 
+Testing: tested 1 input at a time to see if the validation has worked 
+Result: form has been submitted with an alert message
+
+From this testing
+Form is only allowing 1 input to be submitted rather than both, also new bug where once the user clicks the submit button this still submits the form.
 
 Expected: when ‘Reset’ button is clicked this should empty all fields of information
-Testing: 
-Result: 
+Testing: clicking the ‘reset’ button to clear the form
+Result: form is cleared and is cleared when the user re-opens the modal again
 
-Form validation
-Expected: email address field should only allow email addresses
-Testing: typed with no @ symbol
-Result: field validation feedback 'Please include an @ in the email address'
-emailJS
-Expected: when user sends feedback it is received to email address
-Testing: sent feedback form on contact.html
-Result: feedback form received to email
-Form reset after feedback sent
-Expected: form resets after form submitted
-Testing: send form to test it resets
-Fix: I used jQuery on submit event to correct this
-
-Responsiveness
+### Responsiveness
 
 Expected: contact modal, text, input fields and button to be responsive to screen size and width, 
 Testing: through different screen sizes and Google Chrome Dev tools
 Results: contact modal, text, input fields and button are all fit to screen size and width landscape and smaller screen has a scrollable pre-fixed display built in by using bootstrap
-
-Question Icon
+ 
+### <a name="questionicon">Question Icon</a>
 
 Expected: when hovering over 'question' icon, the icon changes colour, increases size and pulses
 Testing: tested by hovering over item
 Result: icon changes colour, increases and pulses when item is hovered over
 
-Expected: clicking on 'uestion' icon pops up modal to explain what their mission objective is for the game and how to play
+Expected: clicking on 'question' icon pops up modal to explain what their mission objective is for the game and how to play
 Testing: tested by clicking 'question' icon
 Result: Opens ‘How to Play’ modal
 
@@ -181,28 +201,37 @@ Expected: when ‘Ready?’ button is clicked to remove modal, returns user back
 Testing:  tested by clicking the ‘Ready?’ button
 Results: modal is dismissed and returns user back at the same point it was clicked
 
-Responsiveness
+### Responsiveness
 
 Expected: home modal, text, and button to be responsive to screen size and width, 
 Testing: through different screen sizes and Google Chrome Dev tools
 Results: home modal, text, and button are all fit to screen size and width landscape and smaller screen has a scrollable pre-fixed display built in by using bootstrap
-
-Audio Icon
+ 
+### <a name="audioicon">Audio Icon</a>
 
 Expected: when hovering over 'audio' icon, the icon changes colour, increases size and pulses
 Testing: tested by hovering over item
 Result: icon changes colour, increases and pulses when item is hovered over
 
 Expected: when ‘audio’ icon is clicked sound to be enabled and icon to change to ‘audio with sound’ icon
-Testing: 
-Results: 
+Testing: clicking the audio volume sound
+Results: sound is logged in the console and is played for the user; the icon also changes to a ‘volume on’ icon
 
 Expected: when ‘audio’ icon is clicked again sound to be muted and ‘audio muted’ icon is to be displayed
-Testing: 
-Results: 
+Testing: clicking the audio volume sound again
+Results: sound is logged in the console and sound is now off, the icon changes back to ‘volume off’ icon
 
+### <a name="buttonicon">Button Audio</a>
 
-LinkedIn Icon
+Expected: when audio is enabled by the user all buttons make a sound
+Testing: adding a generic class to all clickable buttons and clicking every button when the sound is enabled
+Results: all buttons play a ‘click’ sound
+
+Expected: when audio is disabled (automatically on page load) or when the user wishes to turn the sound off buttons do not make a sound
+Testing: clicking on all buttons and toggling between the sound being on/off to see if this works 
+Results: all buttons do not make a sound if the volume is off
+
+### <a name="linkedinicon">LinkedIn Icon</a>
 
 Expected: when hovering over 'LinkedIn' icon, the icon changes colour, increases size and pulses
 Testing: tested by hovering over item
@@ -210,9 +239,9 @@ Result: icon changes colour, increases and pulses when item is hovered over
 
 Expected: when clicking on the ‘LinkedIn’ icon takes the user to my LinkedIn page
 Testing: tested by clicking on the ‘LinkedIn’ icon
-Results: link takes user to // insert LinkedIn page
-
-GitHub Icon
+Results: link takes user to [LinkedIn](https://www.linkedin.com/in/ellie-judge-45b00689/)
+ 
+### <a name="githubicon">GitHub Icon</a>
 
 Expected: when hovering over 'GitHub' icon, the icon changes colour, increases size and pulses
 Testing: tested by hovering over item
@@ -220,11 +249,11 @@ Result: icon changes colour, increases and pulses when item is hovered over
 
 Expected: when clicking on the ‘GitHub’ icon takes the user to my GitHub repo page
 Testing: tested by clicking on the ‘GitHub’ icon
-Results: link takes user to // insert GitHub page
+Results: link takes user to [GitHub](https://github.com/EllieJ87)
 
-Game Container
+## <a name="gamecontainer">Game Container</a>
 
-Image Container
+### <a name="imagecontainer">Image Container</a>
 
 Expected: image is to load and change on different scenarios
 Testing: <img> tag first 
@@ -232,7 +261,7 @@ Results: this was not responsive had to amend the sizing which became problemati
 Fix: change the <img> tag to a background image so this could be contained inside the element 
 Final Results: image changes on different sizes and is responsive to different screen sizes
 
-Text & Option Containers
+### <a name="textcontainers">Text & Option Containers</a>
 
 Expected: game play text and options are displayed when user starts the game  
 Testing: after clicking the ‘Descend’ button on main page load
@@ -246,43 +275,45 @@ Expected: when option is selected the next question shows
 Testing: click an option to proceed
 Results: next option is displayed
 
-Responsiveness
+### Responsiveness
 
 Expected: to be displayed and re-sized across different screen sizes and width
 Testing: re-layout the smaller screen and landscape screen for more visual readability and to make the most of the available space
 Results: multiple testing and layout plans to achieve the look, smaller screens have text and buttons stacked so they take up the full width 
-Testing User Stories
-I used my user stories and documented each of the steps that each user would need to accomplish what they have stated. Below is the link to the document that contains this information.
+ 
+## <a name="testinguserstories">Testing User Stories</a>
 
-As a text adventure game fan
+I used my user stories and documented each of the steps that each user would need to accomplish what they have stated. Below is the link to the document that contains this information.
+ 
+### <a name="textgamefan">As a Text Adventure Game Fan</a>
 
 Expectation 1: I want to play the game to find out which ending scenario I would get depending on my choices throughout the game play 
 Testing: I played the game through once to get my first outcome 
-Result: see screenshot //link update to my first play through once the story mode is completed
+Result: **see screenshot //link update to my first play through once the story mode is completed**
 
 Expectation 2: I want to be able to interact via social media through the social media links in the footer
 Testing: check footer to see links to social media included to open in new tab easily
-Result: see screenshot //link for image of navigation links
+Result: **see screenshot //link for image of navigation links**
 
 Expectation 3: I want the site to have images from my own design to help portray the game play and experience through the option scenarios
-Testing: played through the game to see different imager / character change
-Restult: see screenshot 1 and 2 //link update to my links images
+Testing: played through the game to see different imagery / character change
+Results: **see screenshot 1 and 2 //link update to my links images**
 
 Expectation 4: I want to explore different options / choices to see which ending I would end up with 
 Testing: play the game to see different ending options
-Result: see 1, 2, 3, 4 //link show 2 ending options 
+Result: **see 1, 2, 3, 4 //link show 2 ending options**
 
 Expectation 5: I want the text adventure game to reflect the theme and story mode, so this was more captivating 
 Testing: researched space theme, control boards and scenery
-Result: // make space mood board for imagery / scenes and character development
+Result: ![Moodboard](assets/readme_docs/moodboard/moodboard-img.jpg)
 
-As a user returning to the site
+### <a name="returningfan">As a User Returning to the Site</a>
 
 Expectation 6: I want to be able to do the text adventure game multiple times to see which ending I will be able to receive
 Testing: Play the game and try again to get different scenario
 Result: ‘refresh icon’ to refresh the page to try the game again after each scenario ending
-
-As a user who does not play text adventure
+ 
+### <a name="newfan">As a User who does not play Text Adventure</a>
 
 Expectation 7: I want a text adventure game where I travel on an experience through space and enjoy the character development 
 Testing: complete quiz to see which scenario I will receive and what the outcome of my decisions were
@@ -295,14 +326,14 @@ Expectation 9: I want to see a help section to get information on how to play th
 Testing: Trigger help modal from each page
 Result: help modal triggers as expected on each page
 
-All users
+### <a name="allusers">All Users</a>
 
 Expectation 10: I want the site to be easy to navigate on mobile primarily so I can complete it on the go and this also makes it easier to share with others
 Testing: test all pages on different mobiles
 
 Expectation 11: I want the ability to turn on and off the audio 
 Testing: test audio button to turn ‘On’ and ‘Off’ the audio 
-Result: // to check
+Result: audio turns on and off when the volume button is toggled between on and off.  All buttons targeted with this class also plays/does not play a sound
 
 Expectation 12: I want the text adventure game to be slick, so each scenario / option is displayed one at a time to prevent scrolling and general clutter
 Testing: click through game to ensure each text, imagery and option is visible
@@ -310,96 +341,108 @@ Result: game play works with each change of imagery, text and options // link fo
 
 Expectation 13: I want to be able to contact the site owner with feedback
 Testing: click contact icon to open contact form modal
-Result: Contact page has feedback form //link for contact form
+Result: Contact page has feedback: ![image](assets/readme_docs/moodboard/contact-screen.jpg)
+ 
+### <a name="responsivedesigntesting">Responsive Design Testing</a>
 
-Responsive Design Testing
-
-I used Google Chrome's Development tools // link and Mattkersley Responsive Design site //link to constantly test each change that I made to my website and to ensure that it appeared in the desired way on different screen sizes. I also tested my website on different screen sizes (mobile, tablet and desktop) to ensure it appeared in the desired way on different devices.
+I used Google Chrome's Development tools and [Mattkersley](http://mattkersley.com/responsive/) Responsive Design site to constantly test each change that I made to my website and to ensure that it appeared in the desired way on different screen sizes. I also tested my website on different screen sizes (mobile, tablet and desktop) to ensure it appeared in the desired way on different devices.
 
 I used my own phone to test the orientation and how the site differs from portrait to landscape and to get a feel on the user experience.
 
 To test my whole website, I went through each page, feature by feature, and documented the results on a spreadsheet. The spreadsheet also documents any responsive features and confirms that they work and appear as intended on different screen sizes. The link to the spreadsheet it below:
 
-Responsive testing-checklist //link to the pdf visual
+Responsive testing-checklist [link](http://mattkersley.com/responsive/)
 
-Performance Testing
+## <a name="performancetesting">Performance Testing</a>
 
-Lighthouse Report Result -Main issues to bring down the performance score were things outwith my control - eg. Bootstrap links (error unused CSS) and caching issues (requesting http cache-control)
+[Lighthouse Report Result](https://en.wikipedia.org/wiki/Google_Lighthouse) - Main issues to bring down the performance score were things out of my control - eg. Bootstrap links (error unused CSS) and caching issues (requesting http cache-control)
 
-Validation
+## <a name="validationcode">Validation</a>
 
-W3C tests completed for html and css pages
+### <a name="htmlcode">HTML</a>
 
 W3C testing completed for: index.html
-No issues with W3C Validator on Markup except on game.html where there was a recommendation to follow semantic headings after section, however when script.js is added on the live site this uses an h2 element so resolved upon game play.
+No other issues with W3C Validator on Markup except for the below two warnings:
 
-style.css testing completed with issues regarding the webkit vendor extensions which are to be expected and it also warns about using the same background colour and borders for buttons. There is enough of a contract between the text and background for this not to be an issue. I attempted to save this as a PDF but GitPod wouldn't accept it so saved as PNG and assessor should zoom in to see all the information, thanks.
+**Warning message**: <section id=”text-container”> required a heading element, this is empty as this information gets inputted from the JavaScript file.
 
-Bugs
+**Warning message**: <section id=”buttonBox” class”nested btn”> required a heading element, this is empty as this information gets inputted from the JavaScript file.
 
-Main Background
-o	Issue: Image not showing on the main html page
-o	Testing:  
-1.	Added background image to the main.css file – this did not link through came up with error “failed to load resource the server responded with a status 404”
-2.	Add file direct to html inline body tag to test if this worked
+*Fixed Errors*:
 
-o	Results: background image is now visible in the main html body
+Error Bad Value:  on favicon images: these were raised an error as there was a spacing in the file path, all favicon icons were all corrected and not throwing an error message.
+Error Bad Value: on the form action attribute as this was left blank, this was amened to have the “#” symbol, this was corrected and not throwing an error message.
+Error Attribute: on textarea as ‘type=”text”’ was added, this has been removed, no longer throwing an error message. 
+ 
+## <a name="csscode">CSS</a>
 
-Game container
-o	Issue: main game container did not fit into the outer container when the screen is resized / reduced
-o	Testing: 
-1.	Tested on boot strap grid system– was still not re-sizing and having the right formation
-2.	Changed layout to a css grid template
+W3C testing completed for: main.css
 
-o	Results: amend the layout to be in a css grid layout so this was easier to manipulate and move containers around
+*Error*:
+Testing completed with one error on the end container, there was no minimum declaration on the height of the grid-row as this was set to: minmax(auto).  I then corrected this to be set to minmax(100px, auto) which cleared the error and no more further errors were found.
 
-Text / Button Container
-o	Issue: The text / buttons and fuel and missiles do not fit within the main game container
-o	Testing: 
-1.	Tested on boot strap – was still not re-sizing and having the right formation
-2.	Changed layout to a css grid template
+## <a name="bugsfixes">Bugs</a>
 
-o	Results: amend the layout to be in a css grid layout so this was easier to manipulate and move containers around
+**Main Background**
+- Issue: Image not showing on the main html page
+- Testing:  
+  1. Added background image to the main.css file – this did not link through came up with error “failed to load resource the server responded with a status 404”
+  2. Add file direct to html inline body tag to test if this worked
 
-Image container
-o	Issue: Image does not fit or re-size in the main container 
-o	Testing: 
-1.	Targeted wrong element, as JS was creating the image nothing was inputted in HTML just the container
-2.	Added a class to the image tag to amend the image resizing issue, this was still not resizing the image
-3.	Tested this as a background image to see if the sizing is resized on different screen sizes
+- Results: background image is now visible in the main html body
 
-o	Results: changed the image to be a background image url so this is easier to contain and cover the image container through different screen sizes 
+**Game container**
+- Issue: main game container did not fit into the outer container when the screen is resized / reduced
+- Testing: 
+  1. Tested on boot strap grid system– was still not re-sizing and having the right formation
+  2. Changed layout to a css grid template
 
-How to play -NOTES
-•	Change to e in game rather than sperate this way no not need to add another styling element and then the player can choose if they wish to see how to play rather than trying to stop game play to see how to play the game //to be developed
+- Results: amend the layout to be in a css grid layout so this was easier to manipulate and move containers around
 
-Contact Modal
-o	Issue: When the user clicks inside the input field this removed the contact overlay 
-o	Testing: 
-1.	Added JQuery to make the overlay static so this would not be removed
-2.	Added a ‘X’ so the user can close the overlay 
-3.	This overlay created difficulties with re-sizing and keep a consistent sizing through all the modal / overlays displays 
+**Text / Button Container**
+- Issue: The text / buttons and fuel and missiles do not fit within the main game container
+- Testing: 
+  1. Tested on boot strap – was still not re-sizing and having the right formation
+  2. Changed layout to a css grid template
 
-o	Results: changed the overlay to a bootstrap modal so this was more consistent and keeping with the size ratio and dimensions 
+- Results: amend the layout to be in a css grid layout so this was easier to manipulate and move containers around
 
-Return Home Modal
-o	Issue: Sizing of overlay is not re-sizing correctly 
-o	Testing: 
-1.	Styled through css for sizing and ratio  
+**Image container**
+- Issue: Image does not fit or re-size in the main container 
+- Testing: 
+  1. Targeted wrong element, as JS was creating the image nothing was inputted in HTML just the container
+  2. Added a class to the image tag to amend the image resizing issue, this was still not resizing the image
+  3. Tested this as a background image to see if the sizing is resized on different screen sizes
 
-o	Results: changed the overlay to a bootstrap modal so this was more consistent and keeping with the size ratio and dimensions 
+- Results: changed the image to be a background image url so this is easier to contain and cover the image container through different screen sizes 
 
-Ending Page
-o	Issue: Added an automatic timeout refresh 
-o	Testing: 
-1.	Added different times 
-2.	Added an icon for the user
+**Contact Modal**
+- Issue: When the user clicks inside the input field this removed the contact overlay 
+- Testing: 
+  1. Added JQuery to make the overlay static so this would not be removed
+  2. Added a ‘X’ so the user can close the overlay 
+  3. This overlay created difficulties with re-sizing and keep a consistent sizing through all the modal / overlays displays 
 
-o	Results: removed the refresh time out feature and added this to the icon so the user can choose if they wished to refresh the page or not 
+- Results: changed the overlay to a bootstrap modal so this was more consistent and keeping with the size ratio and dimensions 
 
-Ending of game
-•	Look at adding an option to replay the game – could just be a reset function like when the player whished to return home
-•	4 different endings  
+**Return Home Modal**
+- Issue: Sizing of overlay is not re-sizing correctly 
+- Testing: 
+  1. Styled through css for sizing and ratio  
+
+- Results: changed the overlay to a bootstrap modal so this was more consistent and keeping with the size ratio and dimensions 
+
+**Ending Page**
+- Issue: Added an automatic timeout refresh 
+- Testing: 
+  1. Added different times for a timeout refresh
+  2. Added an icon for the user
+
+- Results: removed the refresh time out feature and added this to the icon so the user can choose if they wished to refresh the page or not 
+
+**Ending of Game**
+- Look at adding an option to replay the game – could just be a reset function like when the player wished to return home
+- 4 different endings  
 
 
 Expected: 

@@ -4,6 +4,7 @@
 
 // Welcome modal variable
 const input = document.getElementById('player');
+// console.log(input);
 const startBtn = document.getElementById('start-btn');
 
 // Main game variables 
@@ -32,10 +33,11 @@ let sound = false; //Ensures that the sound is on when the game is being played
 let playersName;
 let ammo = 0;
 let fuel = 0;
+// console.log(playersName);
 
 // removes the opening modal when the user clicks on it
 startGame = () => {
-    const info = $('#player').val();
+    const info = $('#player').val(); // convey to javascript vanilla JS
     let txt;
     if (info == "") {
         // alert("name required")
@@ -44,21 +46,27 @@ startGame = () => {
 
     } else {
         txt = "";
-        console.log(info);
-        playersName = info.value;
+        // console.log(info);
+        playersName = info;
+        // console.log(playersName);
         // return true;
-        
+
+        // once the button is clicked 
+
+        // $(document).ready(function(){
+            // $("#start-btn").click(function(){ 
+                
+                $("#modal-box").hide(); // convey to javascript vanilla JS
+                $('.modal-backdrop').remove(); // convey to javascript vanilla JS
+                // console.log("modal is hidden")
+        //     })
+        // })
+        advanceTo(scenario.one)
     } 
 
-    $(document).ready(function(){
-        $("#start-btn").click(function(){
-            $("#modal-box").hide();
-            $('.modal-backdrop').remove();
-            console.log("modal is hidden")
-        })
-    })
+    
 
-    advanceTo(scenario.one)
+    // advanceTo(scenario.one)
     
 }
 
@@ -100,6 +108,13 @@ const noBack = () => {
     window.history.forward();
 }
 
+// in console set the value = 4
+// set the query selector 
+// set values to update the divs
+// increasing and decreasing
+
+
+
 // const emptyBars = (el) => {
 //     el.addClass('.empty-grey');
 //   };
@@ -112,7 +127,7 @@ const noBack = () => {
     changeButtons(s.buttons)
     
     // if (ammo = ammo - 1) { //ammo decreases
-    //   ammo = ammo++;
+    //   ammo = ammo++; // ammo--;
     //   if (ammo > 5) {
     //     ammoGameOver();
     //   }
