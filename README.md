@@ -163,12 +163,12 @@ The wireframes were created using [Adobe XD](https://www.adobe.com/uk/products/x
 
 Desktop & Laptop | Tablet & Mobile
 ------------------------ | ---------------------
-[Welcome](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/index-wireframe-xl-lg-md.pdf) | [Welcome](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/index-wireframe-xl-lg-md.pdf)
-[Game Page](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/index-wireframe-xl-lg-md.pdf) | [Game Page](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/index-wireframe-xl-lg-md.pdf)
-[How to Play](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/index-wireframe-xl-lg-md.pdf) | [How to Play](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/index-wireframe-xl-lg-md.pdf)
-[Contact](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/index-wireframe-xl-lg-md.pdf) | [Contact](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/index-wireframe-xl-lg-md.pdf)
-[Return Home](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/index-wireframe-xl-lg-md.pdf)| [Return Home](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/index-wireframe-xl-lg-md.pdf)
-[End of Game](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/index-wireframe-xl-lg-md.pdf) | [End of Game](https://github.com/EllieJ87/ellchan-anime/blob/main/wireframes/index-wireframe-xl-lg-md.pdf)
+[Welcome](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/welcome-desktop.jpg) | [Welcome](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/welcome-mobile.jpg)
+[Game Page](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/game-main-desktop.jpg) | [Game Page](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/game-main-mobile.jpg)
+[How to Play](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/how-to-play-desktop.jpg) | [How to Play](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/how-to-play-mobile.jpg)
+[Contact](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/contact-desktop.jpg) | [Contact](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/contact-mobile.jpgf)
+[Return Home](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/return-home-desktop.jpg)| [Return Home](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/return-home-mobile.jpg)
+[End of Game](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/game-over-desktop.jpg) | [End of Game](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/game-over-mobile.jpg)
 
 There are some differences between my wireframes and my final website. This was due to visual preferences and what was able to work for a streamline user experience.
  

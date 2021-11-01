@@ -2,90 +2,62 @@
 // by myself
 // https://codepen.io/rzim2082/pen/jrWYJW
 
-// Welcome modal variable
+// -- ONLOAD WELCOME VARIABLES -- //
 const input = document.getElementById('player');
-// console.log(input);
 const startBtn = document.getElementById('start-btn');
 
-// Main game variables 
+// -- MAIN GAME VARIABLES -- // 
 const image = document.getElementById("images");
 const text = document.getElementById("text");
 const buttonBox = document.getElementById('buttonBox');
 
-// Return home modal variables
+// -- RETURN HOME VARIABLES -- //
 const modal = document.getElementById('game-container');
 const test = document.getElementById('good-bye-text');
 
-// Ammo & Fuel variables
+// -- AMMO & FUEL VARIABLES -- //
 let ammoBars = document.querySelectorAll('.ammo-bar');
 let fuelBars = document.querySelectorAll('fuel-bar');
 let addClass = document.querySelectorAll('empty-bar');
 
-// Sound variables
+// -- SOUND VARIABLES -- //
 const buttonSound = new Audio("assets/audio/beep-button.mp3");
 const volBtn = $("#volume-btn");
-
 const soundBtn = $(".audio");
 
-let sound = false; //Ensures that the sound is on when the game is being played
+// -- SOUND IS OFF AT THE START OF THE GAME -- //
+let sound = false; 
 
-// this is the variable for the player's name
+// -- PLAYERS NAME AND LET STATE -- //
 let playersName;
 let ammo = 0;
 let fuel = 0;
-// console.log(playersName);
 
-// removes the opening modal when the user clicks on it
+// -- WELCOME ONLOAD -- //
 startGame = () => {
-    const info = $('#player').val(); // convey to javascript vanilla JS
+    // Players name value
+    const info = $('#player').val();
     let txt;
-    if (info == "") {
-        // alert("name required")
+    if (info == "") { // No input is entered throws error message
         txt = "Need a name ranger!";
         document.getElementById("playerName").innerHTML = txt;
 
     } else {
         txt = "";
-        // console.log(info);
+        // Name has been entered
         playersName = info;
-        // console.log(playersName);
-        // return true;
-
-        // once the button is clicked 
-
-        // $(document).ready(function(){
-            // $("#start-btn").click(function(){ 
-                
-                $("#modal-box").hide(); // convey to javascript vanilla JS
-                $('.modal-backdrop').remove(); // convey to javascript vanilla JS
-                // console.log("modal is hidden")
-        //     })
-        // })
+        document.getElementById("modal-box").style.display = "none";
+        $('.modal-backdrop').remove();
         advanceTo(scenario.one)
-    } 
-
-    
-
-    // advanceTo(scenario.one)
-    
+    }     
 }
-
-// -- THIS WAS THE ORIGINAL SCRIPT -- //
-// function removeModal() {
-//     console.log(input.value);
-//     playersName = input.value;
-// // if the user clicks on the button the modal is removed
-//     var myobj = document.getElementById("modal-box");
-//     myobj.remove(); 
-//     advanceTo(scenario.one) 
-// }
 
 // Replaces 'Your name' with the players input
 let changeText = (words) => {
     text.innerHTML = words.replace("Your name", playersName);
 }
 
-// Changes the image on question base
+// Changes the image
 let changeImage = (img) => {
     images.style.backgroundImage = "url(" + img + ")";
 }
@@ -99,10 +71,8 @@ let changeButtons = (buttonList) => {
     };
 };
 
-
-
-
-// Prevents the user to go backwards (from stack overflow source)
+// -- PREVENTS THE USER FROM GOING BACK SOURCE: (from stack overflow)
+// https://stackoverflow.com/questions/12381563/how-can-i-stop-the-browser-back-button-using-javascript
 window.history.forward();
 const noBack = () => {
     window.history.forward();
@@ -140,43 +110,32 @@ const noBack = () => {
     //   emptyBars(fuelBars[fuel]);
     // }
 
-    // Toggles the volume icon
-
+    // -- MAKES THE SOUND PLAY IF ON/OFF -- //
     $(".audio").click(function(){
         if (sound) {
             sound = true;
             play(buttonSound);
-            // console.log("sound played")
-        }
-
-        else {
+        } else {
             sound = false;
-            // console.log("sound off")
         }
-
     })
-
   };
 
-// Toggles the volume icon
+// -- TOGGLES THE VOLUME ICON TO CHANGE WHEN CLICKED -- //
 $(volBtn).click(function() {
     if (sound) {
         sound = false;
         $(this).toggleClass("fa-volume-off");
         $(this).toggleClass("fa-volume-up");
-        console.log("sound", sound);
-    }
-    else {
+    } else {
         sound = true;
         play(buttonSound);
         $(this).toggleClass("fa-volume-off");
         $(this).toggleClass("fa-volume-up");
-        console.log("sound", sound);
         }
 });
 
-
-// Plays the audio sound
+// -- PLAYS THE AUDIO SOUND -- //
 const play = (audio) => {
     audio.play();
   }
@@ -186,8 +145,8 @@ const stop = (audio) => {
     audio.currentTime = 0;
   }
 
-  // import this text from a separte doc
-// Added a home element button (change to icon) removes modal and displays generic text
+// -- REMOVES HOME MODAL AND TAKES PLAYER TO A NEW 'GAME OVER' SCREEN -- //
+// Ending text with option to refresh the page to start the game again
 const removeHomeModal = () => {
     let myobj2 = document.getElementById("game-container");
     myobj2.remove();
@@ -216,13 +175,12 @@ const removeHomeModal = () => {
     <b>Would you like to try again?</b>
     `
     + `<br></br>`
-    // added a font awesome icon with a refresh page browser element
     + `<div class="home-icon"> <a onclick="setTimeout(function() { 
         location.reload(true); });"><i class="fa fa fa-refresh"></i></a>
         </div></div>`;
 };
 
-// Game scenario
+// -- MAIN GAME SCENARIO -- // 
 const scenario = {
     one: {
         image: 'assets/images/image-4.jpg',  
@@ -232,7 +190,6 @@ const scenario = {
             ["Turn and run", "advanceTo(scenario.three)"],
             ["Enter The House", "advanceTo(scenario.four)"]
         ]
-        
     },
 
     two: {
@@ -265,9 +222,8 @@ const scenario = {
         image: 'assets/images/Untitled-4.jpg',
         text: "TO BE CONTINUED...",
     },
-
 };
 
-// Starts the game
+// -- STARTS THE GAME -- //
 advanceTo(scenario.one);
 

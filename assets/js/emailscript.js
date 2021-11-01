@@ -21,7 +21,7 @@ let engine = (id, serial, message) => {
 
     else {
         errorMsg[serial].innerHTML = "";
-        id.style.border = "2px solid green";
+        // id.style.border = "2px solid green";
         alert('Thanks for your feedback!');
     }
 }
