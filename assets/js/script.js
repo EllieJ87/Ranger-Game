@@ -17,8 +17,7 @@ const test = document.getElementById('good-bye-text');
 
 // -- AMMO & FUEL VARIABLES -- //
 let ammoBars = document.querySelectorAll('.ammo-bar');
-let fuelBars = document.querySelectorAll('fuel-bar');
-let addClass = document.querySelectorAll('empty-bar');
+let fuelBars = document.querySelectorAll('.fuel-bar');
 
 // -- SOUND VARIABLES -- //
 const buttonSound = new Audio("assets/audio/beep-button.mp3");
@@ -30,8 +29,8 @@ let sound = false;
 
 // -- PLAYERS NAME AND LET STATE -- //
 let playersName;
-let ammo = 0;
-let fuel = 0;
+let ammo = 0; // setting the ammo at index 0
+let fuel = 0; // setting the fuel at index 0
 
 // -- WELCOME ONLOAD -- //
 startGame = () => {
@@ -78,37 +77,37 @@ const noBack = () => {
     window.history.forward();
 }
 
-// in console set the value = 4
-// set the query selector 
-// set values to update the divs
-// increasing and decreasing
-
-
-
-// const emptyBars = (el) => {
-//     el.addClass('.empty-grey');
-//   };
+// -- CHANGE THE BARS TO BE EMPTY -- // 
+const emptyBars = (el) => {
+    el.classList.add('empty-bars');
+  };
   
-// this is what moves the game along
+// -- MAIN GAME MOVEMENT & CHANGES THE SCENARIO -- //
  const advanceTo = (s) => {
     
     changeImage(s.image)
     changeText(s.text)
     changeButtons(s.buttons)
-    
-    // if (ammo = ammo - 1) { //ammo decreases
-    //   ammo = ammo++; // ammo--;
-    //   if (ammo > 5) {
-    //     ammoGameOver();
-    //   }
-    //   emptyBars(ammoBars[ammo]);
-    // } else if (fuel = fuel - 1) { // fuel decreses
-    //   fuel = fuel++;
-    //   if (fuel > 5) {
-    //     fuelGameOver();
-    //   }
-    //   emptyBars(fuelBars[fuel]);
-    // }
+
+    // -- HELPED FROM SUNNY -- //
+
+    // if decreaseAmmo is true then change class to be empty bars    
+    if (s.decreaseAmmo) { 
+        emptyBars(ammoBars[ammo]);
+        // check to see when ammo reaches equal to 5 then it's game over
+        if (ammo >= 5) {
+            ammoGameOver();
+        }
+        ammo++;
+        // if decreaseFuel is true then change class to be empty bars
+    } else if (s.decreaseFuel) { 
+        emptyBars(fuelBars[fuel]);
+        // check to see when fuel reaches equal to 5 then it's game over
+        if (fuel >= 5) {
+            fuelGameOver();
+        }
+        fuel++;
+    }
 
     // -- MAKES THE SOUND PLAY IF ON/OFF -- //
     $(".audio").click(function(){
@@ -185,7 +184,6 @@ const scenario = {
     one: {
         image: 'assets/images/image-4.jpg',  
         text: "Your name Bacon ipsum dolor amet boudin pastrami shankle ham fatback pork. Short ribs ham beef, filet mignon ball tip sirloin shankle t-bone drumstick. Ground round drumstick pancetta fatback alcatra.?",
-        fuel: fuelBars[fuel],
         buttons: [
             ["Turn and run", "advanceTo(scenario.three)"],
             ["Enter The House", "advanceTo(scenario.four)"]
@@ -204,6 +202,7 @@ const scenario = {
     three: {
         image: 'assets/images/image-3.jpg',
         text: "Scenario 2",
+        decreaseAmmo: true,
         buttons: [
             ["continue", "advanceTo(scenario.four)"]
         ]
@@ -212,6 +211,7 @@ const scenario = {
     four: {
         image: 'assets/images/image-4.jpg',
         text: "Scenario 3",
+        decreaseFuel: true,
         buttons: [
             ["Follow your Dog Downstairs", "advanceTo(scenario.five)"],
             ["Search the Kitchen for a knife", "advanceTo(scenario.one)"]
