@@ -10,6 +10,7 @@ const startBtn = document.getElementById('start-btn');
 const image = document.getElementById("images");
 const text = document.getElementById("text");
 const buttonBox = document.getElementById('buttonBox');
+const gameModal = document.getElementById("game-container");
 
 // -- RETURN HOME VARIABLES -- //
 const modal = document.getElementById('game-container');
@@ -45,7 +46,7 @@ startGame = () => {
         txt = "";
         // Name has been entered
         playersName = info;
-        document.getElementById("modal-box").style.display = "none";
+        document.getElementById("modal-welcome").style.display = "none";
         $('.modal-backdrop').remove();
         advanceTo(scenario.one)
     }     
@@ -70,6 +71,13 @@ let changeButtons = (buttonList) => {
     };
 };
 
+// const gameOver = (gameEnd) => {
+//     gameEnd.classList.remove(changeButtons());
+//     gameEnd.classList.remove(changeImage());
+//     gameEnd.classList.remove(changeText());
+// }
+
+
 // -- PREVENTS THE USER FROM GOING BACK SOURCE: (from stack overflow)
 // https://stackoverflow.com/questions/12381563/how-can-i-stop-the-browser-back-button-using-javascript
 window.history.forward();
@@ -89,8 +97,13 @@ const emptyBars = (el) => {
     changeText(s.text)
     changeButtons(s.buttons)
 
-    // -- HELPED FROM SUNNY -- //
+    // if (s.gameEnd) {
+    //     gameOver();
+    // } else {
+    //     return false;
+    // }
 
+    // -- HELPED FROM SUNNY -- //
     // if decreaseAmmo is true then change class to be empty bars    
     if (s.decreaseAmmo) { 
         emptyBars(ammoBars[ammo]);
@@ -107,6 +120,9 @@ const emptyBars = (el) => {
             fuelGameOver();
         }
         fuel++;
+    } 
+    else if(fuel >= 4 || ammo >= 4) {
+        anotherGameOver();
     }
 
     // -- MAKES THE SOUND PLAY IF ON/OFF -- //
@@ -119,6 +135,38 @@ const emptyBars = (el) => {
         }
     })
   };
+
+  const ammoGameOver = () => {
+    gameModal.remove();
+    test.innerHTML =  `
+    <div class="container end-container">
+    <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
+    +
+    `
+    <p class="end-text">With ${playersName} returning back to their home planet...
+    `
+    + `<br></br>`
+    + `
+    Astra and The Orbit Rangers tried to save Pokitaru but they were eventually 
+    outnumbered by The Magnetars, Vex took Astra and The Orbit Rangers back to 
+    his ship as hostages.  
+    `
+    + `<br></br>` 
+    + `
+    With Astra and The Orbit Rangers now in Vex’s possession, and no other ranger 
+    out there to stop him, meant he was able to continue on his plans to absorb 
+    Pokitaru’s energy and lifestream, all Astra could do is watch as Vex drained 
+    Pokitaru’s energy, slowing depleting until the planet eventually died out...  
+    `
+    + `<br></br>` 
+    + `
+    <b>Would you like to try again?</b>
+    `
+    + `<br></br>`
+    + `<div class="home-icon"> <a onclick="setTimeout(function() { 
+        location.reload(true); });"><i class="fa fa fa-refresh"></i></a>
+        </div></div>`;
+};
 
 // -- TOGGLES THE VOLUME ICON TO CHANGE WHEN CLICKED -- //
 $(volBtn).click(function() {
@@ -147,8 +195,7 @@ const stop = (audio) => {
 // -- REMOVES HOME MODAL AND TAKES PLAYER TO A NEW 'GAME OVER' SCREEN -- //
 // Ending text with option to refresh the page to start the game again
 const removeHomeModal = () => {
-    let myobj2 = document.getElementById("game-container");
-    myobj2.remove();
+    gameModal.remove();
     test.innerHTML =  `
     <div class="container end-container">
     <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
@@ -186,13 +233,14 @@ const scenario = {
         text: "Your name Bacon ipsum dolor amet boudin pastrami shankle ham fatback pork. Short ribs ham beef, filet mignon ball tip sirloin shankle t-bone drumstick. Ground round drumstick pancetta fatback alcatra.?",
         buttons: [
             ["Turn and run", "advanceTo(scenario.three)"],
-            ["Enter The House", "advanceTo(scenario.four)"]
+            ["Enter The House Enter The House Enter The House", "advanceTo(scenario.two)"]
         ]
     },
 
     two: {
         image: 'assets/images/Untitled-4.jpg',
         text: "Your name Bacon ipsum dolor amet boudin pastrami shankle ham fatback pork. Short ribs ham beef, filet mignon ball tip sirloin shankle t-bone drumstick. Ground round drumstick pancetta fatback alcatra.?",
+        decreaseAmmo: true,
         buttons: [
             ["Turn and run", "advanceTo(scenario.three)"],
             ["Enter The House", "advanceTo(scenario.four)"]
@@ -202,7 +250,7 @@ const scenario = {
     three: {
         image: 'assets/images/image-3.jpg',
         text: "Scenario 2",
-        decreaseAmmo: true,
+        decreaseFuel: true,
         buttons: [
             ["continue", "advanceTo(scenario.four)"]
         ]
@@ -211,7 +259,7 @@ const scenario = {
     four: {
         image: 'assets/images/image-4.jpg',
         text: "Scenario 3",
-        decreaseFuel: true,
+        decreaseAmmo: true,
         buttons: [
             ["Follow your Dog Downstairs", "advanceTo(scenario.five)"],
             ["Search the Kitchen for a knife", "advanceTo(scenario.one)"]
@@ -221,6 +269,7 @@ const scenario = {
     five: {
         image: 'assets/images/Untitled-4.jpg',
         text: "TO BE CONTINUED...",
+        // gameEnd: true
     },
 };
 

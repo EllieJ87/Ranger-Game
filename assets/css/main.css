@@ -16,6 +16,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow: scroll;
+}
+
 body {
   padding: 0;
   margin: 0 auto;
@@ -237,8 +241,11 @@ footer {
   color: #A01306;
 }
 
-/* END OF GAME ICON POSITION */
+.fa-heartbeat {
+  color: #FC008C;
+}
 
+/* END OF GAME ICON POSITION */
 .home-icon {
   grid-area: home-icon;
   align-items: center;
@@ -375,8 +382,9 @@ aside {
 /* STATS CONTAINER */
 .stats {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);;
   grid-gap: 10px;
+  padding: 5px!important;
   justify-self: start;
   align-items: start;
 }
@@ -396,6 +404,11 @@ aside {
   color: var(--aqua);
 }
 
+.health-bar {
+  background: #FC008C;
+  color: #FC008C;
+}
+
 .empty-bars {
   background: #DBDCDF;
   color: #DBDCDF;
@@ -403,7 +416,7 @@ aside {
 
 /* ------ ONLOAD WELCOME ------ */
 /* BACKGROUND COLOUR (BODY FADE) */
-#modal-box {
+#modal-welcome {
   background-color: var(--navy);
 }
 
@@ -891,13 +904,6 @@ label {
   ". home-image ."
   "home-text home-text home-text"
   ". home-icon .";
-  
-  /* padding: 10% 15px; */
-  /* height: 600px; */
-  /* display: flex; */
-  /* flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center; */
 }
 
 #home-image {
@@ -913,8 +919,6 @@ label {
   font-family: var(--head);
   color: var(--white);
   letter-spacing: 0.1em;
-  /* padding-top: 20px; */
-  /* padding-bottom: 20px; */
 }
 
 /* ------ MEDIA QUERIES ------ */
@@ -1072,6 +1076,13 @@ label {
     font-size: 1em;
   }
 
+  /* FOOTER & NAVIGATION */
+  footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+
   /* END OF GAME ICON POSITION */
   .fa-refresh {
     font-size: 30px;
@@ -1163,13 +1174,7 @@ label {
     font-size: 1em;
   }
   
-  /* FOOTER & NAVIGATION */
-  footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
-  }
-  
+  /* FOOTER & NAVIGATION */ 
   .footer-links a {
     padding: 10px;
     font-size: 25px;
@@ -1203,7 +1208,6 @@ label {
   .fa-github:hover {
     font-size: 30px;
   }
-
 }
 
 /*  ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px */
@@ -1247,12 +1251,3 @@ label {
     bottom: 0;
   }
 }
-
-          
-
-
-
-  
-
-  
- 

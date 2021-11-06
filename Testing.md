@@ -383,6 +383,13 @@ Testing completed with one error on the end container, there was no minimum decl
 
 ## <a name="bugsfixes">Bugs</a>
 
+**Main Game**
+- Issue: page was not scrolling - was not an issue prior
+- Testing:  
+  1. Added 'overflow: scroll;' to html body to ensure page is scrollable on different decives
+
+- Results: page is now scrollable on different screen sizes
+
 **Main Background**
 - Issue: Image not showing on the main html page
 - Testing:  
@@ -398,6 +405,12 @@ Testing completed with one error on the end container, there was no minimum decl
   2. Changed layout to a css grid template
 
 - Results: amend the layout to be in a css grid layout so this was easier to manipulate and move containers around
+
+**_Issues still unresolved (due to timing)_** 
+
+1. When checking the main game on my phone, settings on my phone is in dark mode, with this setting the div containers for the states the 'place holder' numbers were visible and could be seen.  
+
+This is not as asthetic that I like I am going to look into this feature and see how to amend this going forward and test across dark and light mode on mobiles.  Desktop Opera is in dark mode and this was not showing up as a design asthetic issue.
 
 **Text / Button Container**
 - Issue: The text / buttons and fuel and missiles do not fit within the main game container
@@ -424,6 +437,14 @@ Testing completed with one error on the end container, there was no minimum decl
   3. This overlay created difficulties with re-sizing and keep a consistent sizing through all the modal / overlays displays 
 
 - Results: changed the overlay to a bootstrap modal so this was more consistent and keeping with the size ratio and dimensions 
+
+**_Issues still unresolved (due to timing)_** 
+
+1. Realised that when hitting the submit form with one required field filled in the form is still able to be submitted, intention was to have both ‘Player Name’ and ‘Email’ to be filled in 
+2. When the form is submitted the ‘alert’ box appears twice
+
+With both of these issues I will investigate and research further into form validation’s and how this information gets pulled into a third party source.
+
 
 **Return Home Modal**
 - Issue: Sizing of overlay is not re-sizing correctly 

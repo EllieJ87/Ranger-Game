@@ -232,6 +232,14 @@ This section is a brief highlight of features that this site contains, why they 
 - The user has the option to click outside of the box to dismiss the overlay
 - The 'How to Play' text is also incorporated in the main game play if the user has missed this element, this can be skipped if the user does not want to go through this
 
+**Feedback**
+
+For the ‘How to Play’ instructions for the game play was suggested to try and see if this modal could be added into the ‘Welcome Modal’ prior to the game starting.
+
+From this feedback I tried to implement this into the ‘Welcome Modal’ however there were difficulties regarding the closures of the modal as the ‘How to Play’ returned to where the game was and was not linking back to the ‘Welcome Modal’.  As the ‘Welcome Modal’ is a crucial part of the game as it runs validations for the Players name, I felt adding this styling was not working for my set-up.
+
+I later discussed this feedback with my mentor Sunny and he said as it’s not a timed based game then it was okay not to be added into the ‘Welcome Modal’.  I also stated that the ‘How to Play’ instructions were also implemented into the game so the user can choose whether or not they wish to run through these or not when playing at the start.
+
 ### <a name="contactmodal">Contact (Modal)</a>
 
 - The ‘Email’ icon launches a modal once the user clicks on it

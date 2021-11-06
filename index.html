@@ -28,7 +28,7 @@
 <body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="" style="background-image: url('assets/images/background.jpg');">
 
   <!-- ONLOAD WELCOME MODAL -->
-  <div class="modal fade" id="modal-box" tabindex="-1" role="dialog" aria-labelledby="modal-box">
+  <div class="modal fade" id="modal-welcome" tabindex="-1" role="dialog" aria-labelledby="modal-welcome">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content welcome">
         <div id="welcome-container" class="modal-body">
@@ -178,6 +178,17 @@
         <div class="fuel-bar">5</div>
         <div class="fuel-bar">6</div>
       </div>
+
+      <div class="health">
+        <i class="fa fa-heartbeat" aria-hidden="true"></i>
+        <div class="health-bar">1</div>
+        <div class="health-bar">2</div>
+        <div class="health-bar">3</div>
+        <div class="health-bar">4</div>
+        <div class="health-bar">5</div>
+        <div class="health-bar">6</div>
+      </div>
+
     </aside>
     
     <section id="text-container">
@@ -220,11 +231,11 @@
 
     // code to launch modal when window ready 
     $(document).ready(function() {
-      $("#modal-box").modal('show');
+      $("#modal-welcome").modal('show');
   });
 
   // 23/09/21 prevents the user from dismissing the modal box when clicked outside
-  $('#modal-box').modal({
+  $('#modal-welcome').modal({
     backdrop: 'static',
     keyboard: false
 })
