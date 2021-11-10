@@ -14,6 +14,8 @@ The main narrator guides your through the journey, but it is up to you to have t
 
 A deployed version of my website can be found [here](https://elliej87.github.io/ranger-game/)
 
+<a href="https://elliej87.github.io/ranger-game/" target="_blank">here</a>
+
 This domain will allow you to access Ranger Game website, which I have completed as part of the Code Institute Milestone 2 Project.
 
 ## Table of Contents
