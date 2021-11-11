@@ -143,64 +143,118 @@ const advanceTo = (s) => {
         }
     })
 };
-const capturedGameOver = () => {
+
+const helpedGameOver = () => {
     gameModal.remove();
     test.innerHTML =  `
     <div class="container end-container">
-    <img src="assets/images/image-1.jpg" id="home-image" class="img-fluid" alt="test">`
+    <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
     +
-    `
-    <p class="end-text">With ${playersName} returning back to their home planet...
-    `
+    `<h2 class="end-head">Ending: Helped the Orbit Rangers</h2>`
+    +
+    `<p class="end-text">Well done ${playersName} you managed to meet up with the rest of the Orbit Rangers!`
     + `<br></br>`
-    + `
-    Astra and The Orbit Rangers tried to save Pokitaru but they were eventually 
-    outnumbered by The Magnetars, Vex took Astra and The Orbit Rangers back to 
-    his ship as hostages.  
-    `
+    + `You took on Vex and the Magnetars and you managed to save Pokitaru!`
     + `<br></br>` 
-    + `
-    With Astra and The Orbit Rangers now in Vex’s possession, and no other ranger 
-    out there to stop him, meant he was able to continue on his plans to absorb 
-    Pokitaru’s energy and lifestream, all Astra could do is watch as Vex drained 
-    Pokitaru’s energy, slowing depleting until the planet eventually died out...  
-    `
+    + `Nice work ${playersName}!`
     + `<br></br>` 
-    + `
-    <b>Would you like to try again?</b>
-    `
+    + `<b>ENDING: 1 / 7</b>`
+    + `<br></br>` 
+    + `<b>Would you like to try again?</b></p>`
     + `<br></br>`
     + `<div class="home-icon"> <a onclick="setTimeout(function() { 
         location.reload(true); });"><i class="fa fa fa-refresh"></i></a>
         </div></div>`;
 };
 
-const ammoGameOver = () => {
+const fuelGameOver = () => {
     gameModal.remove();
     test.innerHTML =  `
     <div class="container end-container">
-    <img src="assets/images/image-2.jpg" id="home-image" class="img-fluid" alt="test">`
+    <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
     +
-    `
-    <p class="end-text">With ${playersName} returning back to their home planet...
-    `
+    `<h2 class="end-head">Ending: Lost in Space</h2>`
+    +
+    `<p class="end-text">Sadly ${playersName} you were unable to navigate back!`
     + `<br></br>`
-    + `
-    Astra and The Orbit Rangers tried to save Pokitaru but they were eventually 
-    outnumbered by The Magnetars, Vex took Astra and The Orbit Rangers back to 
-    his ship as hostages.  
-    `
+    + `You lost all communication with Astra and the hope of Pokitaru was gone.  You spent the rest of the years floating in space trying to reconnect back to Astra and The Orbit Rangers`
     + `<br></br>` 
-    + `
-    With Astra and The Orbit Rangers now in Vex’s possession, and no other ranger 
-    out there to stop him, meant he was able to continue on his plans to absorb 
-    Pokitaru’s energy and lifestream, all Astra could do is watch as Vex drained 
-    Pokitaru’s energy, slowing depleting until the planet eventually died out...  
-    `
+    + `Maybe don't run out of fuel next time ${playersName}...!`
     + `<br></br>` 
-    + `
-    <b>Would you like to try again?</b>
-    `
+    + `<b>ENDING: 2 / 7</b>`
+    + `<br></br>` 
+    + `<b>Would you like to try again?</b></p>`
+    + `<br></br>`
+    + `<div class="home-icon"> <a onclick="setTimeout(function() { 
+        location.reload(true); });"><i class="fa fa fa-refresh"></i></a>
+        </div></div>`;
+};
+
+const defeatedGameOver = () => {
+    gameModal.remove();
+    test.innerHTML =  `
+    <div class="container end-container">
+    <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
+    +
+    `<h2 class="end-head">Ending: Infultrated Vex</h2>`
+    +
+    `<p class="end-text">Well done ${playersName} you were very sneaky and quick enough to by pass all the Magnetars and were able to take down Vex himself!`
+    + `<br></br>`
+    + `With the help of Astra and the Orbit Rangers you were able to stop Vex and save Pokitaru!`
+    + `<br></br>` 
+    + `Nice team work there ${playersName}!`
+    + `<br></br>` 
+    + `<b>ENDING: 3 / 7</b>`
+    + `<br></br>` 
+    + `<b>Would you like to try again?</b></p>`
+    + `<br></br>`
+    + `<div class="home-icon"> <a onclick="setTimeout(function() { 
+        location.reload(true); });"><i class="fa fa fa-refresh"></i></a>
+        </div></div>`;
+};
+
+const capturedGameOver = () => {
+    gameModal.remove();
+    test.innerHTML =  `
+    <div class="container end-container">
+    <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
+    +
+    `<h2 class="end-head">Ending: Captured by Vex</h2>`
+    +
+    `<p class="end-text">You were not quick enough ${playersName}! That last incoming powerful blow was too strong for you and cut all power to your ship`
+    + `<br></br>`
+    + `You were taken on board Vex's ship and held captive`
+    + `<br></br>` 
+    + `You hoped Astra would come and save you...`
+    + `<br></br>` 
+    + `<b>ENDING: 4 / 7</b>`
+    + `<br></br>` 
+    + `<b>Would you like to try again?</b></p>`
+    + `<br></br>`
+    + `<div class="home-icon"> <a onclick="setTimeout(function() { 
+        location.reload(true); });"><i class="fa fa fa-refresh"></i></a>
+        </div></div>`;
+};
+
+const spyGameOver = () => {
+    gameModal.remove();
+    test.innerHTML =  `
+    <div class="container end-container">
+    <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
+    +
+    `<h2 class="end-head">Ending: Secret Spy</h2>`
+    +
+    `<p class="end-text">Who would have thought that you took up a secret mission ${playersName}!`
+    + `<br></br>`
+    + `You were a secret spy of Vex all along! You even managed to out smart Astra himself!`
+    + `<br></br>`
+    + `You managed to defeat Astra and the Orbit Rangers and helped Vex with his plans to destroy Pokitaru`
+    + `<br></br>` 
+    + `You feel good about yourself ${playersName}?`
+    + `<br></br>` 
+    + `<b>ENDING: 5 / 7</b>`
+    + `<br></br>` 
+    + `<b>Would you like to try again?</b></p>`
     + `<br></br>`
     + `<div class="home-icon"> <a onclick="setTimeout(function() { 
         location.reload(true); });"><i class="fa fa fa-refresh"></i></a>
@@ -213,154 +267,42 @@ const healthGameOver = () => {
     <div class="container end-container">
     <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
     +
-    `
-    <p class="end-text">With ${playersName} returning back to their home planet...
-    `
-    + `<br></br>`
-    + `
-    Astra and The Orbit Rangers tried to save Pokitaru but they were eventually 
-    outnumbered by The Magnetars, Vex took Astra and The Orbit Rangers back to 
-    his ship as hostages.  
-    `
-    + `<br></br>` 
-    + `
-    With Astra and The Orbit Rangers now in Vex’s possession, and no other ranger 
-    out there to stop him, meant he was able to continue on his plans to absorb 
-    Pokitaru’s energy and lifestream, all Astra could do is watch as Vex drained 
-    Pokitaru’s energy, slowing depleting until the planet eventually died out...  
-    `
-    + `<br></br>` 
-    + `
-    <b>Would you like to try again?</b>
-    `
-    + `<br></br>`
-    + `<div class="home-icon"> <a onclick="setTimeout(function() { 
-        location.reload(true); });"><i class="fa fa fa-refresh"></i></a>
-        </div></div>`;
-};
-
-const spyGameOver = () => {
-    gameModal.remove();
-    test.innerHTML =  `
-    <div class="container end-container">
-    <img src="assets/images/image-4.jpg" id="home-image" class="img-fluid" alt="test">`
+    `<h2 class="end-head">Ending: Fallen Hero</h2>`
     +
-    `
-    <p class="end-text">With ${playersName} returning back to their home planet...
-    `
+    `<p class="end-text">Wow ${playersName} who would have thought you were brave enough to go head to head with Vex and the Magnetars!`
     + `<br></br>`
-    + `
-    Astra and The Orbit Rangers tried to save Pokitaru but they were eventually 
-    outnumbered by The Magnetars, Vex took Astra and The Orbit Rangers back to 
-    his ship as hostages.  
-    `
+    + `You were a brave Rangr and will be missed by all, your heroic bravery managed to save Pokitaru and gave peace back to the planet and the galaxy.`
     + `<br></br>` 
-    + `
-    With Astra and The Orbit Rangers now in Vex’s possession, and no other ranger 
-    out there to stop him, meant he was able to continue on his plans to absorb 
-    Pokitaru’s energy and lifestream, all Astra could do is watch as Vex drained 
-    Pokitaru’s energy, slowing depleting until the planet eventually died out...  
-    `
+    + `You went down in history ${playersName} and to this day Pokitaru honours your bravery`
     + `<br></br>` 
-    + `
-    <b>Would you like to try again?</b>
-    `
+    + `<b>ENDING: 6 / 7</b>`
+    + `<br></br>` 
+    + `<b>Would you like to try again?</b></p>`
     + `<br></br>`
     + `<div class="home-icon"> <a onclick="setTimeout(function() { 
         location.reload(true); });"><i class="fa fa fa-refresh"></i></a>
         </div></div>`;
 };
 
-const defeatedGameOver = () => {
-    gameModal.remove();
-    test.innerHTML =  `
-    <div class="container end-container">
-    <img src="assets/images/image-5.jpg" id="home-image" class="img-fluid" alt="test">`
-    +
-    `
-    <p class="end-text">With ${playersName} returning back to their home planet...
-    `
-    + `<br></br>`
-    + `
-    Astra and The Orbit Rangers tried to save Pokitaru but they were eventually 
-    outnumbered by The Magnetars, Vex took Astra and The Orbit Rangers back to 
-    his ship as hostages.  
-    `
-    + `<br></br>` 
-    + `
-    With Astra and The Orbit Rangers now in Vex’s possession, and no other ranger 
-    out there to stop him, meant he was able to continue on his plans to absorb 
-    Pokitaru’s energy and lifestream, all Astra could do is watch as Vex drained 
-    Pokitaru’s energy, slowing depleting until the planet eventually died out...  
-    `
-    + `<br></br>` 
-    + `
-    <b>Would you like to try again?</b>
-    `
-    + `<br></br>`
-    + `<div class="home-icon"> <a onclick="setTimeout(function() { 
-        location.reload(true); });"><i class="fa fa fa-refresh"></i></a>
-        </div></div>`;
-};
-
-const fuelGameOver = () => {
-    gameModal.remove();
-    test.innerHTML =  `
-    <div class="container end-container">
-    <img src="assets/images/image-6.jpg" id="home-image" class="img-fluid" alt="test">`
-    +
-    `
-    <p class="end-text">With ${playersName} returning back to their home planet...
-    `
-    + `<br></br>`
-    + `
-    Astra and The Orbit Rangers tried to save Pokitaru but they were eventually 
-    outnumbered by The Magnetars, Vex took Astra and The Orbit Rangers back to 
-    his ship as hostages.  
-    `
-    + `<br></br>` 
-    + `
-    With Astra and The Orbit Rangers now in Vex’s possession, and no other ranger 
-    out there to stop him, meant he was able to continue on his plans to absorb 
-    Pokitaru’s energy and lifestream, all Astra could do is watch as Vex drained 
-    Pokitaru’s energy, slowing depleting until the planet eventually died out...  
-    `
-    + `<br></br>` 
-    + `
-    <b>Would you like to try again?</b>
-    `
-    + `<br></br>`
-    + `<div class="home-icon"> <a onclick="setTimeout(function() { 
-        location.reload(true); });"><i class="fa fa fa-refresh"></i></a>
-        </div></div>`;
-};
-
-const helpedGameOver = () => {
+const ammoGameOver = () => {
     gameModal.remove();
     test.innerHTML =  `
     <div class="container end-container">
     <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
     +
-    `
-    <p class="end-text">With ${playersName} returning back to their home planet...
-    `
+    `<h2 class="end-head">Ending: True Hero</h2>`
+    +
+    `<p class="end-text">What can we say ${playersName} but with your super flying skills and quick manoeuvres you out flew Vex and the Magnetars!`
     + `<br></br>`
-    + `
-    Astra and The Orbit Rangers tried to save Pokitaru but they were eventually 
-    outnumbered by The Magnetars, Vex took Astra and The Orbit Rangers back to 
-    his ship as hostages.  
-    `
+    + `You over came all obstacles and defeated the one and only Vex!`
     + `<br></br>` 
-    + `
-    With Astra and The Orbit Rangers now in Vex’s possession, and no other ranger 
-    out there to stop him, meant he was able to continue on his plans to absorb 
-    Pokitaru’s energy and lifestream, all Astra could do is watch as Vex drained 
-    Pokitaru’s energy, slowing depleting until the planet eventually died out...  
-    `
+    + `Well done ${playersName}!`
     + `<br></br>` 
-    + `
-    <b>Would you like to try again?</b>
-    `
+    + `Your name will go down in The Orbit Rangers history!`
+    + `<br></br>` 
+    + `<b>ENDING: 7 / 7</b>`
+    + `<br></br>` 
+    + `<b>Would you like to try again?</b></p>`
     + `<br></br>`
     + `<div class="home-icon"> <a onclick="setTimeout(function() { 
         location.reload(true); });"><i class="fa fa fa-refresh"></i></a>
@@ -428,7 +370,7 @@ const removeHomeModal = () => {
 // -- MAIN GAME SCENARIO -- // 
 const scenario = {
     scene1: {
-        image: 'assets/images/image-4.jpg', // cockpit 
+        image: 'assets/images/Untitled-4.jpg', // cockpit 
         text: "Welcome ranger playerName! Do you need to know how to play?",
         buttons: [
             ["Yeah", "advanceTo(scenario.scene2)"],
@@ -438,7 +380,7 @@ const scenario = {
 
     scene2: {
         image: 'assets/images/Untitled-4.jpg', // cockpit 
-        text: "This game is completely up to you and the chouces you make throughout the game.  You will be given options to navigate through different scenarios",
+        text: "This game is completely up to you and the choices you make throughout the game.  You will be given options to navigate through different scenarios",
         buttons: [
             ["I'm interested...Go on", "advanceTo(scenario.scene3)"]
         ]
@@ -582,7 +524,7 @@ const scenario = {
         image: 'assets/images/image-4.jpg', // astra with mask
         text: "On a whim?",
         buttons: [
-            ["Not my problem Astra...", "advanceTo(scenario.scene20)"]
+            ["Yup", "advanceTo(scenario.scene20)"]
         ]
     },
     
@@ -698,7 +640,7 @@ const scenario = {
     
     scene33: {
         image: 'assets/images/image-4.jpg', // Vex's location
-        text: "Great! Let's see if I can loate him for you",
+        text: "Great! Let's see if I can locate him for you",
         buttons: [
             ["Good plan!", "advanceTo(scenario.scene34)"],
             ["Let's do this!", "advanceTo(scenario.scene35)"]
@@ -816,9 +758,9 @@ const scenario = {
     
     scene47: {
         image: 'assets/images/image-4.jpg',
-        text: "H,, as long as you don't over use it!",
+        text: "Hmm as long as you don't over use it!",
         buttons: [
-            ["Someone will come for meif I do right?", "advanceTo(scenario.scene48)"]
+            ["Someone will come for me if I do right?", "advanceTo(scenario.scene48)"]
         ]
     },
     
@@ -832,7 +774,7 @@ const scenario = {
     
     story1: {
         image: 'assets/images/image-4.jpg',
-        text: "That's the spirit! you will need to be quick at navigating through them",
+        text: "That's the spirit! You will need to be quick at navigating through them",
         buttons: [
             ["No problem!", "advanceTo(scenario.story2)"]
         ]
@@ -884,10 +826,10 @@ const scenario = {
     
     story7: {
         image: 'assets/images/image-4.jpg',
-        text: "I new thre was a reason why I seeked your help playerName let's destroy these asteriods!",
+        text: "I knew there was a reason why I seeked your help playerName let's destroy these asteriods!",
         decreaseFuel: true,
         buttons: [
-            ["You got it AStra!", "advanceTo(scenario.story9)"]
+            ["You got it Astra!", "advanceTo(scenario.story9)"]
         ]
     },
     
@@ -936,7 +878,7 @@ const scenario = {
     
     story13: {
         image: 'assets/images/image-4.jpg',
-        text: "It looks like thre is a few clusters of asteriods that could be destroyed or can be dodged quickly!",
+        text: "It looks like there is a few clusters of asteriods that could be destroyed or can be dodged quickly!",
         buttons: [
             ["Speed it is!", "advanceTo(scenario.story14)"],
             ["Time to destroy!", "advanceTo(scenario.defeat1)"]
@@ -1031,23 +973,15 @@ const scenario = {
     help10: {
         image: 'assets/images/image-4.jpg',
         text: "I think I can see you playerName quick come and lend us some of your ammo!",
-        buttons: [
-            ["I'm on it!", "advanceTo(scenario.help11)"]
-        ]
-    },
-    
-    help11: {
-        image: 'assets/images/image-4.jpg',
-        text: "...",
         decreaseFuel: true,
         buttons: [
-            ["...", "advanceTo(scenario.scene1)"]
+            ["I'm on it!", "advanceTo(scenario.scene1)"]
         ]
     },
 
     fuel1: {
         image: 'assets/images/image-4.jpg',
-        text: "Oh no playerName! The asteriod it your fuel tank!",
+        text: "Oh no playerName! The asteriod hit your fuel tank!",
         decreaseFuel: true,
         buttons: [
             ["Huh? You can fix it right?", "advanceTo(scenario.fuel9)"],
@@ -1084,7 +1018,7 @@ const scenario = {
 
     fuel5: {
         image: 'assets/images/image-4.jpg',
-        text: "It was a close call but we have only just entered the largest asteriod field I've seen!",
+        text: "It was a close call but you've' only just entered the largest asteriod field I've seen!",
         buttons: [
             ["The largest??", "advanceTo(scenario.fuel7)"]
         ]
@@ -1092,7 +1026,7 @@ const scenario = {
 
     fuel6: {
         image: 'assets/images/image-4.jpg',
-        text: "It will might stop you if you use up all your fuel! I've never seen an asteriod field this large before!",
+        text: "It might stop you if you use up all your fuel! I've never seen an asteriod field this large before!",
         buttons: [
             ["I can take it!", "advanceTo(scenario.fuel7)"]
         ]
@@ -1108,7 +1042,7 @@ const scenario = {
 
     fuel8: {
         image: 'assets/images/image-4.jpg',
-        text: "Bad news playername it looks like that asteriod did a number on your fuel tank and it's draining at a much quicker rate!",
+        text: "Bad news playerName it looks like that asteriod did a number on your fuel tank and it's draining at a much quicker rate!",
         decreaseFuel: true,
         buttons: [
             ["Huh? You can fix it right?", "advanceTo(scenario.fuel9)"],
@@ -1177,7 +1111,7 @@ const scenario = {
 
     fuel16: {
         image: 'assets/images/image-4.jpg',
-        text: "playername you're in the clear!",
+        text: "playerName you're in the clear!",
         decreaseFuel: true,
         buttons: [
             ["Phew!", "advanceTo(scenario.fuel18)"]
@@ -1204,7 +1138,7 @@ const scenario = {
         image: 'assets/images/image-4.jpg',
         text: "playerName are you okay? I've seen you've been hit again!",
         buttons: [
-            ["Yeah an asteriod it me", "advanceTo(scenario.fuel21)"]
+            ["Yeah an asteriod hit me", "advanceTo(scenario.fuel21)"]
         ]
     },
 
@@ -1277,7 +1211,7 @@ const scenario = {
 
     defeat2: {
         image: 'assets/images/image-4.jpg',
-        text: "Few that was a close one! There is a clearing up ahead let's put this into auto drive!",
+        text: "Phew that was a close one! There is a clearing up ahead let's put this into auto drive!",
         decreaseAmmo: true,
         buttons: [
             ["Engage fuel boost", "advanceTo(scenario.defeat3)"],
@@ -1299,7 +1233,7 @@ const scenario = {
         text: "Nice maneuvering there playerName looks like you've cleared the asteriod field too!",
         decreaseFuel: true,
         buttons: [
-            ["Where is Vex hiding?", "advanceTo(scenario.defeat4)"]
+            ["Where is Vex hiding?", "advanceTo(scenario.defeat6)"]
         ]
     },
 
@@ -1307,7 +1241,7 @@ const scenario = {
         image: 'assets/images/image-4.jpg',
         text: "I'm sending you updated coordinates looks like Vex is on to us! Le's see if we can by pass him",
         buttons: [
-            ["Rodger!", "advanceTo(scenario.defeat7)"]
+            ["Roger!", "advanceTo(scenario.defeat7)"]
         ]
     },
 
@@ -1413,7 +1347,7 @@ const scenario = {
 
     defeat18: {
         image: 'assets/images/image-4.jpg',
-        text: "Damn I knew you were going to ask that... WEll if you must know I fixed your ship with an extra volt of high explosive ammo (hence why you were able to destroy the asteriods so quickly!",
+        text: "Damn I knew you were going to ask that... Well if you must know I fixed your ship with an extra volt of high explosive ammo (hence why you were able to destroy the asteriods so quickly!",
         buttons: [
             ["Okay okay I'll do it then!", "advanceTo(scenario.defeat21)"]
         ]
@@ -1437,7 +1371,7 @@ const scenario = {
 
     defeat21: {
         image: 'assets/images/image-4.jpg', // blue prints
-        text: "great I've sent over the blue prints on it's location make sure your accurate!",
+        text: "Great I've sent over the blue prints on it's location make sure your accurate!",
         buttons: [
             ["What did I sign up to...", "advanceTo(scenario.defeat23)"]
         ]
@@ -1503,17 +1437,9 @@ const scenario = {
     defeat29: {
         image: 'assets/images/image-4.jpg',
         text: "Well done playerName you got him! Now I'm able to hack into his system and re-direct his auto pilot! Nice work Ranger!",
-        buttons: [
-            ["WE DID IT!", "advanceTo(scenario.defeat30)"]
-        ]
-    },
-
-    defeat30: {
-        image: 'assets/images/image-4.jpg',
-        text: "...",
         decreaseAmmo: true,
         buttons: [
-            ["...", "advanceTo(scenario.scene1)"]
+            ["WE DID IT!", "advanceTo(scenario.scene1)"]
         ]
     },
 
@@ -1538,7 +1464,7 @@ const scenario = {
         image: 'assets/images/image-4.jpg',
         text: "Damn right I am! I believe in my team!",
         buttons: [
-            ["That's goo to know", "advanceTo(scenario.spy5)"]
+            ["That's good to know", "advanceTo(scenario.spy5)"]
         ]
     },
 
@@ -1604,7 +1530,7 @@ const scenario = {
         text: "Damn I miscalculated how many ships Vex has!",
         buttons: [
             ["Yeah you did!", "advanceTo(scenario.spy13)"],
-            ["HAHAHA!", "advanceTo(scenario.spy14 )"]
+            ["HAHAHA!", "advanceTo(scenario.spy14)"]
         ]
     },
 
@@ -1694,7 +1620,7 @@ const scenario = {
 
     spy22: {
         image: 'assets/images/image-4.jpg',
-        text: "I will never join the Magnetars!",
+        text: "I will never join Vex and the Magnetars!",
         buttons: [
             ["Suit yourself", "advanceTo(scenario.spy24)"],
             ["You want to die then", "advanceTo(scenario.spy25)"]
@@ -1727,7 +1653,7 @@ const scenario = {
 
     spy26: {
         image: 'assets/images/image-4.jpg',
-        text: "But what about the pease in the galaxy?  Doe that not matter to you?",
+        text: "But what about the peace in the galaxy?  Dose that not matter to you?",
         buttons: [
             ["Nope", "advanceTo(scenario.spy27)"]
         ]
@@ -1735,7 +1661,7 @@ const scenario = {
 
     spy27: {
         image: 'assets/images/image-4.jpg',
-        text: "Damn you! I didn;t want it to be like this!",
+        text: "Damn you! I didn't want it to be like this!",
         buttons: [
             ["Too late for that!", "advanceTo(scenario.spy28)"]
         ]
@@ -1867,7 +1793,7 @@ const scenario = {
 
     spy42: {
         image: 'assets/images/image-4.jpg',
-        text: "Fighting talk now, I know vex and your weaknesses!",
+        text: "Fighting talk now, I know Vex and your weaknesses!",
         buttons: [
             ["!!", "advanceTo(scenario.spy45)"]
         ]
@@ -1966,25 +1892,18 @@ const scenario = {
     spy53: {
         image: 'assets/images/image-4.jpg',
         text: "Let's see who the best aimer is then!",
+        decreaseAmmo: true,  
         buttons: [
-            ["Bring it on!", "advanceTo(scenario.spy55)"]
+            ["Bring it on!", "advanceTo(scenario.scene1)"]
         ]
     },
 
     spy54: {
         image: 'assets/images/image-4.jpg',
         text: "Take that!",
-        buttons: [
-            ["TAKE THAT!", "advanceTo(scenario.spy55)"]
-        ]
-    },
-
-    spy55: {
-        image: 'assets/images/image-4.jpg',
-        text: "...",
         decreaseAmmo: true,  
         buttons: [
-            ["...", "advanceTo(scenario.scene1)"]
+            ["TAKE THAT!", "advanceTo(scenario.scene1)"]
         ]
     },
 
@@ -2001,7 +1920,7 @@ const scenario = {
         text: "Watch out playerName I see his ship up ahead try to stay out of his raider!", 
         buttons: [
             ["Okay I'll try", "advanceTo(scenario.died3)"],
-            ["nah head on!", "advanceTo(scenario.died4)"]
+            ["Nah head on!", "advanceTo(scenario.died4)"]
         ]
     },
 
@@ -2009,7 +1928,7 @@ const scenario = {
         image: 'assets/images/image-4.jpg',
         text: "Okay looks like you have gone undetected for now just try and get a bit closer", 
         buttons: [
-            ["Rodger!", "advanceTo(scenario.died5)"]
+            ["Roger!", "advanceTo(scenario.died5)"]
         ]
     },
 
@@ -2023,7 +1942,7 @@ const scenario = {
 
     died5: {
         image: 'assets/images/image-4.jpg',
-        text: "One of the Magnetar's ships has spotted you!", 
+        text: "One of the Magnetars ships has spotted you!", 
         buttons: [
             ["Try and dodge them", "advanceTo(scenario.died7)"]
         ]
@@ -2113,7 +2032,7 @@ const scenario = {
 
     died15: {
         image: 'assets/images/image-4.jpg',
-        text: "They are making there way as quickly as possible!", 
+        text: "The Orbit Rangers are making there way as quickly as possible!", 
         decreaseHealth: true, 
         buttons: [
             ["I'm going in further!", "advanceTo(scenario.died18)"]
@@ -2168,7 +2087,7 @@ const scenario = {
 
     died21: {
         image: 'assets/images/image-4.jpg',
-        text: "It looks liek they have surrounded you playerName",
+        text: "It looks like they have surrounded you playerName",
         decreaseHealth: true,  
         buttons: [
             ["I don't think I have much supplies left", "advanceTo(scenario.died27)"]
@@ -2234,7 +2153,7 @@ const scenario = {
         text: "Help is comming!", 
         decreaseHealth: true, 
         buttons: [
-            ["Thanks Astra for eeverything", "advanceTo(scenario.died30)"]
+            ["Thanks Astra for everything", "advanceTo(scenario.died30)"]
         ]
     },
 
@@ -2250,6 +2169,7 @@ const scenario = {
     died30: {
         image: 'assets/images/image-4.jpg',
         text: "What are you talking about!? Don't do anything reckless now!", 
+        decreaseHealth: true,
         buttons: [
             ["I have one more trick to pull", "advanceTo(scenario.died31)"]
         ]
@@ -2258,7 +2178,6 @@ const scenario = {
     died31: {
         image: 'assets/images/image-4.jpg',
         text: "Don't do anything stupid now! We need you!", 
-        decreaseHealth: true, 
         buttons: [
             ["This is my fate Astra", "advanceTo(scenario.died32)"]
         ]
@@ -2299,7 +2218,7 @@ const scenario = {
 
     ammo2: {
         image: 'assets/images/image-4.jpg',
-        text: "Nice flying there playerName! You really do know who to navigate through space", 
+        text: "Nice flying there playerName! You really do know how to navigate through space", 
         buttons: [
             ["Oh yeah!", "advanceTo(scenario.ammo3)"],
             ["I've been practicing", "advanceTo(scenario.ammo4)"]
@@ -2316,7 +2235,7 @@ const scenario = {
 
     ammo4: {
         image: 'assets/images/image-4.jpg',
-        text: "You should teach the other Orbit Rangers when this is over", 
+        text: "You should teach the other Orbit Rangers when this is over!", 
         buttons: [
             ["Yeah of course!", "advanceTo(scenario.ammo5)"]
         ]
@@ -2326,7 +2245,7 @@ const scenario = {
         image: 'assets/images/image-4.jpg',
         text: "I see Vex's ship up ahead, you'll need to slow down and disengage your engine", 
         buttons: [
-            ["Rodger", "advanceTo(scenario.ammo6)"]
+            ["Roger", "advanceTo(scenario.ammo6)"]
         ]
     },
 
@@ -2343,7 +2262,7 @@ const scenario = {
         image: 'assets/images/image-4.jpg',
         text: "Okay I've sent a message to the other Orbit Rangers to come and assit you they should be here to help give you a distraction!", 
         buttons: [
-            ["Thnks Astra!", "advanceTo(scenario.ammo9)"]
+            ["Thanks Astra!", "advanceTo(scenario.ammo9)"]
         ]
     },
 
@@ -2351,7 +2270,7 @@ const scenario = {
         image: 'assets/images/image-4.jpg',
         text: "Good choice! You should be able to get pass without being detected!", 
         buttons: [
-            ["let's get him!", "advanceTo(scenario.ammo10)"]
+            ["Let's get him!", "advanceTo(scenario.ammo10)"]
         ]
     },
 
@@ -2383,7 +2302,7 @@ const scenario = {
 
     ammo12: {
         image: 'assets/images/image-4.jpg',
-        text: "Nice more there playerName! Quick hit him back!", 
+        text: "Nice move there playerName! Quick hit him back!", 
         buttons: [
             ["Right Wing", "advanceTo(scenario.ammo14)"],
             ["Cockpit", "advanceTo(scenario.ammo15)"]
@@ -2401,7 +2320,7 @@ const scenario = {
 
     ammo14: {
         image: 'assets/images/image-4.jpg',
-        text: "Nice! That seems to have unbalanced him! You have a good shot right for the cockpit now!", 
+        text: "Nice! That seems to have unbalanced him! You have a good shot right for the Cockpit now!", 
         decreaseAmmo: true,
         buttons: [
             ["Shoot Cockpit", "advanceTo(scenario.ammo18)"]
@@ -2437,10 +2356,10 @@ const scenario = {
 
     ammo18: {
         image: 'assets/images/image-4.jpg',
-        text: "Nice work there! That really has thrown Vex off! Let's kee the pressure on him now!", 
+        text: "Nice work there! That really has thrown Vex off! Let's keep the pressure on him now!", 
         decreaseAmmo: true,
         buttons: [
-            ["You got it!", "advanceTo(scenario.ammo20)"]
+            ["You've got it!", "advanceTo(scenario.ammo20)"]
         ]
     },
 
@@ -2455,7 +2374,7 @@ const scenario = {
 
     ammo20: {
         image: 'assets/images/image-4.jpg',
-        text: "Vex is powering up his super charged missle again you will need t o be extra quick to dodge this one!", 
+        text: "Vex is powering up his super charged missle again you will need to be extra quick to dodge this one!", 
         buttons: [
             ["Barrel roll to the right", "advanceTo(scenario.ammo22)"],
             ["Barrel roll to the Left", "advanceTo(scenario.ammo23)"]
@@ -2522,7 +2441,7 @@ const scenario = {
 
     ammo27: {
         image: 'assets/images/image-4.jpg',
-        text: "That was awesome playerName! It looks like Vex's ship is falling! You just have the Tail to take out now!", 
+        text: "That was awesome playerName! It looks like vex's ship is falling! You just have the Tail to take out now!", 
         decreaseAmmo: true,
         buttons: [
             ["Shoot at the Tail", "advanceTo(scenario.ammo30)"]
@@ -2531,7 +2450,7 @@ const scenario = {
 
     ammo28: {
         image: 'assets/images/image-4.jpg',
-        text: "Vex never saw that comming! Way to shoot! Now you can set him off course for good aim for the Right Wing!", 
+        text: "Vex never saw that comming! Way to shoot! Now you can set him off course for good, aim for the Right Wing!", 
         decreaseAmmo: true,
         buttons: [
             ["Aim at Right Wing", "advanceTo(scenario.ammo30)"]
@@ -2668,7 +2587,7 @@ const scenario = {
 
     captured11: {
         image: 'assets/images/image-4.jpg',
-        text: "You will ahve to be quick to out manoeuvre him!", 
+        text: "You will have to be quick to out manoeuvre him!", 
         decreaseHealth: true,
         buttons: [
             ["I'm on it", "advanceTo(scenario.captured14)"],
@@ -2710,7 +2629,7 @@ const scenario = {
 
     captured16: {
         image: 'assets/images/image-4.jpg',
-        text: "Few that was a close one!", 
+        text: "Phew that was a close one!", 
         decreaseFuel: true,
         buttons: [
             ["I can take him!", "advanceTo(scenario.captured20)"]
@@ -2782,7 +2701,7 @@ const scenario = {
         text: "He's hit your wing! Try to re-stabilize it!", 
         decreaseHealth: true,
         buttons: [
-            ["Okay!", "advanceTo(scenario.captured28)"]
+            ["I can manage!", "advanceTo(scenario.captured28)"]
         ]
     },    
 
@@ -2806,7 +2725,7 @@ const scenario = {
 
     captured27: {
         image: 'assets/images/image-4.jpg',
-        text: "Phew! I dodn't think you are out of trouble just yet!", 
+        text: "Phew! I dond't think you are out of trouble just yet!", 
         buttons: [
             ["Bring it on!", "advanceTo(scenario.captured28)"]
         ]
@@ -2850,7 +2769,7 @@ const scenario = {
 
     captured32: {
         image: 'assets/images/image-4.jpg',
-        text: "bad news playerName I can't fix your ship from here, you will have to turn off your fuel", 
+        text: "Bad news playerName I can't fix your ship from here, you will have to turn off your fuel", 
         buttons: [
             ["But I won't be able to move!", "advanceTo(scenario.captured34)"],
             ["I can try", "advanceTo(scenario.captured35)"]
@@ -2870,7 +2789,7 @@ const scenario = {
         image: 'assets/images/image-4.jpg',
         text: "It won't take long Ranger!", 
         buttons: [
-            ["turn fuel off", "advanceTo(scenario.captured38)"]
+            ["Turn fuel off", "advanceTo(scenario.captured38)"]
         ]
     },    
 
@@ -2894,7 +2813,7 @@ const scenario = {
         image: 'assets/images/image-4.jpg',
         text: "I'm almost there! just a bit longer!", 
         buttons: [
-            ["bring it on!", "advanceTo(scenario.captured39)"]
+            ["Bring it on!", "advanceTo(scenario.captured39)"]
         ]
     },    
 
@@ -2903,7 +2822,7 @@ const scenario = {
         text: "Looks like you're able to resart the engines again", 
         buttons: [
             ["Man that was close!", "advanceTo(scenario.captured40)"],
-            ["it wasn't easy!", "advanceTo(scenario.captured40)"]
+            ["It wasn't easy!", "advanceTo(scenario.captured40)"]
         ]
     },    
 
@@ -2920,7 +2839,7 @@ const scenario = {
         image: 'assets/images/image-4.jpg',
         text: "Your not in the clear yet! Looks like he's aiming again for you!", 
         buttons: [
-            ["Huh? I thought I tok care of him!", "advanceTo(scenario.captured42)"]
+            ["Huh? I thought I took care of him!", "advanceTo(scenario.captured42)"]
         ]
     },     
 
@@ -2935,27 +2854,20 @@ const scenario = {
     captured42: {
         image: 'assets/images/image-4.jpg',
         text: "He's been charging his new weapona this entire time and looks like he's planning to use it on you!", 
+        decreaseHealth: true,
         buttons: [
-            ["What do I do?", "advanceTo(scenario.captured44)"]
+            ["What do I do?", "advanceTo(scenario.scene1)"]
         ]
     },    
 
     captured43: {
         image: 'assets/images/image-4.jpg',
-        text: "Damn it playerName he's been on your tail this entire time! Wait this weapon is a lot more powerful! Yu might not be able to dodge in time!", 
-        buttons: [
-            ["The fun just doesn't stop!", "advanceTo(scenario.captured44)"]
-        ]
-    },    
-
-    captured44: {
-        image: 'assets/images/image-4.jpg',
-        text: "...",
+        text: "Damn it playerName he's been on your tail this entire time! Wait this weapon is a lot more powerful! You might not be able to dodge in time!", 
         decreaseHealth: true,
         buttons: [
-            ["...", "advanceTo(scenario.scene1)"]
+            ["The fun just doesn't stop!", "advanceTo(scenario.scene1)"]
         ]
-    },
+    },    
 };
 
 // -- STARTS THE GAME -- //

@@ -38,6 +38,7 @@ This domain will allow you to access Ranger Game website, which I have completed
         - [Fonts](#fontsused)
         - [Colours](#coloursused)
         - [Imagery](#imageryused)
+        - [Story](#storyplan)
         - [Wireframes](#wireframesboards)
         - [Changes to Wireframes](#wireframechange)
 
@@ -158,6 +159,15 @@ Along with the main character there is some additional scenery to help the user 
 ![Moodboard](assets/readme_docs/moodboard/moodboard-img.jpg)
 
 All imagery that has been used has been drawn and developed by me this is because I wanted to not rely on other works as I had a clear vision on what I wanted each imagery to represent through this text adventure journey.
+
+### <a name="storyplan">Story</a>
+
+With the story having multiple options and several different endings I built a road map to all multiple options that each play can take!  These are all based on what options you pick throughout the game and can impact either your Fuel, Ammo and Health bars.  
+
+Please note the story is my own concept and ideas please do not copy this as it took me a while to produce it.
+
+![Main Story](assets/readme_docs/moodboard/mainstory.pdf)
+
 
 ### <a name="wireframesboards">Wireframes</a>
 

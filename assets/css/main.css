@@ -307,7 +307,7 @@ main {
 
 #images {
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 
@@ -898,12 +898,25 @@ label {
   grid-gap: 10px;
   grid-template-areas: 
   ". home-image ."
+  "home-head home-head home-head"
   "home-text home-text home-text"
   ". home-icon .";
 }
 
 #home-image {
   grid-area: home-image;
+}
+
+.end-head {
+  grid-area: home-head;
+  text-align: center;
+  align-self: center;
+  font-size: 1.5em;
+  font-family: var(--head);
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--yellow);
+  letter-spacing: 0.1em;
 }
 
 /* END OF GAME TEXT */
