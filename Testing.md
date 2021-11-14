@@ -40,9 +40,6 @@
 Browsers tested: Google Chrome, Mozilla Firefox & Opera.
 The devices used in this testing include Samsung S10 v.Android 10.
 
-// lighthouse testing
-
-
 ## <a name="onloaddisplay">OnLoad Display</a>
 
 Expected: modal to load on screen start
@@ -290,21 +287,25 @@ I used my user stories and documented each of the steps that each user would nee
  
 ### <a name="textgamefan">As a Text Adventure Game Fan</a>
 
-Expectation 1: I want to play the game to find out which ending scenario I would get depending on my choices throughout the game play 
-Testing: I played the game through once to get my first outcome 
-Result: see screenshots of one of my final first play through once the story mode is completed: [one](https://github.com/EllieJ87) | [two](https://github.com/EllieJ87) | [three](https://github.com/EllieJ87) | [four](https://github.com/EllieJ87) | [five](https://github.com/EllieJ87) | [six](https://github.com/EllieJ87) 
+Expectation 1: I want to play the game to find out which ending scenario I would get depending on my choices throughout the game play.
+Testing: I played the game through once to get my first outcome.
+Result: see screenshots of one of my final first play through once the story mode is completed: [one](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/play1/play1-1.jpg) | [two](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/play1/play1-2.jpg) | [three](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/play1/play1-3.jpg) | [four](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/play1/play1-4.jpg) | [five](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/play1/play1-5.jpg) | [six](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/play1/play1-6.jpg).
 
-Expectation 2: I want to be able to interact via social media through the social media links in the footer
-Testing: check footer to see links to social media included to open in new tab easily
-Result: ![linkedIn](assets/readme_docs/testing/social-links.jpg) | ![GitHub](assets/readme_docs/testing/social-links-1.jpg)
+Expectation 2: I want to be able to interact via social media through the social media links in the footer.
+Testing: check footer to see links to social media included to open in new tab easily. 
 
-Expectation 3: I want the site to have images from my own design to help portray the game play and experience through the option scenarios
-Testing: played through the game to see different imagery / character change
-Results: imagery changes: [one](https://github.com/EllieJ87) | [two](https://github.com/EllieJ87) | [three](https://github.com/EllieJ87)
+Result: ![linkedIn](assets/readme_docs/testing/social-links.jpg) | ![GitHub](assets/readme_docs/testing/social-links-1.jpg).
 
-Expectation 4: As I want to explore different options / choices to see which ending I would end up with 
-Testing: play the game to see different ending options
-Result: [one](https://github.com/EllieJ87) | [two](https://github.com/EllieJ87) | [three](https://github.com/EllieJ87) | [four](https://github.com/EllieJ87) | [five](https://github.com/EllieJ87) | [six](https://github.com/EllieJ87) 
+Expectation 3: I want the site to have images from my own design to help portray the game play and experience through the option scenarios.
+Testing: played through the game to see different imagery / character change.
+
+Results: imagery changes: [one](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/shot-1.jpg) | [two](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/shot-2.jpg) | [three](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/shot-3.jpg).
+
+Expectation 4: As I want to explore different options / choices to see which ending I would end up with.
+Testing: play the game to see different ending options.
+
+Result: [one](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/play2/play2-1.jpg) | [two](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/play2/play2-2.jpg) | [three](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/play2/play2-3.jpg) | [four](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/play2/play2-4.jpg) | [five](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/play2/play2-5.jpg) | [six](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/play2/play2-6.jpg).
+
 Notes: As you can see through this second play through I found that image 4 had no image and would also not link to the next playable option.  This then made me re-check all the images, button links and locations to make sure that these all pulled through to the next scenario.  This was good test to run through and catch any more potential link errors.
 
 Expectation 5: I want the text adventure game to reflect the theme and story mode, so this was more captivating 
@@ -316,41 +317,51 @@ Result: ![Moodboard](assets/readme_docs/moodboard/moodboard-img.jpg)
 Expectation 6: I want to be able to be able to play multiple times and see what endings I end up with based on my decisions.
 Testing: Play the game through once and make note of the ending then try and change my options for a different ending
 Result: Adding a ‘refresh icon’ so the player can easily refresh the page again to see what other endings they can get!
-![Refresh Icon](assets/readme_docs/moodboard/moodboard-img.jpg)
+![Refresh Icon](assets/readme_docs/testing/ending-refresh.jpg)
  
 ### <a name="newfan">As a User who does not play Text Adventure</a>
 
-Expectation 7: I want a text adventure game where I travel on an experience through space and enjoy the character development 
-Testing: complete quiz to see which scenario I will receive and what the outcome of my decisions were
+Expectation 7: I want to see a character guide and any additional imagery to help capture the game asthetics, this also made making my decisions more engaging and interactive
 
-Expectation 8: I want to see a character guide and any additional imagery to help capture the game asthetics, this also made making my decisions more engaging and interactive
 Testing: Checked all options that represents the character, imagery or event that was happening at that moment.  Checked all endings and made sure the decrement of the ammo, fuel and health impacted at the correct time and also run the right ending theme.
+
 Conclusion: The full decrement of the ammo, fuel and health had to have another 'empty / dud' scenario so this would take count the decrease correctly and run the correct ending.  For the 'OR' statements this was not needed and could run without having a 'empty / dud' scenario.
+
 Result: Run through all option endings to make sure that all endings were functional and run the correct ending.
 
-Expectation 9: I want to see a help section to get information on how to play the game.
+Expectation 8: I want to see a help section to get information on how to play the game.
+
 Testing: Trigger help modal from each page.
+
 Result: help modal triggers as expected on each page.
-[help](https://github.com/EllieJ87)
+[help](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/help.jpg)
 
 ### <a name="allusers">All Users</a>
 
-Expectation 10: I want the site to be easy to navigate on mobile primarily so I can complete it on the go and this also makes it easier to share with others.
+Expectation 9: I want the site to be easy to navigate on mobile primarily so I can complete it on the go and this also makes it easier to share with others.
+
 Testing: Tested all pages on different mobiles portrait and landscape.
 Development: When developing the site first this was scrolling naturally, this then developed where the smaller screen sizes would not scroll, therefore cutting off the game play.
+
 Results: Add scroll to smaller media queries to enable this feature on both portrait and landscape screen sizes.
 
-Expectation 11: I want the ability to turn on and off the audio.
+Expectation 10: I want the ability to turn on and off the audio.
+
 Testing: Pressed the audio button to turn ‘On’ and ‘Off’ the audio, ran through all buttons that had the '.audio' class to enable the sound.
+
 Result: Audio turns on and off when the volume button is toggled between on and off.  All buttons targeted with this class also plays/does not play a sound
 
-Expectation 12: I want the text adventure game to be slick, so each scenario / option is displayed one at a time to prevent scrolling and general clutter.
+Expectation 11: I want the text adventure game to be slick, so each scenario / option is displayed one at a time to prevent scrolling and general clutter.
+
 Testing: Click through game to ensure each text, imagery and option is visible at each scenario option.
+
 Result: Game play works with each change of imagery, text and options.
 
-Expectation 13: I want to be able to contact the site owner with feedback
+Expectation 12: I want to be able to contact the site owner with feedback
+
 Testing: click contact icon to open contact form modal
-Result: Contact page has feedback: ![Contact Form](assets/readme_docs/moodboard/contact-screen.jpg)
+
+Result: Contact page has feedback: [Contact Form](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/contact.jpg)
  
 ### <a name="responsivedesigntesting">Responsive Design Testing</a>
 
@@ -360,7 +371,7 @@ I used my own phone to test the orientation and how the site differs from portra
 
 To test my whole website, I went through each page, feature by feature, and documented the results on a spreadsheet. The spreadsheet also documents any responsive features and confirms that they work and appear as intended on different screen sizes. The link to the spreadsheet it below:
 
-Responsive testing-checklist [here](http://mattkersley.com/responsive/)
+Responsive testing-checklist [here](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/testing-checklist.pdf)
 
 ## <a name="performancetesting">Performance Testing</a>
 
@@ -432,9 +443,13 @@ Testing completed with one error on the end container, there was no minimum decl
 **_Issues still unresolved (due to timing)_** 
 
 1. When checking the main game on my phone, settings on my phone is in dark mode, with this setting the div containers for the states the 'place holder' numbers were visible and could be seen. 
-[Image One](https://en.wikipedia.org/wiki/Google_Lighthouse) | [Image Two](https://en.wikipedia.org/wiki/Google_Lighthouse) 
+[Image One](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/error/error-1.jpg) | [Image Two](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/error/error-2.jpg) 
 
 This is not as asthetic that I like I am going to look into this feature and see how to amend this going forward and test across dark and light mode on mobiles.  Desktop Opera is in dark mode and this was not showing up as a design asthetic issue.
+
+Re-checking this on Google Chrome and Opera desk top this was not a problem:
+
+[Image One](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/error/error-3.jpg) | [Image Two](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/error/error-4.jpg) 
 
 **Text / Button Container**
 - Issue: The text / buttons and fuel and missiles do not fit within the main game container

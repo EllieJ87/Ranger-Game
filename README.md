@@ -14,8 +14,6 @@ The main narrator guides your through the journey, but it is up to you to have t
 
 A deployed version of my website can be found [here](https://elliej87.github.io/ranger-game/)
 
-<a href="https://elliej87.github.io/ranger-game/" target="_blank">here</a>
-
 This domain will allow you to access Ranger Game website, which I have completed as part of the Code Institute Milestone 2 Project.
 
 ## Table of Contents
@@ -130,7 +128,7 @@ I have chosen [Orbiton](https://fonts.google.com/specimen/Orbitron?query=orb) fo
 
 ![Orbiton Text](assets/readme_docs/moodboard/orbiton-text.jpg)
 
-For my main paragraph text, I have used [Sarpanch](https://fonts.google.com/specimen/Orbitron?query=orb) I wanted to have a generic text that was still inspired by the space theme.
+For my main paragraph text, I have used [Sarpanch](https://fonts.google.com/specimen/Sarpanch?query=Sarpanch) I wanted to have a generic text that was still inspired by the space theme.
 
 ![Sarpanch Text](assets/readme_docs/moodboard/sarpanch-text.jpg)
 
@@ -166,8 +164,7 @@ With the story having multiple options and several different endings I built a r
 
 Please note the story is my own concept and ideas please do not copy this as it took me a while to produce it.
 
-![Main Story](assets/readme_docs/moodboard/mainstory.pdf)
-
+[Main Story](assets/readme_docs/moodboard/mainstory.pdf)
 
 ### <a name="wireframesboards">Wireframes</a>
 
@@ -178,7 +175,7 @@ Desktop & Laptop | Tablet & Mobile
 [Welcome](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/welcome-desktop.jpg) | [Welcome](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/welcome-mobile.jpg)
 [Game Page](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/game-main-desktop.jpg) | [Game Page](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/game-main-mobile.jpg)
 [How to Play](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/how-to-play-desktop.jpg) | [How to Play](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/how-to-play-mobile.jpg)
-[Contact](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/contact-desktop.jpg) | [Contact](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/contact-mobile.jpgf)
+[Contact](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/contact-desktop.jpg) | [Contact](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/contact-mobile.jpg)
 [Return Home](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/return-home-desktop.jpg)| [Return Home](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/return-home-mobile.jpg)
 [End of Game](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/game-over-desktop.jpg) | [End of Game](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/game-over-mobile.jpg)
 
@@ -314,7 +311,7 @@ Google Chrome Dev Tools
 
 -	For testing purposes for responsive design
 
-[Google Fonts](https://fontawesome.com/v4.7/)
+[Google Fonts](https://fonts.google.com)
 
 -	Google fonts was used to import ‘Orbiton font and ‘Sarpanch’ into the HTML which is used on all pages throughout the project.
 
@@ -362,7 +359,7 @@ Google Chrome Dev Tools
 
 ## <a name="testingcases">Testing</a>
 
-Testing can be found [here](https://github.com)
+Testing can be found [here](https://github.com/EllieJ87/ranger-game/blob/master/Testing.md)
 
 ## <a name="implementationtest">Implementation</a>
 
