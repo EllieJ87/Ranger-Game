@@ -317,6 +317,7 @@ Result: ![Moodboard](assets/readme_docs/moodboard/moodboard-img.jpg)
 Expectation 6: I want to be able to be able to play multiple times and see what endings I end up with based on my decisions.
 Testing: Play the game through once and make note of the ending then try and change my options for a different ending
 Result: Adding a ‘refresh icon’ so the player can easily refresh the page again to see what other endings they can get!
+
 ![Refresh Icon](assets/readme_docs/testing/ending-refresh.jpg)
  
 ### <a name="newfan">As a User who does not play Text Adventure</a>
