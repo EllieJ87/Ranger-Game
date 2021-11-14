@@ -375,7 +375,7 @@ Responsive testing-checklist [here](https://github.com/EllieJ87/ranger-game/blob
 
 ## <a name="performancetesting">Performance Testing</a>
 
-[Lighthouse Report Result](https://en.wikipedia.org/wiki/Google_Lighthouse) - Main issues to bring down the performance score were things out of my control - eg. Bootstrap links (error unused CSS) and caching issues (requesting http cache-control)
+[Lighthouse Report Result](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/testing/lighthouse.jpg) - Main issues to bring down the performance score were things out of my control - eg. Bootstrap links (error unused CSS) and caching issues (requesting http cache-control)
 
 ## <a name="validationcode">Validation</a>
 
