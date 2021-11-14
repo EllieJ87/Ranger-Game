@@ -148,7 +148,7 @@ const helpedGameOver = () => {
     gameModal.remove();
     test.innerHTML =  `
     <div class="container end-container">
-    <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
+    <img src="assets/images/pokitaru-end.jpg" id="home-image" class="img-fluid" alt="test">`
     +
     `<h2 class="end-head">Ending: Helped the Orbit Rangers</h2>`
     +
@@ -171,7 +171,7 @@ const fuelGameOver = () => {
     gameModal.remove();
     test.innerHTML =  `
     <div class="container end-container">
-    <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
+    <img src="assets/images/lostinspace-end.jpg" id="home-image" class="img-fluid" alt="test">`
     +
     `<h2 class="end-head">Ending: Lost in Space</h2>`
     +
@@ -194,9 +194,9 @@ const defeatedGameOver = () => {
     gameModal.remove();
     test.innerHTML =  `
     <div class="container end-container">
-    <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
+    <img src="assets/images/infiltrated-end.jpg" id="home-image" class="img-fluid" alt="test">`
     +
-    `<h2 class="end-head">Ending: Infultrated Vex</h2>`
+    `<h2 class="end-head">Ending: Infiltrated Vex</h2>`
     +
     `<p class="end-text">Well done ${playersName} you were very sneaky and quick enough to by pass all the Magnetars and were able to take down Vex himself!`
     + `<br></br>`
@@ -217,7 +217,7 @@ const capturedGameOver = () => {
     gameModal.remove();
     test.innerHTML =  `
     <div class="container end-container">
-    <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
+    <img src="assets/images/captured-end.jpg" id="home-image" class="img-fluid" alt="test">`
     +
     `<h2 class="end-head">Ending: Captured by Vex</h2>`
     +
@@ -240,7 +240,7 @@ const spyGameOver = () => {
     gameModal.remove();
     test.innerHTML =  `
     <div class="container end-container">
-    <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
+    <img src="assets/images/spy-end.jpg" id="home-image" class="img-fluid" alt="test">`
     +
     `<h2 class="end-head">Ending: Secret Spy</h2>`
     +
@@ -265,7 +265,7 @@ const healthGameOver = () => {
     gameModal.remove();
     test.innerHTML =  `
     <div class="container end-container">
-    <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
+    <img src="assets/images/died-end.jpg" id="home-image" class="img-fluid" alt="test">`
     +
     `<h2 class="end-head">Ending: Fallen Hero</h2>`
     +
@@ -288,7 +288,7 @@ const ammoGameOver = () => {
     gameModal.remove();
     test.innerHTML =  `
     <div class="container end-container">
-    <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
+    <img src="assets/images/hero-end.jpg" id="home-image" class="img-fluid" alt="test">`
     +
     `<h2 class="end-head">Ending: True Hero</h2>`
     +
@@ -339,7 +339,7 @@ const removeHomeModal = () => {
     gameModal.remove();
     test.innerHTML =  `
     <div class="container end-container">
-    <img src="assets/images/image-3.jpg" id="home-image" class="img-fluid" alt="test">`
+    <img src="assets/images/home-end.jpg" id="home-image" class="img-fluid" alt="test">`
     +
     `
     <p class="end-text">With ${playersName} returning back to their home planet...
@@ -370,7 +370,7 @@ const removeHomeModal = () => {
 // -- MAIN GAME SCENARIO -- // 
 const scenario = {
     scene1: {
-        image: 'assets/images/Untitled-4.jpg', // cockpit 
+        image: 'assets/images/cockpit.jpg', // cockpit 
         text: "Welcome ranger playerName! Do you need to know how to play?",
         buttons: [
             ["Yeah", "advanceTo(scenario.scene2)"],
@@ -379,7 +379,7 @@ const scenario = {
     },
 
     scene2: {
-        image: 'assets/images/Untitled-4.jpg', // cockpit 
+        image: 'assets/images/cockpit.jpg', // cockpit 
         text: "This game is completely up to you and the choices you make throughout the game.  You will be given options to navigate through different scenarios",
         buttons: [
             ["I'm interested...Go on", "advanceTo(scenario.scene3)"]
@@ -387,7 +387,7 @@ const scenario = {
     },
 
     scene3: {
-        image: 'assets/images/image-3.jpg', // cockpit 
+        image: 'assets/images/cockpit.jpg', // cockpit 
         text: "You will also need to pay attention to your fuel, ammo and health bar as the choices you make will impact these.  Choose wisely!",
         buttons: [
             ["I'm Ready!", "advanceTo(scenario.scene4)"]
@@ -395,7 +395,7 @@ const scenario = {
     },
 
     scene4: {
-        image: 'assets/images/image-4.jpg', // cockpit 
+        image: 'assets/images/cockpit.jpg', // cockpit 
         text: "playerName! Do you understand your mission?",
         buttons: [
             ["No what do I need to do?", "advanceTo(scenario.scene5)"],
@@ -404,7 +404,7 @@ const scenario = {
     },
     
     scene5: {
-        image: 'assets/images/image-4.jpg', // cockpit 
+        image: 'assets/images/cockpit.jpg', // cockpit 
         text: "The main objective is to assist Astra and his team 'The Orbit Rangers' to help save the planet Pokitaru as it's currenntly under attack by the evil empire 'The Magnetars' led by Vex",
         buttons: [
             ["Count me in!", "advanceTo(scenario.scene6)"]
@@ -412,8 +412,8 @@ const scenario = {
     },
     
     scene6: {
-        image: 'assets/images/image-4.jpg', // cockpit 
-        text: "Hi am I speakin to playerName?",
+        image: 'assets/images/cockpit.jpg', // cockpit 
+        text: "Hi am I speaking to playerName?",
         buttons: [
             ["Yes", "advanceTo(scenario.scene8)"],
             ["Nope", "advanceTo(scenario.scene7)"]
@@ -421,15 +421,15 @@ const scenario = {
     },
     
     scene7: {
-        image: 'assets/images/image-4.jpg', // cockpit 
-        text: "oh I swear I contacted plaerName...?",
+        image: 'assets/images/cockpit.jpg', // cockpit 
+        text: "oh I swear I contacted playerName...?",
         buttons: [
             ["Yeah I guess that is me...", "advanceTo(scenario.scene8)"]
         ]
     },
     
     scene8: {
-        image: 'assets/images/image-4.jpg', // cockpit 
+        image: 'assets/images/cockpit.jpg', // cockpit 
         text: "Let's just check our video communication, Are you able to see me?",
         buttons: [
             ["No", "advanceTo(scenario.scene9)"]
@@ -437,7 +437,7 @@ const scenario = {
     },
     
     scene9: {
-        image: 'assets/images/image-4.jpg', // cockpit 
+        image: 'assets/images/cockpit.jpg', // cockpit 
         text: "Okay! Let's try and fix the video link first! I will need to hack into your control panel",
         buttons: [
             ["Wait! You've going to do what now??", "advanceTo(scenario.scene10)"],
@@ -446,7 +446,7 @@ const scenario = {
     },
     
     scene10: {
-        image: 'assets/images/image-4.jpg', // cockpit 
+        image: 'assets/images/cockpit.jpg', // cockpit 
         text: "I'm just running some code through the autopilot to get the screen working!",
         buttons: [
             ["I see", "advanceTo(scenario.scene11)"]
@@ -454,7 +454,7 @@ const scenario = {
     },
     
     scene11: {
-        image: 'assets/images/image-4.jpg', // astra with mask
+        image: 'assets/images/astra-mask.jpg', // astra with mask
         text: "That should be working now! I'm Astra, the leader of the Orbit Rangers!",
         buttons: [
             ["What's with the mask?", "advanceTo(scenario.scene12)"],
@@ -463,7 +463,7 @@ const scenario = {
     },
     
     scene12: {
-        image: 'assets/images/image-4.jpg', // astra with mask
+        image: 'assets/images/astra-mask.jpg', // astra with mask
         text: "Pokitaru's climate is unstable at the moment!",
         buttons: [
             ["You don't have to wear it now", "advanceTo(scenario.scene13)"]
@@ -471,7 +471,7 @@ const scenario = {
     },
     
     scene13: {
-        image: 'assets/images/image-4.jpg', // astra with mask
+        image: 'assets/images/astra-mask.jpg', // astra with mask
         text: "Well not many people know my identity! Not even Vex does!",
         buttons: [
             ["Really? Why so secretive?", "advanceTo(scenario.scene14)"]
@@ -479,7 +479,7 @@ const scenario = {
     },
     
     scene14: {
-        image: 'assets/images/image-4.jpg', // astra with mask
+        image: 'assets/images/astra-mask.jpg', // astra with mask
         text: "If they don't know my identity then they can't track me down!",
         buttons: [
             ["Good to know", "advanceTo(scenario.scene15)"]
@@ -487,7 +487,7 @@ const scenario = {
     },
     
     scene15: {
-        image: 'assets/images/image-4.jpg', // coordinates
+        image: 'assets/images/coordinates-4.jpg', // coordinates
         text: "I'm sending you Pokitaru's location now, are you ready playerName?",
         buttons: [
             ["Yeah! Let's go!", "advanceTo(scenario.scene24)"],
@@ -496,7 +496,7 @@ const scenario = {
     },
     
     scene16: {
-        image: 'assets/images/image-4.jpg', // astra with mask
+        image: 'assets/images/astra-mask.jpg', // astra with mask
         text: "Come on playerName the fate of Pokitaru needs you! The Orbit Rangers can't hold off Vex for much longer!",
         buttons: [
             ["I'm not sure", "advanceTo(scenario.scene17)"],
@@ -505,7 +505,7 @@ const scenario = {
     },
     
     scene17: {
-        image: 'assets/images/image-4.jpg', // astra with mask
+        image: 'assets/images/astra-mask.jpg', // astra with mask
         text: "Come on it won't take long and it would help us out a lot!",
         buttons: [
             ["I'm not interested", "advanceTo(scenario.scene18)"]
@@ -513,7 +513,7 @@ const scenario = {
     },
     
     scene18: {
-        image: 'assets/images/image-4.jpg', // astra with mask
+        image: 'assets/images/astra-mask.jpg', // astra with mask
         text: "How are you not interested in saving the galaxy?",
         buttons: [
             ["I only joined on a whim", "advanceTo(scenario.scene19)"]
@@ -521,7 +521,7 @@ const scenario = {
     },
     
     scene19: {
-        image: 'assets/images/image-4.jpg', // astra with mask
+        image: 'assets/images/astra-mask.jpg', // astra with mask
         text: "On a whim?",
         buttons: [
             ["Yup", "advanceTo(scenario.scene20)"]
@@ -529,7 +529,7 @@ const scenario = {
     },
     
     scene20: {
-        image: 'assets/images/image-4.jpg', // astra with mask
+        image: 'assets/images/astra-mask.jpg', // astra with mask
         text: "playerName we really need more support! The other rangers are depleting in numbers!",
         buttons: [
             ["And if I help you what do I get?", "advanceTo(scenario.scene21)"],
@@ -538,7 +538,7 @@ const scenario = {
     },
     
     scene21: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Okay okay! I hear you! We will hold a massive ceromony dedicated just to you!",
         buttons: [
             ["Doesn't seem like a fair deal to me...", "advanceTo(scenario.scene22)"]
@@ -546,7 +546,7 @@ const scenario = {
     },
     
     scene22: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "How about a promotion? I'll make you a a sub leader of the Orbit Rangers!",
         buttons: [
             ["Keep talking", "advanceTo(scenario.scene23)"]
@@ -554,7 +554,7 @@ const scenario = {
     },
     
     scene23: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "I'll give you a raise and a better security for your family!",
         buttons: [
             ["You have a deal Astra!", "advanceTo(scenario.scene24)"]
@@ -562,7 +562,7 @@ const scenario = {
     },
     
     scene24: {
-        image: 'assets/images/image-4.jpg', // coordinates with 2 routes option
+        image: 'assets/images/coordinates-4.jpg', // coordinates with 2 routes option
         text: "Great! I'm sending you two routes you can take, would you rather go East or West?",
         buttons: [
             ["East", "advanceTo(scenario.scene25)"],
@@ -571,7 +571,7 @@ const scenario = {
     },
     
     scene25: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Redirecting your autopilot to take you East",
         buttons: [
             ["Let's do this!", "advanceTo(scenario.scene26)"]
@@ -579,7 +579,7 @@ const scenario = {
     },
     
     scene26: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "You might need to watch out for asteriods a few have been spotted taking this route",
         buttons: [
             ["Asteriods? Like a lot?", "advanceTo(scenario.scene27)"],
@@ -588,7 +588,7 @@ const scenario = {
     },
     
     scene27: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Rumour has it that Pokitaru has vase amounts of asteriod fields within it's orbit",
         buttons: [
             ["Is there a safer route?", "advanceTo(scenario.story5)"],
@@ -597,7 +597,7 @@ const scenario = {
     },
     
     scene28: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Redirecting your autopilot to take you West",
         buttons: [
             ["Bring it on!", "advanceTo(scenario.scene29)"]
@@ -605,7 +605,7 @@ const scenario = {
     },
     
     scene29: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Now playerName it's been spotted that Vex and the Magnetars have been based in the West",
         buttons: [
             ["How many ships?", "advanceTo(scenario.scene30)"],
@@ -614,7 +614,7 @@ const scenario = {
     },
     
     scene30: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Quite a few but we are managing to hold him back!",
         buttons: [
             ["And how many do we have?", "advanceTo(scenario.scene31)"],
@@ -623,7 +623,7 @@ const scenario = {
     },
     
     scene31: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "To be honest with you ranger not nearly enough!",
         buttons: [
             ["Do you think you can win?", "advanceTo(scenario.spy1)"]
@@ -631,7 +631,7 @@ const scenario = {
     },
     
     scene32: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "playerName we really appreciate your help with taking out Vex!",
         buttons: [
             ["Let's do this!", "advanceTo(scenario.scene34)"]
@@ -639,7 +639,7 @@ const scenario = {
     },
     
     scene33: {
-        image: 'assets/images/image-4.jpg', // Vex's location
+        image: 'assets/images/astra-main.jpg', // Vex's location
         text: "Great! Let's see if I can locate him for you",
         buttons: [
             ["Good plan!", "advanceTo(scenario.scene34)"],
@@ -648,7 +648,7 @@ const scenario = {
     },
     
     scene34: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Glad to hear your fighting spirit! Let's take down Vex together!",
         buttons: [
             ["Alright Astra!", "advanceTo(scenario.scene35)"]
@@ -656,7 +656,7 @@ const scenario = {
     },
     
     scene35: {
-        image: 'assets/images/image-4.jpg', // vex coordinates
+        image: 'assets/images/coordinates-1.jpg', // vex coordinates
         text: "I'm picking up his coordinates now, you can either sneak pass him or take him head on!",
         buttons: [
             ["Head on!", "advanceTo(scenario.died1)"],
@@ -665,7 +665,7 @@ const scenario = {
     },
     
     scene36: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "The Orbit Ranger's Mission is to maintain the peace in the galaxy!",
         buttons: [
             ["*sigh* Which direction should I go?", "advanceTo(scenario.scene37)"]
@@ -673,7 +673,7 @@ const scenario = {
     },
     
     scene37: {
-        image: 'assets/images/image-4.jpg', // updated coordinates
+        image: 'assets/images/astra-main.jpg', // updated coordinates
         text: "Thanks playerName there ae two routes available either the southeast or northwest route",
         buttons: [
             ["Southeast", "advanceTo(scenario.captured1)"],
@@ -682,7 +682,7 @@ const scenario = {
     },
     
     scene38: {
-        image: 'assets/images/image-4.jpg', // vex coordinates
+        image: 'assets/images/astra-main.jpg', // vex coordinates
         text: "That's the spirit playerName I'm sending you Vex's coordinates now!",
         buttons: [
             ["Why did I accept this mission...", "advanceTo(scenario.scene39)"]
@@ -690,7 +690,7 @@ const scenario = {
     },
     
     scene39: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/coordinates-2.jpg',
         text: "You should have received the coordinates now",
         buttons: [
             ["Yeah I have", "advanceTo(scenario.scene40)"]
@@ -698,7 +698,7 @@ const scenario = {
     },
     
     scene40: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "You will have to navigate through an asteriod field though",
         buttons: [
             ["Is there not another route?", "advanceTo(scenario.scene41)"],
@@ -707,7 +707,7 @@ const scenario = {
     },
     
     scene41: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "I can check your location and see if there is another route",
         buttons: [
             ["Please do!", "advanceTo(scenario.scene43)"]
@@ -715,7 +715,7 @@ const scenario = {
     },
     
     scene42: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Don't worry playerName I'll help guide you through it!",
         buttons: [
             ["You better", "advanceTo(scenario.scene41)"],
@@ -724,7 +724,7 @@ const scenario = {
     },
     
     scene43: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/coordinates-2.jpg',
         text: "Checking your location, you can either take a southeast route or a northwest route",
         buttons: [
             ["Southeast", "advanceTo(scenario.captured1)"],
@@ -733,7 +733,7 @@ const scenario = {
     },
     
     scene44: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Northwest it is! Re-navigating your location to a Northwest direction!",
         buttons: [
             ["This is the best route right?", "advanceTo(scenario.scene45)"]
@@ -741,7 +741,7 @@ const scenario = {
     },
     
     scene45: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "It might be quick but you could land yourseld in a huge asteriod field if your not careful! Keep an eye on your fuel",
         buttons: [
             ["Okay Astra!", "advanceTo(scenario.fuel2)"]
@@ -749,7 +749,7 @@ const scenario = {
     },
     
     scene46: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "You won't die! Just make sure you don't run our of fuel before you reach us!",
         buttons: [
             ["I have enough right?", "advanceTo(scenario.scene47)"]
@@ -757,7 +757,7 @@ const scenario = {
     },
     
     scene47: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Hmm as long as you don't over use it!",
         buttons: [
             ["Someone will come for me if I do right?", "advanceTo(scenario.scene48)"]
@@ -765,7 +765,7 @@ const scenario = {
     },
     
     scene48: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Of course playerName The Orbit Rangers never leaves a Ranger down!",
         buttons: [
             ["Thanks Astra!", "advanceTo(scenario.fuel2)"]
@@ -773,7 +773,7 @@ const scenario = {
     },
     
     story1: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "That's the spirit! You will need to be quick at navigating through them",
         buttons: [
             ["No problem!", "advanceTo(scenario.story2)"]
@@ -781,7 +781,7 @@ const scenario = {
     },
     
     story2: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Let's see if you are quick enough to get through them!",
         buttons: [
             ["Sure thing Astra!", "advanceTo(scenario.story3)"]
@@ -789,7 +789,7 @@ const scenario = {
     },
     
     story3: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/asteriods-1.jpg',
         text: "I see an upcoming asteriod field, try clearing the path to get rid of them!",
         decreaseFuel: true,
         buttons: [
@@ -798,7 +798,7 @@ const scenario = {
     },
     
     story4: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/asteriods-1.jpg',
         text: "Damn playerName that was some quick firing! let's see if you can keep this up!",
         decreaseAmmo: true,
         buttons: [
@@ -807,7 +807,7 @@ const scenario = {
     },
     
     story5: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Come on playerName you can do this! I'll help you navigate through them! Just put that fuel to good use!",
         buttons: [
             ["I'm not sure", "advanceTo(scenario.story6)"],
@@ -816,7 +816,7 @@ const scenario = {
     },
     
     story6: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/asteriods-2.jpg',
         text: "playerName it looks like the start of the asteriod field so now take it nice and slow and try and dodge as many as you can!",
         decreaseFuel: true,
         buttons: [
@@ -825,7 +825,7 @@ const scenario = {
     },
     
     story7: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "I knew there was a reason why I seeked your help playerName let's destroy these asteriods!",
         decreaseFuel: true,
         buttons: [
@@ -834,7 +834,7 @@ const scenario = {
     },
     
     story8: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/asteriods-4.jpg',
         text: "Try and destroy some of the bigger asteriods to clear the way!",
         buttons: [
             ["Fire!", "advanceTo(scenario.story10)"]
@@ -842,7 +842,7 @@ const scenario = {
     },
     
     story9: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/asteriods-4.jpg',
         text: "playerName there is an asteriod coming straight towards you!",
         buttons: [
             ["Shoot it", "advanceTo(scenario.story11)"]
@@ -850,7 +850,7 @@ const scenario = {
     },
     
     story10: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Great that cleared one of them, let me use the autopilot to check your surrounding area",
         decreaseAmmo: true,
         buttons: [
@@ -860,7 +860,7 @@ const scenario = {
     },
     
     story11: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Nice firing there! What a way to shoot! let's quickly get through this then we can take down Vex!",
         decreaseAmmo: true,
         buttons: [
@@ -869,7 +869,7 @@ const scenario = {
     },
     
     story12: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Of course I can!",
         buttons: [
             ["Your the best Astra!", "advanceTo(scenario.story13)"]
@@ -877,7 +877,7 @@ const scenario = {
     },
     
     story13: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/asteriods-5.jpg',
         text: "It looks like there is a few clusters of asteriods that could be destroyed or can be dodged quickly!",
         buttons: [
             ["Speed it is!", "advanceTo(scenario.story14)"],
@@ -886,7 +886,7 @@ const scenario = {
     },
     
     story14: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/asteriods-5.jpg',
         text: "Quick there is an asteriod heading straight for you!",
         buttons: [
             ["Quickly dodge to the left", "advanceTo(scenario.help1)"],
@@ -895,7 +895,7 @@ const scenario = {
     },
     
     help1: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Nice Work playerName you managed to avoid it! I see a clear path",
         decreaseFuel: true,
         buttons: [
@@ -904,7 +904,7 @@ const scenario = {
     },
     
     help2: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/asteriods-6.jpg',
         text: "Asteriod coming straight at you!",
         buttons: [
             ["Fire", "advanceTo(scenario.help3)"]
@@ -912,7 +912,7 @@ const scenario = {
     },
     
     help3: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Whoo! I think you're in the clear now!",
         decreaseAmmo: true,
         buttons: [
@@ -921,7 +921,7 @@ const scenario = {
     },
     
     help4: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/coordinates-3.jpg',
         text: "Ah yes! Let me check your coordinates and see if you are still on course",
         buttons: [
             ["Cool", "advanceTo(scenario.help5)"]
@@ -929,7 +929,7 @@ const scenario = {
     },
     
     help5: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "playerName it looks like you've managed to by pass Vex and The Magnetars war ship!",
         decreaseFuel: true,
         buttons: [
@@ -939,7 +939,7 @@ const scenario = {
     },
     
     help6: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Don't worry let's see if we can can get you closer to Pokitaru to join the rest of the Orbit Rangers!",
         buttons: [
             ["At Last!", "advanceTo(scenario.help8)"]
@@ -947,7 +947,7 @@ const scenario = {
     },
     
     help7: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Just a bit closer to Pokitaru!",
         buttons: [
             ["Finally! Let's kick some Magnetars butt!", "advanceTo(scenario.help9)"]
@@ -955,7 +955,7 @@ const scenario = {
     },
     
     help8: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/pokitaru.jpg',
         text: "Almost there!",
         buttons: [
             ["Phew! I can see Pokitaru!", "advanceTo(scenario.help10)"]
@@ -963,7 +963,7 @@ const scenario = {
     },
     
     help9: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/pokitaru.jpg',
         text: "I see you got your confidence back playerName we are going to need it!",
         buttons: [
             ["Yeah! I can see Pokitaru!", "advanceTo(scenario.help10)"]
@@ -971,7 +971,7 @@ const scenario = {
     },
     
     help10: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/pokitaru.jpg',
         text: "I think I can see you playerName quick come and lend us some of your ammo!",
         decreaseFuel: true,
         buttons: [
@@ -980,7 +980,7 @@ const scenario = {
     },
 
     fuel1: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Oh no playerName! The asteriod hit your fuel tank!",
         decreaseFuel: true,
         buttons: [
@@ -990,7 +990,7 @@ const scenario = {
     },
 
     fuel2: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/asteriods-4.jpg',
         text: "playerName I see a huge asteriod field up ahead be careful!",
         buttons: [
             ["I've got this!", "advanceTo(scenario.fuel3)"],
@@ -999,7 +999,7 @@ const scenario = {
     },
 
     fuel3: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Nice maneuvering there playerName! ",
         decreaseFuel: true,
         buttons: [
@@ -1008,7 +1008,7 @@ const scenario = {
     },
 
     fuel4: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Take it easy you need to keep an eye on your fuel!",
         decreaseFuel: true,
         buttons: [
@@ -1017,7 +1017,7 @@ const scenario = {
     },
 
     fuel5: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "It was a close call but you've' only just entered the largest asteriod field I've seen!",
         buttons: [
             ["The largest??", "advanceTo(scenario.fuel7)"]
@@ -1025,7 +1025,7 @@ const scenario = {
     },
 
     fuel6: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "It might stop you if you use up all your fuel! I've never seen an asteriod field this large before!",
         buttons: [
             ["I can take it!", "advanceTo(scenario.fuel7)"]
@@ -1033,7 +1033,7 @@ const scenario = {
     },
 
     fuel7: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/asteriods-4.jpg',
         text: "WATCH OUT! A fast asteriod is coming straight for you! Brace for impact!",
         buttons: [
             ["Is this how I die...?", "advanceTo(scenario.fuel8)"]
@@ -1041,7 +1041,7 @@ const scenario = {
     },
 
     fuel8: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Bad news playerName it looks like that asteriod did a number on your fuel tank and it's draining at a much quicker rate!",
         decreaseFuel: true,
         buttons: [
@@ -1051,7 +1051,7 @@ const scenario = {
     },
 
     fuel9: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "I can try to rebalance the fuel but I can't promise anything!",
         buttons: [
             ["Anything!", "advanceTo(scenario.fuel11)"]
@@ -1059,7 +1059,7 @@ const scenario = {
     },
 
     fuel10: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Try shutting off the fuel",
         buttons: [
             ["I'll try that!", "advanceTo(scenario.fuel12)"]
@@ -1067,7 +1067,7 @@ const scenario = {
     },
 
     fuel11: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "playerName I can't seem to access your fuel tank from here I think the asteriod did more damage!",
         buttons: [
             ["What shall I do?", "advanceTo(scenario.fuel13)"]
@@ -1075,7 +1075,7 @@ const scenario = {
     },
 
     fuel12: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "playerName I don't think it is working!",
         buttons: [
             ["What shall I try next?", "advanceTo(scenario.fuel13)"]
@@ -1083,7 +1083,7 @@ const scenario = {
     },
 
     fuel13: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "You will have to try and quickly make it out of the asteriod field!",
         decreaseFuel: true,
         buttons: [
@@ -1092,7 +1092,7 @@ const scenario = {
     },
 
     fuel14: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "I can see 2 paths either left or right",
         buttons: [
             ["Left", "advanceTo(scenario.fuel15)"],
@@ -1101,7 +1101,7 @@ const scenario = {
     },
 
     fuel15: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/asteriods-3.jpg',
         text: "playerName you've headed further into the asteriod field watch out!",
         decreaseFuel: true,
         buttons: [
@@ -1110,7 +1110,7 @@ const scenario = {
     },
 
     fuel16: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/asteriods-6.jpg',
         text: "playerName you're in the clear!",
         decreaseFuel: true,
         buttons: [
@@ -1119,7 +1119,7 @@ const scenario = {
     },
 
     fuel17: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "playerName I see an asteriod coming straight towards you again WATCH OUT!",
         buttons: [
             ["try and dodge", "advanceTo(scenario.fuel19)"]
@@ -1127,7 +1127,7 @@ const scenario = {
     },
 
     fuel18: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "playerName I see some actiity coming from the left!",
         buttons: [
             ["What is it?", "advanceTo(scenario.fuel20)"]
@@ -1135,7 +1135,7 @@ const scenario = {
     },
 
     fuel19: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "playerName are you okay? I've seen you've been hit again!",
         buttons: [
             ["Yeah an asteriod hit me", "advanceTo(scenario.fuel21)"]
@@ -1143,7 +1143,7 @@ const scenario = {
     },
 
     fuel20: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "It looks like a large asteriod is headed straight to you! try using your fuel boost",
         buttons: [
             ["Use fuel boost", "advanceTo(scenario.fuel22)"]
@@ -1151,8 +1151,8 @@ const scenario = {
     },
 
     fuel21: {
-        image: 'assets/images/image-4.jpg',
-        text: "Damn I think that asteriod has thrown you off course again! You've been pulled out of the asteriod field now!",
+        image: 'assets/images/asteriods.jpg',
+        text: "Damn I think that asteriod has thrown you off course again! You've been pulled into the centre of asteriod field now!",
         decreaseFuel: true,
         buttons: [
             ["How do I get back on course?", "advanceTo(scenario.fuel23)"]
@@ -1160,8 +1160,8 @@ const scenario = {
     },
 
     fuel22: {
-        image: 'assets/images/image-4.jpg',
-        text: "I think you boosted too far and now are being pulled out of the asteriod field",
+        image: 'assets/images/asteriods.jpg',
+        text: "I think you boosted too far and now are being pulled into the asteriod field",
         decreaseFuel: true,
         buttons: [
             ["How do I navigate back?", "advanceTo(scenario.fuel23)"]
@@ -1169,7 +1169,7 @@ const scenario = {
     },
 
     fuel23: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "I can try and access your autopilot",
         buttons: [
             ["ANYTHING!", "advanceTo(scenario.fuel24)"]
@@ -1177,15 +1177,15 @@ const scenario = {
     },
 
     fuel24: {
-        image: 'assets/images/image-4.jpg',
-        text: "I'm unable to reach you playerName I'm loosing comunication!",
+        image: 'assets/images/static-astra-main.jpg',
+        text: "I'm unable to reach you playerName I'm loosing communication!",
         buttons: [
             ["ASTRA! ASTRA??", "advanceTo(scenario.fuel25)"]
         ]
     },
 
     fuel25: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/static-astra-main.jpg',
         text: "I've lost video, if you can still hear this try and use your fuel to get back closer to the asteriod field and I can see if I can reach you!",
         buttons: [
             ["Okay I'll use the last of my fuel", "advanceTo(scenario.fuel26)"]
@@ -1193,7 +1193,7 @@ const scenario = {
     },
 
     fuel26: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/static-astra-main.jpg',
         text: "...",
         decreaseFuel: true,
         buttons: [
@@ -1202,7 +1202,7 @@ const scenario = {
     },
 
     defeat1: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/asteriods-5.jpg',
         text: "Quick to the right another incoming asteriod!",
         buttons: [
             ["Launch missile", "advanceTo(scenario.defeat2)"]
@@ -1210,7 +1210,7 @@ const scenario = {
     },
 
     defeat2: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Phew that was a close one! There is a clearing up ahead let's put this into auto drive!",
         decreaseAmmo: true,
         buttons: [
@@ -1220,8 +1220,8 @@ const scenario = {
     },
 
     defeat3: {
-        image: 'assets/images/image-4.jpg',
-        text: "Great work playername you've made it out of the asteriod field!",
+        image: 'assets/images/asteriods-6.jpg',
+        text: "Great work playerName you've made it out of the asteriod field!",
         decreaseFuel: true,
         buttons: [
             ["Phew that was a close one!", "advanceTo(scenario.defeat5)"]
@@ -1229,7 +1229,7 @@ const scenario = {
     },
 
     defeat4: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Nice maneuvering there playerName looks like you've cleared the asteriod field too!",
         decreaseFuel: true,
         buttons: [
@@ -1238,7 +1238,7 @@ const scenario = {
     },
 
     defeat5: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "I'm sending you updated coordinates looks like Vex is on to us! Le's see if we can by pass him",
         buttons: [
             ["Roger!", "advanceTo(scenario.defeat7)"]
@@ -1246,7 +1246,7 @@ const scenario = {
     },
 
     defeat6: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "It looks like Vex is hiding on his main ship which is further east pass the asteriod field",
         buttons: [
             ["How can I get to him?", "advanceTo(scenario.defeat8)"]
@@ -1254,7 +1254,7 @@ const scenario = {
     },
 
     defeat7: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "If we can go undetected we could infiltrate his ship and re-run his system to send him off course",
         buttons: [
             ["You sure he won't notice", "advanceTo(scenario.defeat11)"],
@@ -1263,7 +1263,7 @@ const scenario = {
     },
 
     defeat8: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Wait your not thinking of taking him on are you? That's crazy!",
         buttons: [
             ["I'm that crazy!", "advanceTo(scenario.defeat9)"],
@@ -1272,7 +1272,7 @@ const scenario = {
     },
 
     defeat9: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "There could be a way to take him on...",
         buttons: [
             ["Yeah let's do it!", "advanceTo(scenario.defeat12)"]
@@ -1280,7 +1280,7 @@ const scenario = {
     },
 
     defeat10: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Well if you are interested I could check intel to see what we could do",
         buttons: [
             ["Okay", "advanceTo(scenario.defeat12)"]
@@ -1288,7 +1288,7 @@ const scenario = {
     },
 
     defeat11: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "You have enough ammo! Come on playerName this could be the chance to save Pokitaru",
         buttons: [
             ["Okay okay what do I do?", "advanceTo(scenario.defeat12)"]
@@ -1296,7 +1296,7 @@ const scenario = {
     },
 
     defeat12: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "I've checked intel and Vex's ship does have 1 weakness",
         buttons: [
             ["I'm listenering...", "advanceTo(scenario.defeat13)"]
@@ -1304,7 +1304,7 @@ const scenario = {
     },
 
     defeat13: {
-        image: 'assets/images/image-4.jpg', // blue prints
+        image: 'assets/images/blue-print.jpg', // blue prints
         text: "First you need to sneak towards the back of his ship, You should see a set of blue prints on your screen now",
         buttons: [
             ["Seems simple enough!", "advanceTo(scenario.defeat14)"]
@@ -1312,7 +1312,7 @@ const scenario = {
     },
 
     defeat14: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "I've called some of the Orbit Rangers to get in position to cause a distraction! You take Vex down!",
         buttons: [
             ["So what is his weak spot?", "advanceTo(scenario.defeat15)"]
@@ -1320,7 +1320,7 @@ const scenario = {
     },
 
     defeat15: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/blue-print.jpg',
         text: "There is a small opening towards the back of his ship, if you are able to hit that then we might be able to shut down his system by hacking into his autopilot!",
         buttons: [
             ["Hmm I'm not sure", "advanceTo(scenario.defeat16)"],
@@ -1329,7 +1329,7 @@ const scenario = {
     },
 
     defeat16: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Aww come on playerName we don't ave any other options he is out numbering us! This coould be our only last chance!",
         buttons: [
             ["Why can't you do it?", "advanceTo(scenario.defeat18)"]
@@ -1337,7 +1337,7 @@ const scenario = {
     },
 
     defeat17 : {
-        image: 'assets/images/image-4.jpg', // blue prints
+        image: 'assets/images/blue-print.jpg', // blue prints
         text: "Great! Check the blue prints on your screen and make sure you directly hit it otherwise we could be done for!",
         buttons: [
             ["No pressure there then!", "advanceTo(scenario.defeat19)"],
@@ -1346,7 +1346,7 @@ const scenario = {
     },
 
     defeat18: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Damn I knew you were going to ask that... Well if you must know I fixed your ship with an extra volt of high explosive ammo (hence why you were able to destroy the asteriods so quickly!",
         buttons: [
             ["Okay okay I'll do it then!", "advanceTo(scenario.defeat21)"]
@@ -1354,7 +1354,7 @@ const scenario = {
     },
 
     defeat19: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Don't worry you've got this!  We did fix your ship with high explosive ammo you'll be fine!",
         buttons: [
             ["Sweet! Vex your mine!", "advanceTo(scenario.defeat23)"]
@@ -1362,7 +1362,7 @@ const scenario = {
     },
 
     defeat20: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Well the fate of Pokitaru will be destroyed and I guess you'll die and the rest of us rangers too... You ready though?",
         buttons: [
             ["Looks like i have no choice!...", "advanceTo(scenario.defeat22)"]
@@ -1370,15 +1370,15 @@ const scenario = {
     },
 
     defeat21: {
-        image: 'assets/images/image-4.jpg', // blue prints
-        text: "Great I've sent over the blue prints on it's location make sure your accurate!",
+        image: 'assets/images/blue-print.jpg', // blue prints
+        text: "Great re-check the blue prints on it's location make sure your accurate!",
         buttons: [
             ["What did I sign up to...", "advanceTo(scenario.defeat23)"]
         ]
     },
 
     defeat22: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "We've got you covered I fixed up your ammo earlier with an extra punch!",
         buttons: [
             ["... Man I'm gunna die right", "advanceTo(scenario.defeat23)"]
@@ -1386,7 +1386,7 @@ const scenario = {
     },
 
     defeat23: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "You ready? We are all rooting for you!",
         buttons: [
             ["Let's do this!", "advanceTo(scenario.defeat24)"]
@@ -1394,7 +1394,7 @@ const scenario = {
     },
 
     defeat24: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-back.jpg',
         text: "playerName I see you are near Vex's ship, well done he's not noticed we will keep him distracted while you take him down!",
         buttons: [
             ["Okay", "advanceTo(scenario.defeat25)"]
@@ -1402,7 +1402,7 @@ const scenario = {
     },
 
     defeat25: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-back.jpg',
         text: "playerName what is taking so long?",
         buttons: [
             ["I can't find it, I think it's not here!", "advanceTo(scenario.defeat26)"]
@@ -1410,7 +1410,7 @@ const scenario = {
     },
 
     defeat26: {
-        image: 'assets/images/image-4.jpg', // blue prints
+        image: 'assets/images/blue-print.jpg', // blue prints
         text: "Recheck the blue prints quick we can't hold him off for much longer!",
         buttons: [
             ["Okay think think", "advanceTo(scenario.defeat27)"],
@@ -1419,7 +1419,7 @@ const scenario = {
     },
 
     defeat27: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "playerName why are you hesitating? SHOOT IT!",
         buttons: [
             ["Okay FIRE!", "advanceTo(scenario.defeat29)"]
@@ -1427,7 +1427,7 @@ const scenario = {
     },
 
     defeat28: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "playerName you need to HURRY UP!",
         buttons: [
             ["FIRE!", "advanceTo(scenario.defeat29)"]
@@ -1435,7 +1435,7 @@ const scenario = {
     },
 
     defeat29: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-tail.jpg',
         text: "Well done playerName you got him! Now I'm able to hack into his system and re-direct his auto pilot! Nice work Ranger!",
         decreaseAmmo: true,
         buttons: [
@@ -1444,7 +1444,7 @@ const scenario = {
     },
 
     spy1: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Of course I have faith in all my rangers! Do you not?",
         buttons: [
             ["Sounds like you can't beat Vex", "advanceTo(scenario.spy2)"],
@@ -1453,7 +1453,7 @@ const scenario = {
     },
 
     spy2: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Of course The Orbit Rangers can! Just you watch what we can do!",
         buttons: [
             ["I'd like to see you try!", "advanceTo(scenario.spy4)"]
@@ -1461,7 +1461,7 @@ const scenario = {
     },
 
     spy3: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Damn right I am! I believe in my team!",
         buttons: [
             ["That's good to know", "advanceTo(scenario.spy5)"]
@@ -1469,7 +1469,7 @@ const scenario = {
     },
 
     spy4: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Are you doubting our skills Ranger?",
         buttons: [
             ["Not at all!", "advanceTo(scenario.spy7)"]
@@ -1477,7 +1477,7 @@ const scenario = {
     },
 
     spy5: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Asking a lot of questions...",
         buttons: [
             ["Do you trust them?", "advanceTo(scenario.spy6)"]
@@ -1485,15 +1485,15 @@ const scenario = {
     },
 
     spy6: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Yes of course I do!",
         buttons: [
-            ["Interesting...", "advanceTo(scenario.spy6)"]
+            ["Interesting...", "advanceTo(scenario.spy7)"]
         ]
     },
 
     spy7: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Come on let's take on Vex!",
         buttons: [
             ["Okay, I have a good plan to take him down", "advanceTo(scenario.spy8)"]
@@ -1501,7 +1501,7 @@ const scenario = {
     },
 
     spy8: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Let's hear it then playerName",
         buttons: [
             ["You go up ahead, and I'll back you up", "advanceTo(scenario.spy9)"]
@@ -1509,7 +1509,7 @@ const scenario = {
     },
 
     spy9: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Shall we call for back up?",
         buttons: [
             ["You've got this", "advanceTo(scenario.spy10)"],
@@ -1518,7 +1518,7 @@ const scenario = {
     },
 
     spy10: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-ship-multi.jpg',
         text: "It looks like Vex and the Magnetars are about to surround us playerName!",
         buttons: [
             ["I'm right behind you", "advanceTo(scenario.spy12)"]
@@ -1526,7 +1526,7 @@ const scenario = {
     },
 
     spy11: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-ship-multi.jpg',
         text: "Damn I miscalculated how many ships Vex has!",
         buttons: [
             ["Yeah you did!", "advanceTo(scenario.spy13)"],
@@ -1535,7 +1535,7 @@ const scenario = {
     },
 
     spy12: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-ship.jpg',
         text: "playerName...? playerName...! playerName!!",
         buttons: [
             ["HAHAHA!!", "advanceTo(scenario.spy15)"]
@@ -1543,7 +1543,7 @@ const scenario = {
     },
 
     spy13: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Wait how did you know this?",
         buttons: [
             ["...", "advanceTo(scenario.spy17)"]
@@ -1551,7 +1551,7 @@ const scenario = {
     },
 
     spy14: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-ship.jpg',
         text: "playerName??",
         buttons: [
             ["HAHAHA!", "advanceTo(scenario.spy17)"]
@@ -1559,7 +1559,7 @@ const scenario = {
     },
 
     spy15: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Damn you've led me straight into Vex's trap!",
         buttons: [
             ["You bought this on yourself Astra", "advanceTo(scenario.spy16)"],
@@ -1568,7 +1568,7 @@ const scenario = {
     },
 
     spy16: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Who are you really?",
         buttons: [
             ["You should know who I am!", "advanceTo(scenario.spy17)"]
@@ -1576,7 +1576,7 @@ const scenario = {
     },
 
     spy17: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "WAIT! How could I not see you were working with Vex this entire time!!?",
         buttons: [
             ["Finally figured it out Astra", "advanceTo(scenario.spy18)"]
@@ -1584,8 +1584,8 @@ const scenario = {
     },
 
     spy18: {
-        image: 'assets/images/image-4.jpg',
-        text: "DAMN IT! playerName you were just trying to lure mr by myself all this time!",
+        image: 'assets/images/astra-ship.jpg',
+        text: "DAMN IT! playerName you were just trying to lure me by myself all this time!",
         buttons: [
             ["Aww don't feel bad", "advanceTo(scenario.spy19)"],
             ["Face it Vex is the true leader!", "advanceTo(scenario.spy20)"]
@@ -1593,7 +1593,7 @@ const scenario = {
     },
 
     spy19: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-ship.jpg',
         text: "How dare you!",
         buttons: [
             ["You mad now?", "advanceTo(scenario.spy21)"],
@@ -1602,7 +1602,7 @@ const scenario = {
     },
 
     spy20: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "How can you say that? He's destroyed so many planets!",
         buttons: [
             ["You can join us", "advanceTo(scenario.spy22)"],
@@ -1611,7 +1611,7 @@ const scenario = {
     },
 
     spy21: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Of course I am! Do you realise what you have done?",
         buttons: [
             ["Of course", "advanceTo(scenario.spy24)"]
@@ -1619,7 +1619,7 @@ const scenario = {
     },
 
     spy22: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "I will never join Vex and the Magnetars!",
         buttons: [
             ["Suit yourself", "advanceTo(scenario.spy24)"],
@@ -1628,7 +1628,7 @@ const scenario = {
     },
 
     spy23: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Is that all that matters to you?",
         buttons: [
             ["Yeah", "advanceTo(scenario.spy26)"]
@@ -1636,7 +1636,7 @@ const scenario = {
     },
 
     spy24: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Your going to pay by joining Vex!",
         buttons: [
             ["Aww I'm so scared", "advanceTo(scenario.spy27)"]
@@ -1644,7 +1644,7 @@ const scenario = {
     },
 
     spy25: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-ship.jpg',
         text: "I will defeat you all!",
         buttons: [
             ["Bring it on!", "advanceTo(scenario.spy27)"]
@@ -1652,7 +1652,7 @@ const scenario = {
     },
 
     spy26: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "But what about the peace in the galaxy?  Dose that not matter to you?",
         buttons: [
             ["Nope", "advanceTo(scenario.spy27)"]
@@ -1660,7 +1660,7 @@ const scenario = {
     },
 
     spy27: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-ship.jpg',
         text: "Damn you! I didn't want it to be like this!",
         buttons: [
             ["Too late for that!", "advanceTo(scenario.spy28)"]
@@ -1668,7 +1668,7 @@ const scenario = {
     },
 
     spy28: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-ship.jpg',
         text: "I don't think you truely understand who you are up against!",
         buttons: [
             ["Then show me", "advanceTo(scenario.spy29)"],
@@ -1677,7 +1677,7 @@ const scenario = {
     },
 
     spy29: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-ship.jpg',
         text: "There must be another way",
         buttons: [
             ["Too bad!", "advanceTo(scenario.spy31)"],
@@ -1686,7 +1686,7 @@ const scenario = {
     },
 
     spy30: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "I can't believe you are siding with Vex! Take this!",
         buttons: [
             ["...!", "advanceTo(scenario.spy33)"],
@@ -1695,7 +1695,7 @@ const scenario = {
     },
 
     spy31: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-left.jpg',
         text: "You hit me? Damn you playerName",
         decreaseAmmo: true,
         buttons: [
@@ -1704,7 +1704,7 @@ const scenario = {
     },
 
     spy32: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-right.jpg',
         text: "Ergh I'm much quicker than you and I'll dodge the next one!",
         decreaseAmmo: true,
         buttons: [
@@ -1714,7 +1714,7 @@ const scenario = {
     },
 
     spy33: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-ship.jpg',
         text: "See I can pack just as powerful punch as Vex!",
         decreaseHealth: true,
         buttons: [
@@ -1723,7 +1723,7 @@ const scenario = {
     },
 
     spy34: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-ship.jpg',
         text: "Take that!",
         decreaseHealth: true,
         buttons: [
@@ -1732,7 +1732,7 @@ const scenario = {
     },
 
     spy35: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-ship.jpg',
         text: "Brace yourself this won't be pretty!",
         buttons: [
             ["Bring it on!", "advanceTo(scenario.spy39)"]
@@ -1740,7 +1740,7 @@ const scenario = {
     },
 
     spy36: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-ship.jpg',
         text: "Let's see if you can dodge this",
         buttons: [
             ["Bet I can", "advanceTo(scenario.spy39)"]
@@ -1748,7 +1748,7 @@ const scenario = {
     },
 
     spy37: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-right.jpg',
         text: "You surely don't want to be doing this",
         decreaseAmmo: true,
         buttons: [
@@ -1757,7 +1757,7 @@ const scenario = {
     },
 
     spy38: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-left.jpg',
         text: "Looks like you were not quick enough that time playerName",
         buttons: [
             ["Damn it", "advanceTo(scenario.spy40)"]
@@ -1765,7 +1765,7 @@ const scenario = {
     },
 
     spy39: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-ship.jpg',
         text: "Gotcha! TAKE THIS!",
         decreaseHealth: true,
         buttons: [
@@ -1774,7 +1774,7 @@ const scenario = {
     },
 
     spy40: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "I guess I will have to take you down before taking on Vex",
         buttons: [
             ["You have to go through me first", "advanceTo(scenario.spy41)"],
@@ -1783,7 +1783,7 @@ const scenario = {
     },
 
     spy41: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-ship.jpg',
         text: "We shall see about that!",
         buttons: [
             ["I'm going to make Vex proud!", "advanceTo(scenario.spy43)"],
@@ -1792,7 +1792,7 @@ const scenario = {
     },
 
     spy42: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-ship.jpg',
         text: "Fighting talk now, I know Vex and your weaknesses!",
         buttons: [
             ["!!", "advanceTo(scenario.spy45)"]
@@ -1800,7 +1800,7 @@ const scenario = {
     },
 
     spy43: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Vex is not proud of any of anyone just himself! Take this!",
         buttons: [
             ["Damn it!", "advanceTo(scenario.spy46)"],
@@ -1818,7 +1818,7 @@ const scenario = {
     },
 
     spy45: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Your messing with the wrong rangers here playerName!",
         decreaseHealth: true,
         buttons: [
@@ -1827,7 +1827,7 @@ const scenario = {
     },
 
     spy46: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "By this rate you will be taken out!",
         decreaseHealth: true,
         buttons: [
@@ -1836,7 +1836,7 @@ const scenario = {
     },
 
     spy47: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "You've picked the wrong side playerName",
         decreaseHealth: true,
         buttons: [
@@ -1845,7 +1845,7 @@ const scenario = {
     },
 
     spy48: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Lost for words I see",
         decreaseHealth: true,
         buttons: [
@@ -1854,7 +1854,7 @@ const scenario = {
     },
 
     spy49: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-left.jpg',
         text: "Let's end this now give me all you've got!",
         decreaseAmmo: true,
         buttons: [
@@ -1863,7 +1863,7 @@ const scenario = {
     },
 
     spy50: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-mask.jpg',
         text: "Damn you! You've hit me pretty bad! But I'm not giving up yet!",
         buttons: [
             ["Told you FIRE!", "advanceTo(scenario.spy51)"],
@@ -1872,7 +1872,7 @@ const scenario = {
     },
 
     spy51: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-right.jpg',
         text: "You must have gone through some hardcore training",
         decreaseAmmo: true,
         buttons: [
@@ -1881,7 +1881,7 @@ const scenario = {
     },
 
     spy52: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-left.jpg',
         text: "I'm not going without a fight!",
         decreaseAmmo: true,
         buttons: [
@@ -1890,7 +1890,7 @@ const scenario = {
     },
 
     spy53: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/static-astra-mask.jpg',
         text: "Let's see who the best aimer is then!",
         decreaseAmmo: true,  
         buttons: [
@@ -1899,7 +1899,7 @@ const scenario = {
     },
 
     spy54: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/static-astra-mask.jpg',
         text: "Take that!",
         decreaseAmmo: true,  
         buttons: [
@@ -1908,7 +1908,7 @@ const scenario = {
     },
 
     died1: {
-        image: 'assets/images/image-4.jpg', // coordinates
+        image: 'assets/images/coordinates-3.jpg', // coordinates
         text: "Oh head on! What a Ranger you are!  Here are the updated coordinates to take Vex head on!", 
         buttons: [
             ["I'm ready!", "advanceTo(scenario.died2)"]
@@ -1916,7 +1916,7 @@ const scenario = {
     },
 
     died2: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-ship.jpg',
         text: "Watch out playerName I see his ship up ahead try to stay out of his raider!", 
         buttons: [
             ["Okay I'll try", "advanceTo(scenario.died3)"],
@@ -1925,7 +1925,7 @@ const scenario = {
     },
 
     died3: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Okay looks like you have gone undetected for now just try and get a bit closer", 
         buttons: [
             ["Roger!", "advanceTo(scenario.died5)"]
@@ -1933,7 +1933,7 @@ const scenario = {
     },
 
     died4: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-shiip.jpg',
         text: "playerName Vex has caught on to you you best be careful now!", 
         buttons: [
             ["Damn", "advanceTo(scenario.died6)"]
@@ -1941,7 +1941,7 @@ const scenario = {
     },
 
     died5: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-one.jpg',
         text: "One of the Magnetars ships has spotted you!", 
         buttons: [
             ["Try and dodge them", "advanceTo(scenario.died7)"]
@@ -1949,7 +1949,7 @@ const scenario = {
     },
 
     died6: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Try and get enough distance beetween you and Vex he's range is quite short!", 
         buttons: [
             ["I'll try!", "advanceTo(scenario.died8)"]
@@ -1957,7 +1957,7 @@ const scenario = {
     },
 
     died7: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Damn he got you! Looks like they are sending a warning to the rest of the ships!", 
         decreaseHealth: true,
         buttons: [
@@ -1967,7 +1967,7 @@ const scenario = {
     },
 
     died8: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "I'm calling in the Orbit Rangers who can give you back up!", 
         decreaseHealth: true,
         buttons: [
@@ -1977,7 +1977,7 @@ const scenario = {
     },
 
     died9: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "II'm calling in the Orbit Rangers who can give you back up", 
         buttons: [
             ["I'll try and hold them off!", "advanceTo(scenario.died13)"],
@@ -1986,7 +1986,7 @@ const scenario = {
     },
 
     died10: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "playerName at least wait for backup!", 
         buttons: [
             ["How long will that take?", "advanceTo(scenario.died14)"],
@@ -1995,7 +1995,7 @@ const scenario = {
     },
 
     died11: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Try and hold Vex off as long as possible, The Orbit Rangers are on their way now", 
         decreaseHealth: true,
         buttons: [
@@ -2004,7 +2004,7 @@ const scenario = {
     },
 
     died12: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Not too long they are on their way! Just try and weaken Vex as much as possible!", 
         decreaseHealth: true,
         buttons: [
@@ -2013,7 +2013,7 @@ const scenario = {
     },
 
     died13: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-multi.jpg',
         text: "Try and hold them off as long as possible they are on their way now", 
         decreaseHealth: true,
         buttons: [
@@ -2022,7 +2022,7 @@ const scenario = {
     },
 
     died14: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-multi.jpg',
         text: "Not too long they are on their way! Just try and hold them at bay!", 
         decreaseHealth: true,
         buttons: [
@@ -2031,7 +2031,7 @@ const scenario = {
     },
 
     died15: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-multi.jpg',
         text: "The Orbit Rangers are making there way as quickly as possible!", 
         decreaseHealth: true, 
         buttons: [
@@ -2040,7 +2040,7 @@ const scenario = {
     },
 
     died16: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-ship.jpg',
         text: "Vex is too strong try and get out of there playerName!", 
         decreaseHealth: true, 
         buttons: [
@@ -2050,7 +2050,7 @@ const scenario = {
     },
 
     died17: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-multi.jpg',
         text: "There is too many! Get out of there playerName", 
         buttons: [
             ["I'll try", "advanceTo(scenario.died21)"],
@@ -2059,7 +2059,7 @@ const scenario = {
     },
 
     died18: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-multi.jpg',
         text: "It's too dangerous!", 
         buttons: [
             ["I'm okay with that!", "advanceTo(scenario.died22)"],
@@ -2068,7 +2068,7 @@ const scenario = {
     },
 
     died19: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Damn it playerName! Try and out manoeuvre him!", 
         buttons: [
             ["Okay", "advanceTo(scenario.died24)"],
@@ -2077,7 +2077,7 @@ const scenario = {
     },
 
     died20: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "It's too dangerous!", 
         buttons: [
             ["I'm okay with that", "advanceTo(scenario.died25)"],
@@ -2086,7 +2086,7 @@ const scenario = {
     },
 
     died21: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-multi.jpg',
         text: "It looks like they have surrounded you playerName",
         decreaseHealth: true,  
         buttons: [
@@ -2095,7 +2095,7 @@ const scenario = {
     },
 
     died22: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-multi.jpg',
         text: "There is a missile headed straight for you!", 
         decreaseHealth: true, 
         buttons: [
@@ -2104,7 +2104,7 @@ const scenario = {
     },
 
     died23: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-multi.jpg',
         text: "WATCH OUT!! One is tailing behind you! ", 
         decreaseHealth: true, 
         buttons: [
@@ -2113,7 +2113,7 @@ const scenario = {
     },
 
     died24: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-ship-multi.jpg',
         text: "it looks like Vex and the Magnetars have surrouned you playerName", 
         decreaseHealth: true, 
         buttons: [
@@ -2122,7 +2122,7 @@ const scenario = {
     },
 
     died25: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-ship.jpg',
         text: "Vex is firing a powerful missile which is headed straight for you!", 
         decreaseHealth: true, 
         buttons: [
@@ -2131,7 +2131,7 @@ const scenario = {
     },
 
     died26: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-ship.jpg',
         text: "WATCH OUT! Vex has you locked on his site!", 
         decreaseHealth: true, 
         buttons: [
@@ -2140,7 +2140,7 @@ const scenario = {
     },
 
     died27: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Just try and hang on a bit longer!", 
         buttons: [
             ["I don't have much time", "advanceTo(scenario.died28)"],
@@ -2149,7 +2149,7 @@ const scenario = {
     },
 
     died28: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Help is comming!", 
         decreaseHealth: true, 
         buttons: [
@@ -2158,7 +2158,7 @@ const scenario = {
     },
 
     died29: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "DAMN IT playerName! Help is on it's way!", 
         decreaseHealth: true, 
         buttons: [
@@ -2167,7 +2167,7 @@ const scenario = {
     },
 
     died30: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "What are you talking about!? Don't do anything reckless now!", 
         decreaseHealth: true,
         buttons: [
@@ -2176,7 +2176,7 @@ const scenario = {
     },
 
     died31: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/static-astra-main.jpg',
         text: "Don't do anything stupid now! We need you!", 
         buttons: [
             ["This is my fate Astra", "advanceTo(scenario.died32)"]
@@ -2184,7 +2184,7 @@ const scenario = {
     },
 
     died32: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/static-astra-main.jpg',
         text: "What do you mean your fate! We can do this together!", 
         buttons: [
             ["I'm going to help the only way I know how to", "advanceTo(scenario.died33)"]
@@ -2192,7 +2192,7 @@ const scenario = {
     },
 
     died33: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/static-astra-main.jpg',
         text: "playerName?? playerName??!! playerName!! Can you hear me? playerName! playerName!!!!", 
         buttons: [
             ["...", "advanceTo(scenario.died34)"]
@@ -2200,7 +2200,7 @@ const scenario = {
     },
 
     died34: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/static-astra-main.jpg',
         text: "...", 
         decreaseHealth: true,
         buttons: [
@@ -2209,7 +2209,7 @@ const scenario = {
     },
 
     ammo1: {
-        image: 'assets/images/image-4.jpg', // coordinates
+        image: 'assets/images/coordinates-4.jpg', // coordinates
         text: "I like your style playerName! I'm sending you Vex's location", 
         buttons: [
             ["Let's fly!", "advanceTo(scenario.ammo2)"]
@@ -2217,7 +2217,7 @@ const scenario = {
     },
 
     ammo2: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Nice flying there playerName! You really do know how to navigate through space", 
         buttons: [
             ["Oh yeah!", "advanceTo(scenario.ammo3)"],
@@ -2226,7 +2226,7 @@ const scenario = {
     },
 
     ammo3: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "We should be able to get you close enough undetected so you can take down Vex!", 
         buttons: [
             ["Let's do this!", "advanceTo(scenario.ammo5)"]
@@ -2234,7 +2234,7 @@ const scenario = {
     },
 
     ammo4: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "You should teach the other Orbit Rangers when this is over!", 
         buttons: [
             ["Yeah of course!", "advanceTo(scenario.ammo5)"]
@@ -2242,7 +2242,7 @@ const scenario = {
     },
 
     ammo5: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-ship.jpg',
         text: "I see Vex's ship up ahead, you'll need to slow down and disengage your engine", 
         buttons: [
             ["Roger", "advanceTo(scenario.ammo6)"]
@@ -2250,7 +2250,7 @@ const scenario = {
     },
 
     ammo6: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Nice work! Do you want to take Vex head on or keep sneaking?", 
         buttons: [
             ["Head on", "advanceTo(scenario.ammo7)"],
@@ -2259,7 +2259,7 @@ const scenario = {
     },
 
     ammo7: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Okay I've sent a message to the other Orbit Rangers to come and assit you they should be here to help give you a distraction!", 
         buttons: [
             ["Thanks Astra!", "advanceTo(scenario.ammo9)"]
@@ -2267,7 +2267,7 @@ const scenario = {
     },
 
     ammo8: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Good choice! You should be able to get pass without being detected!", 
         buttons: [
             ["Let's get him!", "advanceTo(scenario.ammo10)"]
@@ -2275,7 +2275,7 @@ const scenario = {
     },
 
     ammo9: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Orbit Ranger's here and assisting you playerName fire when ready!", 
         buttons: [
             ["Take that Vex!", "advanceTo(scenario.ammo11)"]
@@ -2283,7 +2283,7 @@ const scenario = {
     },
 
     ammo10: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Okay you should be close enough to cause some damage on him!", 
         buttons: [
             ["FIRE!", "advanceTo(scenario.ammo11)"]
@@ -2291,7 +2291,7 @@ const scenario = {
     },
 
     ammo11: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Whoo you really got him good! But he's noticed now make sure you dodge Vex's incoming missiles!", 
         decreaseAmmo: true,
         buttons: [
@@ -2301,7 +2301,7 @@ const scenario = {
     },
 
     ammo12: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Nice move there playerName! Quick hit him back!", 
         buttons: [
             ["Right Wing", "advanceTo(scenario.ammo14)"],
@@ -2310,7 +2310,7 @@ const scenario = {
     },
 
     ammo13: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Great flying there playerName, you have a clear shot of either the Tail or Left Wing!", 
         buttons: [
             ["Tail", "advanceTo(scenario.ammo16)"],
@@ -2319,7 +2319,7 @@ const scenario = {
     },
 
     ammo14: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-cockpit.jpg',
         text: "Nice! That seems to have unbalanced him! You have a good shot right for the Cockpit now!", 
         decreaseAmmo: true,
         buttons: [
@@ -2328,7 +2328,7 @@ const scenario = {
     },
 
     ammo15: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-right.jpg',
         text: "WOW! What a direct hit! Way to shoot, Quick playerName keep shooting him!", 
         decreaseAmmo: true,
         buttons: [
@@ -2337,7 +2337,7 @@ const scenario = {
     },
 
     ammo16: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-left.jpg',
         text: "Good Shooting! You've made Vex spin out of control! Keep giving it all you got! Try and take down the Left Wing!", 
         decreaseAmmo: true,
         buttons: [
@@ -2346,7 +2346,7 @@ const scenario = {
     },
 
     ammo17: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-tail.jpg',
         text: "Great work playerName you've managed to destabilise him now! ", 
         decreaseAmmo: true,
         buttons: [
@@ -2355,7 +2355,7 @@ const scenario = {
     },
 
     ammo18: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Nice work there! That really has thrown Vex off! Let's keep the pressure on him now!", 
         decreaseAmmo: true,
         buttons: [
@@ -2364,7 +2364,7 @@ const scenario = {
     },
 
     ammo19: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Nice shooting playerName! Looks like Vex is unable to control his ship now!", 
         decreaseAmmo: true,
         buttons: [
@@ -2373,7 +2373,7 @@ const scenario = {
     },
 
     ammo20: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Vex is powering up his super charged missle again you will need to be extra quick to dodge this one!", 
         buttons: [
             ["Barrel roll to the right", "advanceTo(scenario.ammo22)"],
@@ -2382,7 +2382,7 @@ const scenario = {
     },
 
     ammo21: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Looks like Vex is targetting back on to you again!", 
         buttons: [
             ["Dodge up", "advanceTo(scenario.ammo24)"],
@@ -2391,7 +2391,7 @@ const scenario = {
     },
 
     ammo22: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Quick reflects there playerName let's see if you can get another hit in!", 
         decreaseFuel: true,
         buttons: [
@@ -2401,7 +2401,7 @@ const scenario = {
     },
 
     ammo23: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Way to move quickly out of the way playerName! His Left Wing and Tail are open! ", 
         decreaseFuel: true,
         buttons: [
@@ -2411,7 +2411,7 @@ const scenario = {
     },
 
     ammo24: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Way to pilot that space ship playerName! Vex is nearly down! just the Right wing or Cockpit left!", 
         decreaseFuel: true,
         buttons: [
@@ -2421,7 +2421,7 @@ const scenario = {
     },
 
     ammo25: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "What a way to fly playerName! Quick while Vex is unaware you just need to take down the Right Wing or Cockpit!", 
         decreaseFuel: true,
         buttons: [
@@ -2431,7 +2431,7 @@ const scenario = {
     }, 
 
     ammo26: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-left.jpg',
         text: "Amazing work there playerName looks like you can really set off course by targetting his Left Wing!", 
         decreaseAmmo: true,
         buttons: [
@@ -2440,7 +2440,7 @@ const scenario = {
     },
 
     ammo27: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-tail.jpg',
         text: "That was awesome playerName! It looks like vex's ship is falling! You just have the Tail to take out now!", 
         decreaseAmmo: true,
         buttons: [
@@ -2449,7 +2449,7 @@ const scenario = {
     },
 
     ammo28: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-right.jpg',
         text: "Vex never saw that comming! Way to shoot! Now you can set him off course for good, aim for the Right Wing!", 
         decreaseAmmo: true,
         buttons: [
@@ -2458,7 +2458,7 @@ const scenario = {
     },
 
     ammo29: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-cockpit.jpg',
         text: "You've saved the best to last! Only left is to take down the Cockpit!!", 
         decreaseAmmo: true,
         buttons: [
@@ -2467,7 +2467,7 @@ const scenario = {
     },
 
     ammo30: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "You have some very impressive shooting styles there playerName!", 
         decreaseAmmo: true,
         buttons: [
@@ -2476,7 +2476,7 @@ const scenario = {
     },
 
     ammo31: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "The Orbit Rangers are able to keep the rest of the Magnetars at bay while you issue the final blow!", 
         buttons: [
             ["I've got this Astra!", "advanceTo(scenario.ammo32)"]
@@ -2484,7 +2484,7 @@ const scenario = {
     },
 
     ammo32: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-cockpit.jpg',
         text: "You just need to hit Vex one more time and we've won!", 
         buttons: [
             ["Mission Completed", "advanceTo(scenario.ammo33)"]
@@ -2492,7 +2492,7 @@ const scenario = {
     },    
 
     ammo33: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/vex-cockpit.jpg',
         text: "...", 
         decreaseAmmo: true,
         buttons: [
@@ -2501,7 +2501,7 @@ const scenario = {
     },    
 
     captured1: {
-        image: 'assets/images/image-4.jpg', // pathing route 
+        image: 'assets/images/coordinates-2.jpg', // pathing route 
         text: "Southeast it is! I'll send you a pathing route for you to take!", 
         buttons: [
             ["Better not take long!", "advanceTo(scenario.captured2)"]
@@ -2509,7 +2509,7 @@ const scenario = {
     },    
 
     captured2: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/coordinates-2.jpg',
         text: "Yeah yeah! Just quickly make your way here!", 
         buttons: [
             ["I'll try", "advanceTo(scenario.captured3)"]
@@ -2517,7 +2517,7 @@ const scenario = {
     },    
 
     captured3: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "playerName what is taking you so long you should be hear by now!", 
         buttons: [
             ["Oh I got lost", "advanceTo(scenario.captured4)"],
@@ -2526,7 +2526,7 @@ const scenario = {
     },    
 
     captured4: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "How did you get lost?", 
         buttons: [
             ["I took the wrong turning!", "advanceTo(scenario.captured5)"]
@@ -2534,7 +2534,7 @@ const scenario = {
     },    
 
     captured5: {
-        image: 'assets/images/image-4.jpg', // pathing with players location
+        image: 'assets/images/coordinates-2.jpg', // pathing with players location
         text: "Are you able to navigate back on to the pathing route I sent you? I've been able to track you", 
         buttons: [
             ["I can try..", "advanceTo(scenario.captured8)"]
@@ -2542,7 +2542,7 @@ const scenario = {
     },    
 
     captured6: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Why not? Come on playerName we are loosing precious time here", 
         buttons: [
             ["So you keep sayiing", "advanceTo(scenario.captured7)"]
@@ -2550,7 +2550,7 @@ const scenario = {
     },    
 
     captured7: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Please playerName!", 
         buttons: [
             ["Nope", "advanceTo(scenario.captured8)"]
@@ -2558,7 +2558,7 @@ const scenario = {
     },    
 
     captured8: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "WAIT playerName you are heading in the opposite direction!", 
         buttons: [
             ["Yeah I know", "advanceTo(scenario.captured9)"]
@@ -2566,7 +2566,7 @@ const scenario = {
     },    
 
     captured9: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-one.jpg',
         text: "Watch out playerName one of Vex's crew has spotted you!", 
         decreaseFuel: true,
         buttons: [
@@ -2576,7 +2576,7 @@ const scenario = {
     },    
 
     captured10: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Let me help you! I will be able to let you know when he is about to fire", 
         decreaseHealth: true,
         buttons: [
@@ -2586,7 +2586,7 @@ const scenario = {
     },    
 
     captured11: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "You will have to be quick to out manoeuvre him!", 
         decreaseHealth: true,
         buttons: [
@@ -2596,7 +2596,7 @@ const scenario = {
     },    
 
     captured12: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-one.jpg',
         text: "Looks like he's about to shoot again! You will have to out manoeuvre him!", 
         buttons: [
             ["Turbo Boost!", "advanceTo(scenario.captured16)"]
@@ -2604,7 +2604,7 @@ const scenario = {
     },    
 
     captured13: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-one.jpg',
         text: "He's about to fire watch out!", 
         buttons: [
             ["...", "advanceTo(scenario.captured17)"]
@@ -2612,7 +2612,7 @@ const scenario = {
     },    
 
     captured14: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-one.jpg',
         text: "He's right on your tail! looks like he's about to fire!", 
         buttons: [
             ["Gargh!", "advanceTo(scenario.captured18)"]
@@ -2620,7 +2620,7 @@ const scenario = {
     },    
 
     captured15: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-one.jpg',
         text: "He's catching up to you!", 
         buttons: [
             ["I'm quicker than him", "advanceTo(scenario.captured19)"]
@@ -2628,7 +2628,7 @@ const scenario = {
     },    
 
     captured16: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Phew that was a close one!", 
         decreaseFuel: true,
         buttons: [
@@ -2637,7 +2637,7 @@ const scenario = {
     },    
 
     captured17: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Damn looks like he's hit you pretty bad!", 
         decreaseHealth: true,
         buttons: [
@@ -2646,7 +2646,7 @@ const scenario = {
     },    
 
     captured18: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Damn I can see he's hit your tail pretty bad!", 
         decreaseHealth: true,
         buttons: [
@@ -2655,7 +2655,7 @@ const scenario = {
     },    
 
     captured19: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Nice piloting there playerName", 
         decreaseFuel: true,
         buttons: [
@@ -2664,7 +2664,7 @@ const scenario = {
     },    
 
     captured20: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-one.jpg',
         text: "Watch out playerName he's firing from the left now!", 
         buttons: [
             ["Alright", "advanceTo(scenario.captured24)"]
@@ -2672,7 +2672,7 @@ const scenario = {
     },    
 
     captured21: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-one.jpg',
         text: "Are you able to make it?", 
         decreaseFuel: true,
         buttons: [
@@ -2681,7 +2681,7 @@ const scenario = {
     },    
 
     captured22: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-one.jpg',
         text: "He's reloading again! Quickly try and avoid it!", 
         buttons: [
             ["Boost Forward", "advanceTo(scenario.captured25)"]
@@ -2689,7 +2689,7 @@ const scenario = {
     },    
 
     captured23: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-one.jpg',
         text: "Watch out playerName incoming missile from the right hand side!", 
         buttons: [
             ["Damn it!", "advanceTo(scenario.captured26)"] 
@@ -2697,7 +2697,7 @@ const scenario = {
     },    
 
     captured24: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "He's hit your wing! Try to re-stabilize it!", 
         decreaseHealth: true,
         buttons: [
@@ -2706,7 +2706,7 @@ const scenario = {
     },    
 
     captured25: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Nice work playerName looks like you managed to avoid it!",
         decreaseFuel: true, 
         buttons: [
@@ -2715,7 +2715,7 @@ const scenario = {
     },    
 
     captured26: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Are you okay? Looks like he hit you pretty bad!", 
         decreaseHealth: true,
         buttons: [
@@ -2724,7 +2724,7 @@ const scenario = {
     },     
 
     captured27: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Phew! I dond't think you are out of trouble just yet!", 
         buttons: [
             ["Bring it on!", "advanceTo(scenario.captured28)"]
@@ -2732,7 +2732,7 @@ const scenario = {
     },    
 
     captured28: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-one.jpg',
         text: "Looks like he's coming back again and about to fire, try and dodge it!", 
         buttons: [
             ["Dodge Left", "advanceTo(scenario.captured29)"],
@@ -2741,7 +2741,7 @@ const scenario = {
     },    
 
     captured29: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Phew you managed to just miss it! Nice flying there playerName!", 
         decreaseFuel: true,
         buttons: [
@@ -2750,7 +2750,7 @@ const scenario = {
     },    
 
     captured30: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Nice flying that was such a close call! It nearly hit you!", 
         decreaseFuel: true,
         buttons: [
@@ -2759,7 +2759,7 @@ const scenario = {
     },    
 
     captured31: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "I'm doing a system check", 
         buttons: [
             ["Can you fix it?", "advanceTo(scenario.captured32)"],
@@ -2768,7 +2768,7 @@ const scenario = {
     },    
 
     captured32: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Bad news playerName I can't fix your ship from here, you will have to turn off your fuel", 
         buttons: [
             ["But I won't be able to move!", "advanceTo(scenario.captured34)"],
@@ -2777,7 +2777,7 @@ const scenario = {
     },    
 
     captured33: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "I'm on my way and called for back up, you think you can last a bit longer?", 
         buttons: [
             ["I can try", "advanceTo(scenario.captured36)"],
@@ -2786,7 +2786,7 @@ const scenario = {
     },    
 
     captured34: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "It won't take long Ranger!", 
         buttons: [
             ["Turn fuel off", "advanceTo(scenario.captured38)"]
@@ -2794,7 +2794,7 @@ const scenario = {
     },    
 
     captured35: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "I'll send back up in the mean time and I'm on my way too!", 
         buttons: [
             ["Will they arrive in time?", "advanceTo(scenario.captured38)"]
@@ -2802,7 +2802,7 @@ const scenario = {
     },    
 
     captured36: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "I'm travelling as fast as I can just hold on a bit longer!", 
         buttons: [
             ["Hurry!", "advanceTo(scenario.captured39)"]
@@ -2810,7 +2810,7 @@ const scenario = {
     },    
 
     captured37: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "I'm almost there! just a bit longer!", 
         buttons: [
             ["Bring it on!", "advanceTo(scenario.captured39)"]
@@ -2818,7 +2818,7 @@ const scenario = {
     },    
 
     captured38: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Looks like you're able to resart the engines again", 
         buttons: [
             ["Man that was close!", "advanceTo(scenario.captured40)"],
@@ -2827,7 +2827,7 @@ const scenario = {
     },    
 
     captured39: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/astra-main.jpg',
         text: "Damn just how far away are you?", 
         buttons: [
             ["I'm not sure!", "advanceTo(scenario.captured41)"],
@@ -2836,7 +2836,7 @@ const scenario = {
     },       
 
     captured40: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-one.jpg',
         text: "Your not in the clear yet! Looks like he's aiming again for you!", 
         buttons: [
             ["Huh? I thought I took care of him!", "advanceTo(scenario.captured42)"]
@@ -2844,7 +2844,7 @@ const scenario = {
     },     
 
     captured41: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-one.jpg',
         text: "playerName I don't think you're in the clear yet! He's coming up right behind you!", 
         buttons: [
             ["SAY WHAT?", "advanceTo(scenario.captured43)"]
@@ -2852,7 +2852,7 @@ const scenario = {
     },    
 
     captured42: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-one.jpg',
         text: "He's been charging his new weapona this entire time and looks like he's planning to use it on you!", 
         decreaseHealth: true,
         buttons: [
@@ -2861,7 +2861,7 @@ const scenario = {
     },    
 
     captured43: {
-        image: 'assets/images/image-4.jpg',
+        image: 'assets/images/enemy-ship-one.jpg',
         text: "Damn it playerName he's been on your tail this entire time! Wait this weapon is a lot more powerful! You might not be able to dodge in time!", 
         decreaseHealth: true,
         buttons: [

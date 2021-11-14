@@ -40,6 +40,9 @@
 Browsers tested: Google Chrome, Mozilla Firefox & Opera.
 The devices used in this testing include Samsung S10 v.Android 10.
 
+// lighthouse testing
+
+
 ## <a name="onloaddisplay">OnLoad Display</a>
 
 Expected: modal to load on screen start
@@ -289,19 +292,20 @@ I used my user stories and documented each of the steps that each user would nee
 
 Expectation 1: I want to play the game to find out which ending scenario I would get depending on my choices throughout the game play 
 Testing: I played the game through once to get my first outcome 
-Result: **see screenshot //link update to my first play through once the story mode is completed**
+Result: see screenshots of one of my final first play through once the story mode is completed: [one](https://github.com/EllieJ87) | [two](https://github.com/EllieJ87) | [three](https://github.com/EllieJ87) | [four](https://github.com/EllieJ87) | [five](https://github.com/EllieJ87) | [six](https://github.com/EllieJ87) 
 
 Expectation 2: I want to be able to interact via social media through the social media links in the footer
 Testing: check footer to see links to social media included to open in new tab easily
-Result: **see screenshot //link for image of navigation links**
+Result: ![linkedIn](assets/readme_docs/testing/social-links.jpg) | ![GitHub](assets/readme_docs/testing/social-links-1.jpg)
 
 Expectation 3: I want the site to have images from my own design to help portray the game play and experience through the option scenarios
 Testing: played through the game to see different imagery / character change
-Results: **see screenshot 1 and 2 //link update to my links images**
+Results: imagery changes: [one](https://github.com/EllieJ87) | [two](https://github.com/EllieJ87) | [three](https://github.com/EllieJ87)
 
-Expectation 4: I want to explore different options / choices to see which ending I would end up with 
+Expectation 4: As I want to explore different options / choices to see which ending I would end up with 
 Testing: play the game to see different ending options
-Result: **see 1, 2, 3, 4 //link show 2 ending options**
+Result: [one](https://github.com/EllieJ87) | [two](https://github.com/EllieJ87) | [three](https://github.com/EllieJ87) | [four](https://github.com/EllieJ87) | [five](https://github.com/EllieJ87) | [six](https://github.com/EllieJ87) 
+Notes: As you can see through this second play through I found that image 4 had no image and would also not link to the next playable option.  This then made me re-check all the images, button links and locations to make sure that these all pulled through to the next scenario.  This was good test to run through and catch any more potential link errors.
 
 Expectation 5: I want the text adventure game to reflect the theme and story mode, so this was more captivating 
 Testing: researched space theme, control boards and scenery
@@ -309,39 +313,44 @@ Result: ![Moodboard](assets/readme_docs/moodboard/moodboard-img.jpg)
 
 ### <a name="returningfan">As a User Returning to the Site</a>
 
-Expectation 6: I want to be able to do the text adventure game multiple times to see which ending I will be able to receive
-Testing: Play the game and try again to get different scenario
-Result: ‘refresh icon’ to refresh the page to try the game again after each scenario ending
+Expectation 6: I want to be able to be able to play multiple times and see what endings I end up with based on my decisions.
+Testing: Play the game through once and make note of the ending then try and change my options for a different ending
+Result: Adding a ‘refresh icon’ so the player can easily refresh the page again to see what other endings they can get!
+![Refresh Icon](assets/readme_docs/moodboard/moodboard-img.jpg)
  
 ### <a name="newfan">As a User who does not play Text Adventure</a>
 
 Expectation 7: I want a text adventure game where I travel on an experience through space and enjoy the character development 
 Testing: complete quiz to see which scenario I will receive and what the outcome of my decisions were
 
-Expectation 8: I want to see a character guide and interact with my through my decisions through the game play to make it more engaging and interactive
-Testing: check all options that represents the characters emotions, and all endings are working // run through
-Result: all options and endings are working // see if any fixes are needed
+Expectation 8: I want to see a character guide and any additional imagery to help capture the game asthetics, this also made making my decisions more engaging and interactive
+Testing: Checked all options that represents the character, imagery or event that was happening at that moment.  Checked all endings and made sure the decrement of the ammo, fuel and health impacted at the correct time and also run the right ending theme.
+Conclusion: The full decrement of the ammo, fuel and health had to have another 'empty / dud' scenario so this would take count the decrease correctly and run the correct ending.  For the 'OR' statements this was not needed and could run without having a 'empty / dud' scenario.
+Result: Run through all option endings to make sure that all endings were functional and run the correct ending.
 
-Expectation 9: I want to see a help section to get information on how to play the game
-Testing: Trigger help modal from each page
-Result: help modal triggers as expected on each page
+Expectation 9: I want to see a help section to get information on how to play the game.
+Testing: Trigger help modal from each page.
+Result: help modal triggers as expected on each page.
+[help](https://github.com/EllieJ87)
 
 ### <a name="allusers">All Users</a>
 
-Expectation 10: I want the site to be easy to navigate on mobile primarily so I can complete it on the go and this also makes it easier to share with others
-Testing: test all pages on different mobiles
+Expectation 10: I want the site to be easy to navigate on mobile primarily so I can complete it on the go and this also makes it easier to share with others.
+Testing: Tested all pages on different mobiles portrait and landscape.
+Development: When developing the site first this was scrolling naturally, this then developed where the smaller screen sizes would not scroll, therefore cutting off the game play.
+Results: Add scroll to smaller media queries to enable this feature on both portrait and landscape screen sizes.
 
-Expectation 11: I want the ability to turn on and off the audio 
-Testing: test audio button to turn ‘On’ and ‘Off’ the audio 
-Result: audio turns on and off when the volume button is toggled between on and off.  All buttons targeted with this class also plays/does not play a sound
+Expectation 11: I want the ability to turn on and off the audio.
+Testing: Pressed the audio button to turn ‘On’ and ‘Off’ the audio, ran through all buttons that had the '.audio' class to enable the sound.
+Result: Audio turns on and off when the volume button is toggled between on and off.  All buttons targeted with this class also plays/does not play a sound
 
-Expectation 12: I want the text adventure game to be slick, so each scenario / option is displayed one at a time to prevent scrolling and general clutter
-Testing: click through game to ensure each text, imagery and option is visible
-Result: game play works with each change of imagery, text and options // link for screen shot
+Expectation 12: I want the text adventure game to be slick, so each scenario / option is displayed one at a time to prevent scrolling and general clutter.
+Testing: Click through game to ensure each text, imagery and option is visible at each scenario option.
+Result: Game play works with each change of imagery, text and options.
 
 Expectation 13: I want to be able to contact the site owner with feedback
 Testing: click contact icon to open contact form modal
-Result: Contact page has feedback: ![image](assets/readme_docs/moodboard/contact-screen.jpg)
+Result: Contact page has feedback: ![Contact Form](assets/readme_docs/moodboard/contact-screen.jpg)
  
 ### <a name="responsivedesigntesting">Responsive Design Testing</a>
 
@@ -351,7 +360,7 @@ I used my own phone to test the orientation and how the site differs from portra
 
 To test my whole website, I went through each page, feature by feature, and documented the results on a spreadsheet. The spreadsheet also documents any responsive features and confirms that they work and appear as intended on different screen sizes. The link to the spreadsheet it below:
 
-Responsive testing-checklist [link](http://mattkersley.com/responsive/)
+Responsive testing-checklist [here](http://mattkersley.com/responsive/)
 
 ## <a name="performancetesting">Performance Testing</a>
 
@@ -370,9 +379,9 @@ No other issues with W3C Validator on Markup except for the below two warnings:
 
 *Fixed Errors*:
 
-Error Bad Value:  on favicon images: these were raised an error as there was a spacing in the file path, all favicon icons were all corrected and not throwing an error message.
-Error Bad Value: on the form action attribute as this was left blank, this was amened to have the “#” symbol, this was corrected and not throwing an error message.
-Error Attribute: on textarea as ‘type=”text”’ was added, this has been removed, no longer throwing an error message. 
+Error Bad Value: On favicon images: these were raised an error as there was a spacing in the file path, all favicon icons were all corrected and not throwing an error message.
+Error Bad Value: On the form action attribute as this was left blank, this was amened to have the “#” symbol, this was corrected and not throwing an error message.
+Error Attribute: On textarea as ‘type=”text”’ was added, this has been removed, no longer throwing an error message. 
  
 ## <a name="csscode">CSS</a>
 
@@ -382,6 +391,20 @@ W3C testing completed for: main.css
 Testing completed with one error on the end container, there was no minimum declaration on the height of the grid-row as this was set to: minmax(auto).  I then corrected this to be set to minmax(100px, auto) which cleared the error and no more further errors were found.
 
 ## <a name="bugsfixes">Bugs</a>
+
+**Welcome Modal**
+- Issue: input was not validating correctly, the value input was duplicated thus not pulling through the correct value from the input field.
+- Testing:  
+  1. Removed the duplicated input.value for the 'playersName' this was tested in the console directly and returned the value. 
+
+- Results: Console log correctly displayed the correct input value.
+
+- Issue: From the input validation, the scenario was pulling undefined at first input, when this re-linked back to the start again the input was then valid and no longer showing undefined
+- Testing:  
+  1. Changed where the 'advanceTo(scenario.scene1)' this was initally not being called in the correct position.
+  2. Amended to be called directly after the button was clicked and linked to the start of the game.
+
+- Results: Displays the users input value through out the game.
 
 **Main Game**
 - Issue: page was not scrolling - was not an issue prior
@@ -408,14 +431,15 @@ Testing completed with one error on the end container, there was no minimum decl
 
 **_Issues still unresolved (due to timing)_** 
 
-1. When checking the main game on my phone, settings on my phone is in dark mode, with this setting the div containers for the states the 'place holder' numbers were visible and could be seen.  
+1. When checking the main game on my phone, settings on my phone is in dark mode, with this setting the div containers for the states the 'place holder' numbers were visible and could be seen. 
+[Image One](https://en.wikipedia.org/wiki/Google_Lighthouse) | [Image Two](https://en.wikipedia.org/wiki/Google_Lighthouse) 
 
 This is not as asthetic that I like I am going to look into this feature and see how to amend this going forward and test across dark and light mode on mobiles.  Desktop Opera is in dark mode and this was not showing up as a design asthetic issue.
 
 **Text / Button Container**
 - Issue: The text / buttons and fuel and missiles do not fit within the main game container
 - Testing: 
-  1. Tested on boot strap – was still not re-sizing and having the right formation
+  1. Tested on bootstrap – was still not re-sizing and having the right formation
   2. Changed layout to a css grid template
 
 - Results: amend the layout to be in a css grid layout so this was easier to manipulate and move containers around
@@ -430,13 +454,13 @@ This is not as asthetic that I like I am going to look into this feature and see
 - Results: changed the image to be a background image url so this is easier to contain and cover the image container through different screen sizes 
 
 **Contact Modal**
-- Issue: When the user clicks inside the input field this removed the contact overlay 
+- Issue: When the user clicks inside the input field this removed the contact overlay. 
 - Testing: 
   1. Added JQuery to make the overlay static so this would not be removed
   2. Added a ‘X’ so the user can close the overlay 
   3. This overlay created difficulties with re-sizing and keep a consistent sizing through all the modal / overlays displays 
 
-- Results: changed the overlay to a bootstrap modal so this was more consistent and keeping with the size ratio and dimensions 
+- Results: changed the overlay to a bootstrap modal so this was more consistent and keeping with the size ratio and dimensions.
 
 **_Issues still unresolved (due to timing)_** 
 
@@ -445,28 +469,17 @@ This is not as asthetic that I like I am going to look into this feature and see
 
 With both of these issues I will investigate and research further into form validation’s and how this information gets pulled into a third party source.
 
-
 **Return Home Modal**
-- Issue: Sizing of overlay is not re-sizing correctly 
+- Issue: Sizing of overlay is not re-sizing correctly.
 - Testing: 
   1. Styled through css for sizing and ratio  
 
-- Results: changed the overlay to a bootstrap modal so this was more consistent and keeping with the size ratio and dimensions 
+- Results: changed the overlay to a bootstrap modal so this was more consistent and keeping with the size ratio and dimensions.
 
 **Ending Page**
-- Issue: Added an automatic timeout refresh 
+- Issue: Added an automatic timeout refresh.
 - Testing: 
   1. Added different times for a timeout refresh
   2. Added an icon for the user
 
-- Results: removed the refresh time out feature and added this to the icon so the user can choose if they wished to refresh the page or not 
-
-**Ending of Game**
-- Look at adding an option to replay the game – could just be a reset function like when the player wished to return home
-- 4 different endings  
-
-
-Expected: 
-Testing: 
-Results: 
-
+- Results: removed the refresh time out feature and added this to the icon so the user can choose if they wished to refresh the page or not.
