@@ -125,6 +125,7 @@ Testing: through different screen sizes and Google Chrome Dev tools
 Results: ending home text and ‘refresh’ icon are all fit to screen size and width
 
 ### <a name="emailicon">Email Icon</a>
+__*Removed Temporarily will come back to re-develop*__
 
 Expected: when hovering over 'email' icon, the icon changes colour, increases size and pulses
 Testing: tested by hovering over item
