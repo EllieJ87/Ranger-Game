@@ -136,26 +136,6 @@ footer {
   animation-direction: alternate;
 }
 
-.fa-envelope-o {
-  color: var(--aqua);
-}
-
-.fa-envelope-o:hover {
-  color: var(--white);
-  font-size: 35px;
-  text-shadow: 0 0 15px rgba(242, 244, 248, 0.8); 
-  -webkit-animation-name: increase;
-  animation-name: increase;
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
 .fa-question {
   color: var(--navy);
   text-shadow: 0 0 3px rgba(238, 252, 5, 1);
@@ -217,18 +197,6 @@ footer {
   animation-direction: alternate;
 }
 
-@keyframes increase {
-  to {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-  }
-
-  to {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);;
-  }
-}
-
 .fa-rocket {
   color: var(--aqua);
 }
@@ -266,16 +234,6 @@ footer {
   animation-iteration-count: infinite;
 }
 
-@keyframes rotate {
-  from {
-      transform: rotate(0deg);
-  }
-
-  to {
-      transform: rotate(360deg);
-  }
-}
-
 /* ------ MAIN GAME CONTAINER ------ */
 #game-container {
   display: grid;
@@ -289,7 +247,7 @@ footer {
   grid-template-areas:
   "image image image stats"
   "image image image ."
-  "text-container text-container buttonBox buttonBox";
+  "text-container text-container button-box button-box";
 }
 
 #game-container > * {
@@ -327,8 +285,8 @@ main {
 }
 
 /* BUTTON OPTIONS */
-#buttonBox {
-  grid-area: buttonBox;
+#button-box {
+  grid-area: button-box;
   background-color: var(--aqua);
   border: 3px solid var(--purple);
   box-shadow:inset 0 0 .5rem 0 var(--purple),0 0 1rem 0 var(--purple);
@@ -472,7 +430,7 @@ aside {
   width: 100%;
 }
 
-#playerName {
+#player-name {
   font-family: var(--font);
   font-size: 0.9em;
   color: #A01306;
@@ -722,170 +680,6 @@ aside {
   box-shadow: 0 0 10px rgba(135, 24, 110, 0.9);
 }
 
-/* ------ CONTACT FORM ------ */
-/* BACKGROUND COLOUR (BODY FADE) */
-#modal-contact {
-  background-color: rgba(135, 24, 110, 0.5);
-}
-
-/* CONTACT CONTAINER */
-.modal-content .contact {
-  margin: 0 auto;
-}
-
-#contact-container {
-  padding: 5px;
-  background-color: var(--navy);
-  border: 2px solid var(--aqua);
-  box-shadow:inset 0 0 .5rem 0 var(--aqua),0 0 1rem 0 var(--aqua);
-}
-
-/* CONTACT BODY */
-#contact-body {
-  margin: 0 auto;
-  padding: 15px 15px;
-  background-color: var(--yellow);
-  border: 2px solid var(--purple);
-  box-shadow:inset 0 0 .5rem 0 var(--purple),0 0 1rem 0 var(--purple);
-}
-
-/* CONTACT HEADER */
-.contact-header {
-  padding: 0;
-  margin: 0;
-  border-bottom: 0 none; 
-}
-
-/* CONTACT 'X' */
-.btn-contact {
-  padding: 5px;
-  margin: 0;
-  color: var(--navy);
-}
-
-.btn-contact:hover, .btn-contact:focus, .btn-contact:active  {
-  color: var(--aqua);
-}
-
-/* CONTACT HEADER */
-#contact-headText {
-  font-family: var(--head);
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.5em;
-  letter-spacing: 0.3em;
-  color: var(--magenta);
-}
-
-/* CONTACT TEXT */
-.contact-bodyText {
-  font-family: var(--font);
-  color: var(--navy);
-  font-size: 1em;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  line-height: 2em;
-}
-
-/* CONTACT LABEL */
-label {
-  padding: 5px 0;
-  margin: 0;
-}
-
-/* INPUT FIELD */
-.form-control {
-  background-color: var(--aqua);
-  font-family: var(--font);
-  border: none;
-  border-radius: 3px;
-}
-
-.error {
-  font-family: var(--font);
-  font-size: 0.7em;
-  margin-top: 5px;
-  color: #A01306;
-}
-
-/* CONTACT FOOTER */
-.contact-footer {
-  padding: 10px 0 0 0;
-  border-top: 0 none;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* SUBMIT BUTTON */
-#submit {
-  padding: 0;
-  margin: 0;
-  width: 150px;
-  height: 50px;
-  background-color: var(--white);
-  color: var(--magenta);
-  border: none;
-  border-radius: 3px;
-  font-family: var(--head);
-  font-size: 1.2em;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  text-align: center;
-  cursor: pointer;
-
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(242, 244, 248, 0);
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-property: box-shadow;
-  transition-property: box-shadow;
-  transition: background-color 1s ease;
-}
-
-#submit:hover, #submit:focus, #submit:active {
-  color: var(--white);
-  background-color: var(--aqua);
-  box-shadow: 0 0 10px rgba(104, 226, 163, 0.9);
-}
- 
-/* RESET BUTTON */
-#reset {
-  padding: 0;
-  margin: 0;
-  width: 150px;
-  height: 50px;
-  background-color: var(--magenta);
-  color: var(--white);
-  border: none;
-  border-radius: 3px;
-  font-family: var(--head);
-  font-size: 1.2em;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  text-align: center;
-  cursor: pointer;
-
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(208, 7, 162, 0);
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-property: box-shadow;
-  transition-property: box-shadow;
-  transition: background-color 1s ease;
-}
-
-#reset:hover, #reset:focus, #reset:active {
-  color: var(--yellow);
-  background-color: var(--purple);
-  box-shadow: 0 0 10px rgba(135, 24, 110, 0.9);
-}
-
 /* ------ END OF GAME & RETURN HOME END CONTAINER ------ */
 .end-container {
   display: grid;
@@ -930,6 +724,29 @@ label {
   letter-spacing: 0.1em;
 }
 
+/* ------ KEYFRAMES ------ */
+@keyframes increase {
+  to {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  to {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);;
+  }
+}
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+
+  to {
+      transform: rotate(360deg);
+  }
+}
+
 /* ------ MEDIA QUERIES ------ */
 /* SCREEN WIDTH AT 768PX */
 @media (max-width: 768px) {
@@ -948,7 +765,7 @@ label {
     "image image stats"
     "image image stats"
     "text-container text-container text-container"
-    "buttonBox buttonBox buttonBox";
+    "button-box button-box button-box";
   }
   
   #content > * {
@@ -1063,31 +880,6 @@ label {
     height: 40px;
     font-size: 1em;
   }
-  
-  /* ------ CONTACT FORM ------ */
-  #contact-headText {
-    margin-bottom: 0;
-  }
-  
-  .contact-bodyText {
-    font-size: 0.9em;
-  }
-  
-  .contact-footer {
-    padding-top: 10px;
-  }
-  
-  #submit {
-    width: 125px;
-    height: 40px;
-    font-size: 1em;
-  }
-  
-  #reset {
-    width: 125px;
-    height: 40px;
-    font-size: 1em;
-  }
 
   /* FOOTER & NAVIGATION */
   footer {
@@ -1163,30 +955,6 @@ label {
     font-size: 0.8em;
   }
   
-  /* ------ CONTACT FORM ------ */
-  #contact-headText {
-    letter-spacing: 0.1em;
-  }
-  .contact-bodyText {
-    font-size: 0.8em;
-  }
-
-  .contact-footer {
-    padding-top: 5px;
-  }
-   
-  #submit {
-    width: 100px;
-    height: 40px;
-    font-size: 1em;
-  }
-  
-  #reset {
-    width: 100px;
-    height: 40px;
-    font-size: 1em;
-  }
-  
   /* FOOTER & NAVIGATION */ 
   .footer-links a {
     padding: 10px;
@@ -1242,7 +1010,7 @@ label {
     grid-template-areas:
     "image image stats"
     "text-container text-container text-container"
-    "buttonBox buttonBox buttonBox";
+    "button-box button-box button-box";
   }
 
   #text {

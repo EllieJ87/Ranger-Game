@@ -102,7 +102,7 @@ My website is for current and potential anime, gaming or drawing fans, who are l
 - I want the ability to turn the music / sound on and off when I choose
 - I want the text adventure game to have a consistent and easily flow theme 
 - I want each option to be separate rather than a long list 
-- I want to be able to contact the site owner with feedback
+- __*In development*__ I want to be able to contact the site owner with feedback
 - I want to be able to see and interact with them via social media
 
 ### <a name="sitegoals">Site Owner Goals</a>
@@ -175,7 +175,7 @@ Desktop & Laptop | Tablet & Mobile
 [Welcome](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/welcome-desktop.jpg) | [Welcome](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/welcome-mobile.jpg)
 [Game Page](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/game-main-desktop.jpg) | [Game Page](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/game-main-mobile.jpg)
 [How to Play](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/how-to-play-desktop.jpg) | [How to Play](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/how-to-play-mobile.jpg)
-[Contact](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/contact-desktop.jpg) | [Contact](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/contact-mobile.jpg)
+[Contact - TEMP REMOVED](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/contact-desktop.jpg) | [Contact - TEMP REMOVED](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/contact-mobile.jpg)
 [Return Home](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/return-home-desktop.jpg)| [Return Home](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/return-home-mobile.jpg)
 [End of Game](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/game-over-desktop.jpg) | [End of Game](https://github.com/EllieJ87/ranger-game/blob/master/assets/readme_docs/wireframes/game-over-mobile.jpg)
 
@@ -260,6 +260,12 @@ I later discussed this feedback with my mentor Sunny and he said as it’s not a
 - The modal has a ‘Reset’ button where the user can click to clear the form if they wish
 - If the user decides not to contact me when they have clicked the ‘Email’ icon there is an option ‘X’ button in the top right-hand corner, so they have to option to dismiss the overlay box
 - The modal dismiss is also added so the user can click outside of the modal if they do not wish to submit a form
+
+__*Updated:25-11-2021*__
+
+- After feedback with Mentor regarding the validation for this it was decided for this feature to be temporarily removed.
+- I will come back to this validation error when I have a bit more time to develop this feature more.
+- See the testing documentation for the issues related to this feature
 
 ### <a name="homemodal">Home (Modal)</a>
 

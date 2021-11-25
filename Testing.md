@@ -358,6 +358,8 @@ Testing: Click through game to ensure each text, imagery and option is visible a
 
 Result: Game play works with each change of imagery, text and options.
 
+__*Still in Development*__
+
 Expectation 12: I want to be able to contact the site owner with feedback
 
 Testing: click contact icon to open contact form modal
@@ -484,6 +486,10 @@ Re-checking this on Google Chrome and Opera desk top this was not a problem:
 2. When the form is submitted the ‘alert’ box appears twice
 
 With both of these issues I will investigate and research further into form validation’s and how this information gets pulled into a third party source.
+
+__*Updated:25-11-2021*__
+
+- With the aove issues regarding the contact form it was discussed with my mentor to remove this feature temporarily and come back to it when I have a bit more timr to develop this further.
 
 **Return Home Modal**
 - Issue: Sizing of overlay is not re-sizing correctly.

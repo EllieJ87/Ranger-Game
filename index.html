@@ -1,246 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <title>Ranger Game</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- Need Meta Description -->
-  <meta name="description" content="A fun Ranger space text adventure game! Try and help AStra take on Vex to save Pokitaru! ">
   
-  <!-- This is the link to Bootstrap, which will make up the basis of the styles for my site -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-  <!--This is the link to font awesome, which I will use for the icons in my site-->
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
- 
-  <!-- CSS LINK -->
-  <link rel="stylesheet" href="assets/css/main.css">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A fun Ranger space text adventure game! Try and help AStra take on Vex to save Pokitaru! ">
+    
+    <title>Ranger Game</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="assets/images/faicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/images/faicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/images/faicon/favicon-96x96.png" sizes="96x96">
+    
+    <!-- BOOTSTRAP CSS STYLES LINK -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- FONT AWESOME LINK -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="assets/css/main.css">
   
-  <!-- Favicon Icon -->
-  <link rel="icon" type="image/png" href="assets/images/faicon/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="assets/images/faicon/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="assets/images/faicon/favicon-96x96.png" sizes="96x96">
-
-<!--  -->
-
-</head>
-<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="" style="background-image: url('assets/images/background.jpg');">
-
-  <!-- ONLOAD WELCOME MODAL -->
-  <div class="modal fade" id="modal-welcome" tabindex="-1" role="dialog" aria-labelledby="modal-welcome">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content welcome">
-        <div id="welcome-container" class="modal-body">
-          <div id="welcome-body">
-            <h4 id="welcome-header">Welcome Aboard</h4>
-            <br>
-            <p id="welcome-text">CALLING ALL RANGERS!<br><br>
-              I hope this message finds you well?<br><br>
-              The planet Pokitaru needs your help!<br><br>
-              Are you willing to change your coordinates to help save Pokitaru?<br><br>
-              Are you ready to descend?
-            </p>
-            
-            <form action="#" id="input" class="input-container">
-              <label for="player"></label>
-              
-              <input type="text" class="input" name="player" id="player" placeholder="Ranger's name...">
-              <button id="start-btn" type="button" class="audio" onclick="startGame();">Descend</button>
-            </form>
-            <div id="playerName"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<!-- RETURN HOME MODAL -->
-<div class="modal fade" id="modal-home" tabindex="-1" role="dialog" aria-labelledby="modal-home" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content home">
-      <div id="home-container">
-        <div id="home-body">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true" class="btn-close audio">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <h5 id="home-header">Return Home?</h5>
-            <br>
-            <p id="home-text">  
-              It looks like you are wanting to return home!<br><br>
-              This will take you back to the start of the game again and all progress you have made so far will be lost in space.<br><br>
-              Pokitaru will not be saved but hey you will return safely back to your home planet.<br><br>
-              Are you sure you wish to return Ranger?
-              </p>
-          </div>
-          <div class="modal-footer">
-            <button id="home-btn" class="audio" type="button" data-dismiss="modal" onclick="removeHomeModal()">Home</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- HOW TO PLAY MODAL --> 
-<div class="modal fade" id="modal-play" tabindex="-1" role="dialog" aria-labelledby="modal-play" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content play">
-      <div id="play-container">
-        <div id="play-body">
-          <div class="modal-header play-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true" class="play-close audio">&times;</span>
-            </button>
-          </div>
-          <div class="play-body">
-            <h5 id="play-headText">How to Play</h5>
-            <br>
-            <p id="play-text">This game is completely up to you and the choices you make.<br><br>
-              The main objective is to assist Astra and his team ‘The Orbit Rangers’ to help save the planet Pokitaru as it’s currently under attack by the evil empire The Magnetars led by Vex.<br><br>
-              Upon your journey you will encounter obstacles that could get in your way, you will need to choose wisely to safely navigate to Pokitaru.<br><br>
-              One more thing you should pay attention to is the fuel and an ammo bar, you will need to keep a close eye on these as you don’t want to run out at a crucial part of the game!<br><br>
-              Good Luck Ranger!
-              </p>
-          </div>
-          <div class="modal-footer play-footer">
-            <button id="ready" class="audio" type="button" data-dismiss="modal">Ready?</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CONTACT FORM MODAL --> 
-<div class="modal fade" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="modal-contact" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content contact">
-      <div id="contact-container">
-        <div id="contact-body">
-          <div class="modal-header contact-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true" class="btn-contact audio">&times;</span>
-            </button>
-          </div>
-          <div class="contact-bodyText">
-            <h5 id="contact-headText">Contact Me</h5>
-            <br>
-            <form id="form" autocomplete="off">
-              <label for="pname">Player's Name</label>
-              <input type="text" class="form-control" name="pname" id="pname" placeholder="Your name...">
-            <div class="error"></div>
-              <label for="email">Email</label>
-              <input type="text" class="form-control" name="email" id="email" placeholder="Your email...">
-              <div class="error"></div>
-              <label for="textarea">Your Thoughts?</label>
-              <textarea name="message" class="form-control textarea" id="textarea" style="height:200px" placeholder="Your Thoughts..."></textarea>
-            <div class="modal-footer contact-footer">
-              <button id="submit" class="audio" type="submit">Submit</button>
-              <button id="reset" class="audio" type="reset">Reset</button>
+  </head>
+  
+  <body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="" style="background-image: url('assets/images/background.jpg');">
+    
+    <!-- ONLOAD WELCOME MODAL -->
+    <section class="modal fade" id="modal-welcome" tabindex="-1" role="dialog" aria-labelledby="modal-welcome">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content welcome">
+          <div id="welcome-container" class="modal-body">
+            <div id="welcome-body">
+              <h4 id="welcome-header">Welcome Aboard</h4><br>
+              <p id="welcome-text">CALLING ALL RANGERS!<br><br>
+                I hope this message finds you well?<br><br>
+                The planet Pokitaru needs your help!<br><br>
+                Are you willing to change your coordinates to help save Pokitaru?<br><br>
+                Are you ready to descend?</p>              
+              <form action="#" id="input" class="input-container">
+                <label for="player"></label>
+                <input type="text" class="input" name="player" id="player" placeholder="Ranger's name...">
+                <button id="start-btn" type="button" class="audio" onclick="startGame();">Descend</button>
+              </form>
+              <div id="player-name"></div>
             </div>
-          </form> 
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-
-<!-- MAIN GAME PLAY CONTAINER -->
-<div class="container">
-    
-  <div id="game-container">
-    
-    <main id="images"></main>
-    
-    <aside class="stats">
-      
-      <div class="ammo">
-        <i class="fa fa-crosshairs" aria-hidden="true"></i>
-        <div class="ammo-bar">1</div>
-        <div class="ammo-bar">2</div>
-        <div class="ammo-bar">3</div>
-        <div class="ammo-bar">4</div>
-        <div class="ammo-bar">5</div>
-        <div class="ammo-bar">6</div>
-      </div>
-      
-      <div class="fuel">
-        <i class="fa fa-rocket" aria-hidden="true"></i>
-        <div class="fuel-bar">1</div>
-        <div class="fuel-bar">2</div>
-        <div class="fuel-bar">3</div>
-        <div class="fuel-bar">4</div>
-        <div class="fuel-bar">5</div>
-        <div class="fuel-bar">6</div>
-      </div>
-
-      <div class="health">
-        <i class="fa fa-heartbeat" aria-hidden="true"></i>
-        <div class="health-bar">1</div>
-        <div class="health-bar">2</div>
-        <div class="health-bar">3</div>
-        <div class="health-bar">4</div>
-        <div class="health-bar">5</div>
-        <div class="health-bar">6</div>
-      </div>
-
-    </aside>
-    
-    <section id="text-container">
-      <p id="text"></p>
     </section>
     
-    <section id="buttonBox" class="nested btn"></section>
-  </div>
-
-  <!-- ENDING TEXT PLACEMENT -->
-<div id="good-bye-text"></div>
-
-</div> <!-- container close tag-->
-
-
-
-<footer class="container-fluid">
+    <!-- RETURN HOME MODAL -->
+    <section class="modal fade" id="modal-home" tabindex="-1" role="dialog" aria-labelledby="modal-home" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content home">
+          <div id="home-container">
+            <div id="home-body">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" class="btn-close audio">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5 id="home-header">Return Home?</h5><br>
+                <p id="home-text">It looks like you are wanting to return home!<br><br>
+                  This will take you back to the start of the game again and all progress you have made so far will be lost in space.<br><br>
+                  Pokitaru will not be saved but hey you will return safely back to your home planet.<br><br>
+                  Are you sure you wish to return Ranger?</p>
+              </div>
+              <div class="modal-footer">
+                <button id="home-btn" class="audio" type="button" data-dismiss="modal" onclick="removeHomeModal()">Home</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     
-  <span class="footer-text"> Ranger Game &copy;EJ@2021</span>
+    <!-- HOW TO PLAY MODAL -->
+    <section class="modal fade" id="modal-play" tabindex="-1" role="dialog" aria-labelledby="modal-play" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content play">
+          <div id="play-container">
+            <div id="play-body">
+              <div class="modal-header play-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" class="play-close audio">&times;</span>
+                </button>
+              </div>
+              <div class="play-body">
+                <h5 id="play-headText">How to Play</h5><br>
+                <p id="play-text">This game is completely up to you and the choices you make.<br><br>
+                  The main objective is to assist Astra and his team ‘The Orbit Rangers’ to help save the planet Pokitaru as it’s currently under attack by the evil empire The Magnetars led by Vex.<br><br>
+                  Upon your journey you will encounter obstacles that could get in your way, you will need to choose wisely to safely navigate to Pokitaru.<br><br>
+                  One more thing you should pay attention to is the fuel and an ammo bar, you will need to keep a close eye on these as you don’t want to run out at a crucial part of the game!<br><br>
+                  Good Luck Ranger!</p>
+              </div>
+              <div class="modal-footer play-footer">
+                <button id="ready" class="audio" type="button" data-dismiss="modal">Ready?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- MAIN GAME PLAY CONTAINER -->
+    <div class="container">
+      <div id="game-container">
+        
+        <!-- IMAGE CONTAINER -->
+        <main id="images"></main>
+
+        <!-- STATS CONTAINER -->
+        <aside class="stats">
+
+          <!-- AMMO CONTAINER -->
+          <div class="ammo">
+            <i class="fa fa-crosshairs" aria-hidden="true"></i>
+            <div class="ammo-bar">1</div>
+            <div class="ammo-bar">2</div>
+            <div class="ammo-bar">3</div>
+            <div class="ammo-bar">4</div>
+            <div class="ammo-bar">5</div>
+            <div class="ammo-bar">6</div>
+          </div>
+
+          <!-- FUEL CONTAINER -->
+          <div class="fuel">
+            <i class="fa fa-rocket" aria-hidden="true"></i>
+            <div class="fuel-bar">1</div>
+            <div class="fuel-bar">2</div>
+            <div class="fuel-bar">3</div>
+            <div class="fuel-bar">4</div>
+            <div class="fuel-bar">5</div>
+            <div class="fuel-bar">6</div>
+          </div>
+          
+          <!-- HEALTH CONTAINER -->
+          <div class="health">
+            <i class="fa fa-heartbeat" aria-hidden="true"></i>
+            <div class="health-bar">1</div>
+            <div class="health-bar">2</div>
+            <div class="health-bar">3</div>
+            <div class="health-bar">4</div>
+            <div class="health-bar">5</div>
+            <div class="health-bar">6</div>
+          </div>
+        
+        </aside>
+
+        <!-- TEXT CONTAINER -->        
+        <section id="text-container">
+          <p id="text"></p>
+        </section>
+
+        <!-- BUTTON CONTAINER -->
+        <section id="button-box" class="nested btn"></section>
+      </div>
+      
+      <!-- ENDING TEXT PLACEMENT -->
+      <div id="good-bye-text"></div>
+    </div> <!-- CONTAINER CLOSING TAG -->
+    
+    <footer class="container-fluid">
+      <span class="footer-text"> Ranger Game &copy;EJ@2021</span>
+      
+      <div class="footer-links">
+        <i id="volume-btn" class="fa fa-volume-off" aria-hidden="true"></i>
+        <i class="fa fa-home audio" aria-hidden="true" data-toggle="modal" data-target="#modal-home"></i>
+        <a class="fa fa-question audio" aria-hidden="true" data-toggle="modal" data-target="#modal-play"></a>
+        <a href="https://www.linkedin.com/in/ellie-judge-45b00689/" class="fa fa-linkedin-square audio" aria-hidden="true" target="_blank"></a>
+        <a href="https://github.com/EllieJ87" class="fa fa-github audio" aria-hidden="true" target="_blank"></a> 
+      </div>
+    </footer>
+    
+    <!-- JQUERY & BOOTSTRAP.JS CDNS FILES -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- My js file link -->
+    <script src="assets/js/script.js"></script>
   
-  <div class="footer-links">
-    <i id="volume-btn" class="fa fa-volume-off" aria-hidden="true"></i>
-    <i class="fa fa-home audio" aria-hidden="true" data-toggle="modal" data-target="#modal-home"></i>
-    <i class="fa fa-envelope-o audio" aria-hidden="true" data-toggle="modal" data-target="#modal-contact"></i>
-    <a class="fa fa-question audio" aria-hidden="true" data-toggle="modal" data-target="#modal-play"></a>
-    <a href="https://www.linkedin.com/in/ellie-judge-45b00689/" class="fa fa-linkedin-square audio" aria-hidden="true" target="_blank"></a>
-    <a href="https://github.com/EllieJ87" class="fa fa-github audio" aria-hidden="true" target="_blank"></a> 
-  </div>
-</footer>
-  
-<!-- jQuery & Bootstrap.js CDNS files -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- My js file link -->
-<script src="assets/js/script.js"></script>
-<script src="assets/js/emailscript.js"></script>
-
-<script>
-
-    // code to launch modal when window ready 
-    $(document).ready(function() {
-      $("#modal-welcome").modal('show');
-  });
-
-  // 23/09/21 prevents the user from dismissing the modal box when clicked outside
-  $('#modal-welcome').modal({
-    backdrop: 'static',
-    keyboard: false
-})
-
-</script>
-</body>
+  </body>
 </html>

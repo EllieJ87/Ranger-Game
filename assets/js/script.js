@@ -9,7 +9,7 @@ const startBtn = document.getElementById('start-btn');
 // -- MAIN GAME VARIABLES -- // 
 const image = document.getElementById("images");
 const text = document.getElementById("text");
-const buttonBox = document.getElementById('buttonBox');
+const buttonBox = document.getElementById('button-box');
 const gameModal = document.getElementById("game-container");
 
 // -- RETURN HOME VARIABLES -- //
@@ -35,14 +35,25 @@ let ammo = 0; // setting the ammo at index 0
 let fuel = 0; // setting the fuel at index 0
 let health = 0; // setting the health at index 0
 
+// -- CODE TO LAUNCH MODEL WHEN WINDOW IS READY -- // 
+$(document).ready(function() {
+    $("#modal-welcome").modal('show');
+});
+
+// 23/09/21 prevents the user from dismissing the modal box when clicked outside
+$('#modal-welcome').modal({
+    backdrop: 'static',
+    keyboard: false
+})
+
 // -- WELCOME ONLOAD -- //
-startGame = () => {
+const startGame = () => {
     // Players name value
     const info = $('#player').val();
     let txt;
     if (info == "") { // No input is entered throws error message
         txt = "Need a name ranger!";
-        document.getElementById("playerName").innerHTML = txt;
+        document.getElementById("player-name").innerHTML = txt;
 
     } else {
         txt = "";
@@ -54,7 +65,7 @@ startGame = () => {
     }     
 }
 
-// Replaces 'Your name' with the players input
+// Replaces 'playerName' with the users input
 let changeText = (words) => {
     text.innerHTML = words.replace("playerName", playersName);
 }
@@ -320,18 +331,18 @@ $(volBtn).click(function() {
         play(buttonSound);
         $(this).toggleClass("fa-volume-off");
         $(this).toggleClass("fa-volume-up");
-        }
+    }
 });
 
 // -- PLAYS THE AUDIO SOUND -- //
 const play = (audio) => {
     audio.play();
-  }
+}
   
 const stop = (audio) => {
     audio.pause();
     audio.currentTime = 0;
-  }
+}
 
 // -- REMOVES HOME MODAL AND TAKES PLAYER TO A NEW 'GAME OVER' SCREEN -- //
 // Ending text with option to refresh the page to start the game again
@@ -362,9 +373,11 @@ const removeHomeModal = () => {
     <b>Would you like to try again?</b>
     `
     + `<br></br>`
-    + `<div class="home-icon"> <a onclick="setTimeout(function() { 
+    + `
+    <div class="home-icon"> <a onclick="setTimeout(function() { 
         location.reload(true); });"><i class="fa fa fa-refresh"></i></a>
-        </div></div>`;
+        </div>
+    </div>`;
 };
 
 // -- MAIN GAME SCENARIO -- // 
@@ -440,7 +453,7 @@ const scenario = {
         image: 'assets/images/cockpit.jpg', // cockpit 
         text: "Okay! Let's try and fix the video link first! I will need to hack into your control panel",
         buttons: [
-            ["Wait! You've going to do what now??", "advanceTo(scenario.scene10)"],
+            ["Wait! You're going to do what now??", "advanceTo(scenario.scene10)"],
             ["Okay!", "advanceTo(scenario.scene11)"]
         ]
     },
@@ -1849,7 +1862,7 @@ const scenario = {
         text: "Lost for words I see",
         decreaseHealth: true,
         buttons: [
-            ["No... You are the one who has underestimated me ", "advanceTo(scenario.spy49)"]
+            ["No... You are the one who has underestimated me", "advanceTo(scenario.spy49)"]
         ]
     },
 
@@ -2105,7 +2118,7 @@ const scenario = {
 
     died23: {
         image: 'assets/images/enemy-multi.jpg',
-        text: "WATCH OUT!! One is tailing behind you! ", 
+        text: "WATCH OUT!! One is tailing behind you!", 
         decreaseHealth: true, 
         buttons: [
             ["I can shake it", "advanceTo(scenario.died27)"]
@@ -2132,7 +2145,7 @@ const scenario = {
 
     died26: {
         image: 'assets/images/vex-ship.jpg',
-        text: "WATCH OUT! Vex has you locked on his site!", 
+        text: "WATCH OUT! Vex has you locked on his sight!", 
         decreaseHealth: true, 
         buttons: [
             ["I can handle it!", "advanceTo(scenario.died27)"]
@@ -2347,7 +2360,7 @@ const scenario = {
 
     ammo17: {
         image: 'assets/images/vex-tail.jpg',
-        text: "Great work playerName you've managed to destabilise him now! ", 
+        text: "Great work playerName you've managed to destabilise him now!", 
         decreaseAmmo: true,
         buttons: [
             ["Take down the Tail!", "advanceTo(scenario.ammo19)"]
@@ -2402,7 +2415,7 @@ const scenario = {
 
     ammo23: {
         image: 'assets/images/astra-main.jpg',
-        text: "Way to move quickly out of the way playerName! His Left Wing and Tail are open! ", 
+        text: "Way to move quickly out of the way playerName! His Left Wing and Tail are open!", 
         decreaseFuel: true,
         buttons: [
             ["Shoot Left Wing", "advanceTo(scenario.ammo27)"],
@@ -2441,7 +2454,7 @@ const scenario = {
 
     ammo27: {
         image: 'assets/images/vex-tail.jpg',
-        text: "That was awesome playerName! It looks like vex's ship is falling! You just have the Tail to take out now!", 
+        text: "That was awesome playerName! It looks like Vex's ship is falling! You just have the Tail to take out now!", 
         decreaseAmmo: true,
         buttons: [
             ["Shoot at the Tail", "advanceTo(scenario.ammo30)"]
@@ -2853,7 +2866,7 @@ const scenario = {
 
     captured42: {
         image: 'assets/images/enemy-ship-one.jpg',
-        text: "He's been charging his new weapona this entire time and looks like he's planning to use it on you!", 
+        text: "He's been charging his new weapon this entire time and looks like he's planning to use it on you!", 
         decreaseHealth: true,
         buttons: [
             ["What do I do?", "advanceTo(scenario.scene1)"]
